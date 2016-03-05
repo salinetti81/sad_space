@@ -1,0 +1,24 @@
+{
+  "name": "sad_space",
+  "version": "1.0.0",
+  "description": "This is project 3 for GA, our group project with Dan, Sammy, and Ashleigh.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salinetti81/sad_space.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salinetti81/sad_space/issues"
+  },
+  "homepage": "https://github.com/salinetti81/sad_space#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "passport": "^0.3.2"
+  }
+}
