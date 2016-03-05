@@ -3,7 +3,7 @@ var passport = require('passport');
 var LocalStrategy  = require('passport-local').Strategy;
 
 // load up the user model
-var User = require('../models/users.js');
+var User = require('../models/userModel.js');
 
 // expose this function to our app using module.exports
 module.exports = function(passport) {
@@ -60,11 +60,11 @@ User.findOne({ 'email' :  email }, function(err, user) {
 
         // set the user's local credentials
         newUser.username = req.body.username;
-        newUser.email    = email;
+        // newUser.email    = email;
         newUser.password = newUser.generateHash(password);
 
         // save the user
-        newUser.save(function(err) {
+        newUser.save(function(err) {    
             if (err)
                 throw err;
             return done(null, newUser);

@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
-var daysScema = mongoose.Schema({
+var daysSchema = mongoose.Schema({
     date: Date,
     events:[String]
 });
 
-var Day = mongoose.model('Day', daySchema);
+var Day = mongoose.model('Day', daysSchema);
 
 module.exports = Day;
