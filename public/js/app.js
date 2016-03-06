@@ -1,13 +1,7 @@
-var app = angular.module('SadSpace', []);
+var app = angular.module('sadSpace', []);
 
 
-$.ajax( {
-    url: remoteUrlWithOrigin,
-    data: queryData,
-    dataType: 'json',
-    type: 'POST',
-    headers: { 'Api-User-Agent': 'Example/1.0' },
-    success: function(data) {
-       // do something with data
-    }
-} );
+app.controller('MainController', [function(){
+
+	
+}]);
