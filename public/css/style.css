@@ -1,12 +1,31 @@
-body{
+body {
+	margin: 0;
+	padding: 0;
 	background: black;
 	color: white;
 }
 
+/*===========================*/
+/*HEADER*/
 header {
+	background: #333333;
 	color: white;
+	padding: 1em;
 }
 
+h1 {
+	display: inline;
+}
+
+ul {
+	display: inline;
+}
+
+li {
+	display: inline;
+}
+
+/*===========================*/
 
 #planets-container {
 
