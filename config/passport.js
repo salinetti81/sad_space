@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  var passport = require('passport');
+=======
+var passport = require('passport');
+>>>>>>> passport
 
 var LocalStrategy  = require('passport-local').Strategy;
 
@@ -8,7 +12,11 @@ var User = require('../models/userModel.js');
 // expose this function to our app using module.exports
 module.exports = function(passport) {
 
+<<<<<<< HEAD
 
+=======
+// =========================================================================
+>>>>>>> passport
 // passport session setup ==================================================
 // =========================================================================
 // required for persistent login sessions
@@ -16,14 +24,14 @@ module.exports = function(passport) {
 
 // used to serialize the user for the session
 passport.serializeUser(function(user, done) {
-    done(null, user.id);
+done(null, user.id);
 });
 
 // used to deserialize the user
 passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
-        done(err, user);
-    });
+User.findById(id, function(err, user) {
+    done(err, user);
+});
 });
 
 // =========================================================================
@@ -61,13 +69,14 @@ User.findOne({ 'email' :  email }, function(err, user) {
         // set the user's local credentials
         newUser.username = req.body.username;
         // newUser.email    = email;
-        newUser.password = newUser.generateHash(password);
+        // newUser.password = newUser.generateHash(password);
 
         // save the user
         newUser.save(function(err) {    
             if (err)
                 throw err;
             return done(null, newUser);
+<<<<<<< HEAD
 
 
     // =========================================================================
@@ -86,6 +95,8 @@ User.findOne({ 'email' :  email }, function(err, user) {
         User.findById(id, function(err, user) {
             done(err, user);
 
+=======
+>>>>>>> passport
         });
     };
 
@@ -112,6 +123,7 @@ User.findOne({ 'email' :  email }, function(err, user) {
     // if there are any errors, return the error before anything else
     if (err)
         return done(err);
+<<<<<<< HEAD
 
     // if no user is found, return the message
     if (!user)
@@ -307,13 +319,34 @@ User.findOne({ 'email' :  email }, function(err, user) {
 //             // if the user is found but the password is wrong
 //             if (!user.validPassword(password))
 //                 return done(null, false); // create the loginMessage and save it to session as flashdata
+=======
+
+    // if no user is found, return the message
+    if (!user)
+        return done(null, false); // req.flash is the way to set flashdata using connect-flash
+
+    // if the user is found but the password is wrong
+    if (!user.validPassword(password))
+        return done(null, false); // create the loginMessage and save it to session as flashdata
+
+    // all is well, return successful user
+    return done(null, user);
+>>>>>>> passport
 
 //             // all is well, return successful user
 //             return done(null, user);
 
+<<<<<<< HEAD
 
 //         });
 
 //     }));
 
 // }; //ends module.exprts
+=======
+});
+
+}));
+
+}; //ends module.exports
+>>>>>>> passport
