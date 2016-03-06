@@ -7,7 +7,7 @@ var User = require('../models/userModel.js');
 // expose this function to our app using module.exports
 module.exports = function(passport) {
 
-<<<<<<< HEAD
+
 // =========================================================================
 // passport session setup ==================================================
 // =========================================================================
@@ -16,14 +16,14 @@ module.exports = function(passport) {
 
 // used to serialize the user for the session
 passport.serializeUser(function(user, done) {
-done(null, user.id);
+    done(null, user.id);
 });
 
 // used to deserialize the user
 passport.deserializeUser(function(id, done) {
-User.findById(id, function(err, user) {
-    done(err, user);
-});
+    User.findById(id, function(err, user) {
+        done(err, user);
+    });
 });
 
 // =========================================================================
@@ -68,7 +68,7 @@ User.findOne({ 'email' :  email }, function(err, user) {
             if (err)
                 throw err;
             return done(null, newUser);
-=======
+
     // =========================================================================
     // passport session setup ==================================================
     // =========================================================================
@@ -84,7 +84,6 @@ User.findOne({ 'email' :  email }, function(err, user) {
     passport.deserializeUser(function(id, done) {
         User.findById(id, function(err, user) {
             done(err, user);
->>>>>>> ce2e1c65bfc56d85d1bbe20502c111fb8846d812
         });
     });
 
