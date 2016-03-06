@@ -8,6 +8,10 @@ var User = require('../models/userModel.js');
 // expose this function to our app using module.exports
 module.exports = function(passport) {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cdf8ef44895a1436c2c8b45d0faf9526b2e2daa0
 // =========================================================================
 // passport session setup ==================================================
 // =========================================================================
@@ -16,14 +20,14 @@ module.exports = function(passport) {
 
 // used to serialize the user for the session
 passport.serializeUser(function(user, done) {
-done(null, user.id);
+    done(null, user.id);
 });
 
 // used to deserialize the user
 passport.deserializeUser(function(id, done) {
-User.findById(id, function(err, user) {
-    done(err, user);
-});
+    User.findById(id, function(err, user) {
+        done(err, user);
+    });
 });
 
 // =========================================================================
@@ -68,6 +72,25 @@ User.findOne({ 'email' :  email }, function(err, user) {
             if (err)
                 throw err;
             return done(null, newUser);
+<<<<<<< HEAD
+=======
+
+    // =========================================================================
+    // passport session setup ==================================================
+    // =========================================================================
+    // required for persistent login sessions
+    // passport needs ability to serialize and unserialize users out of session
+
+    // used to serialize the user for the session
+    passport.serializeUser(function(user, done) {
+    done(null, user.id);
+    });
+
+    // used to deserialize the user
+    passport.deserializeUser(function(id, done) {
+        User.findById(id, function(err, user) {
+            done(err, user);
+>>>>>>> cdf8ef44895a1436c2c8b45d0faf9526b2e2daa0
         });
     };
 
