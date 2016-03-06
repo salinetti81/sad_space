@@ -19,10 +19,11 @@ app.use(session({secret: 'secretsecretsecret', resave: true, saveUninitialized: 
 app.use(passport.initialize());
 app.use(passport.session());
 
+var usersController = require('./controllers/users');
 require('./config/passport.js')(passport);
 
 app.get('/', function(req,res){
-	res.render('index.html');
+	res.render('signin.html');
 });
 
 app.listen(port, function(){
