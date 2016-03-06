@@ -9,24 +9,22 @@ var express 	 	= require('express'),
 
 mongoose.connect('mongodb://localhost:27017/planetproject');
 
+app.use(morgan('dev'));
 
 app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json);
+app.use(bodyParser.json());
 
-app.use(morgan('dev'));
 
 app.use(session({secret: 'secretsecretsecret', resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
 
 var usersController = require('./controllers/users');
-app.use('/milkyway', usersController);
-
 require('./config/passport.js')(passport);
 
-
+app.use('/milkyway', usersController);
 // app.get('/milkyway', function(req,res){
 // 	res.render('index.html');
 // });
