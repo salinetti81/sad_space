@@ -1,8 +1,68 @@
-body{
-	background-image: url(http://m7.i.pbase.com/u8/qleap/large/37456337.EarthBig.jpg);
-	background-size: cover;
+body {
+	margin: 0;
+	padding: 0;
+	background: black;
+	color: white;
 }
 
-h4 {
+/*===========================*/
+/*HEADER*/
+header {
+	background: #333333;
 	color: white;
+	padding: 1em;
+}
+
+h1 {
+	display: inline;
+}
+
+ul {
+	display: inline;
+}
+
+li {
+	display: inline;
+}
+
+/*===========================*/
+
+#planets-container {
+
+}
+
+#mercury {
+
+}
+
+#venus {
+	
+}
+
+#earth {
+	
+}
+
+#mars {
+	
+}
+
+#jupiter {
+	
+}
+
+#saturn {
+	
+}
+
+#uranus {
+	
+}
+
+#neptune {
+	
+}
+
+#pluto {
+	
 }

@@ -13,10 +13,14 @@ var User = require('../models/userModel.js');
 module.exports = function(passport) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 // =========================================================================
 >>>>>>> passport
+=======
+// =========================================================================
+>>>>>>> 685542ef5324775d1fd8d28af5cc614082a3139f
 // passport session setup ==================================================
 // =========================================================================
 // required for persistent login sessions
@@ -77,6 +81,7 @@ User.findOne({ 'email' :  email }, function(err, user) {
                 throw err;
             return done(null, newUser);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     // =========================================================================
@@ -97,6 +102,8 @@ User.findOne({ 'email' :  email }, function(err, user) {
 
 =======
 >>>>>>> passport
+=======
+>>>>>>> 685542ef5324775d1fd8d28af5cc614082a3139f
         });
     };
 
@@ -141,6 +148,7 @@ User.findOne({ 'email' :  email }, function(err, user) {
 
 }));
 
+<<<<<<< HEAD
 }; //ends module.exprts
 
 
@@ -350,3 +358,6 @@ User.findOne({ 'email' :  email }, function(err, user) {
 
 }; //ends module.exports
 >>>>>>> passport
+=======
+}; //ends module.exports 
+>>>>>>> 685542ef5324775d1fd8d28af5cc614082a3139f
