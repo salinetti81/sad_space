@@ -33,9 +33,9 @@ router.post('/signup', passport.authenticate('local-signup', {
 });
 
 
-//Sign In
+//Sign In Route
 
-//Sign Out
+//Sign Out Route
 
 //defines isLoggedIn
 function isLoggedIn(req, res, next) {
