@@ -45,3 +45,6 @@ function isLoggedIn(req, res, next) {
 //if user doesn't exists, go here
       res.redirect('/');
 } ;
+
+
+module.exports = router;
