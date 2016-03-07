@@ -1,4 +1,4 @@
-<html ng-app='SadSpace'>
+<html>
 <head>
 	<title></title>
 
@@ -7,28 +7,27 @@
 	<script type="text/javascript" src="js/app.js"></script>
 </head>
 
-	<body>
+<body>
+	
+<h1>The Universe is at your finger tips</h1>
+<div class="passport">
+	<h4>Signup</h4>
+<!-- form action route needs to change -->
+	<form action="/milkyway/signup" method="POST">
+		<input type="text" name="username" placeholder="username">
+		<input type="text" name="email" placeholder="email">
+		<input type="text" name="password" placeholder="password">
+		<input type="submit">
+	</form>
 
-		<h2>The Universe is at your finger tips</h2>
+	<h4>Login</h4>
 
-		<div class= "passport">
-			<h4>Signup</h4>
-
-			<!-- form action route needs to change -->
-			<form action="/" method="POST">
-				<input type="text" name="username" placeholder="username">
-				<input type="text" name="email" placeholder="email">
-				<input type="text" name="password" placeholder="password">
-				<input type="submit">
-			</form>
-
-			<h4>Login</h4>
-			<form action="/" method="POST">
-				<input type="text" name="email" placeholder="email">
-				<input type="text" name="password" placeholder="password">
-				<input type="submit">
-			</form>
-		</div>  <!-- ends passport div -->
+	<form action="/milkyway/login" method="POST">
+		<input type="text" name="email" placeholder="email">
+		<input type="text" name="password" placeholder="password">
+		<input type="submit">
+	</form>
+</div>  <!-- ends passport div -->
 
 	</body>
 </html>
