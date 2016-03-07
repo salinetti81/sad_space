@@ -6,7 +6,7 @@ var express     = require('express'),
 
 //Index
 router.get('/', function(req,res) {
-    res.render('index.html');
+    res.send('index.html');
 });
 
 router.get('/:id', function(req,res){
@@ -17,19 +17,19 @@ router.get('/:id', function(req,res){
   });
 });
 
-//JSON
-router.get('/json', function(req, res) {
-    User.find(function(err, users) {
-        res.send(users);
-    });
-});
+// //JSON
+// router.get('/json', function(req, res) {
+//     User.find(function(err, users) {
+//         res.send(users);
+//     });
+// });
 
-//SINGLE JSON 
-router.get('/:id/json', function(req, res) {
-    User.findById(req.params.id, function(err, user) {
-        res.send(user);
-    });
-});
+// //SINGLE JSON 
+// router.get('/:id/json', function(req, res) {
+//     User.findById(req.params.id, function(err, user) {
+//         res.send(user);
+//     });
+// });
 
 //LOGOUT
 router.get('/logout', function(req, res) {
@@ -56,7 +56,6 @@ router.get('/:id', isLoggedIn, function(req, res) {
 // CREATE NEW USER
     //PROCESS SIGNUP FORM
 router.post('/signup', passport.authenticate('local-signup', {
-    
     failureRedirect : '/'}), function(req,res) { //redirect back to signup if there is an error
         res.redirect('/' + req.user.id);
         console.log(user);
@@ -82,7 +81,6 @@ router.post('/login', passport.authenticate('local-login', {
 //     };
 // });
 // });
-
 
 
 //defines isLoggedIn
