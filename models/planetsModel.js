@@ -3,9 +3,16 @@ var mongoose = require('mongoose');
 
 var planetSchema = mongoose.Schema({
     name: String,
-    info: String
+    moons: [String],
+    distanceFromSun: Number,
+    mass: Number,
+    ringSystem: Boolean,
+    lengthOfDay: Number,
+    orbitalPeriod: Number 
 });
 
 var Planet = mongoose.model('Planet', planetSchema);
 
 module.exports = Planet;
+
+

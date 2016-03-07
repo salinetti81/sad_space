@@ -33,6 +33,9 @@ app.use(function(req, res, next){
 var usersController = require('./controllers/users');
 require('./config/passport.js')(passport);
 
+var seedController = require('./controllers/seed.js');
+app.use('/seed', seedController);
+
 
 app.use('/users', usersController);
 // app.get('/milkyway', function(req,res){
