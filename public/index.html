@@ -12,8 +12,8 @@
 	
 {{main.fun}}
 
-
-		<div id="signin" ng-hide="" ng-controller="SignUpController as ctrl">
+Welcome {{user.name}}
+		<div id="signin" ng-hide="" ng-controller="SignUpController as ctrl" ng-if="ctrl.isLoggedIn=true">
 			<h4>Signup</h4>
 
 			<form ng-submit="ctrl.signUp()">
@@ -25,7 +25,7 @@
 
 			<h4>Login</h4>
 
-			<form action="/milkyway/login" ng-submit = "ctrl.logIn()">
+			<form action="/milkyway/login" ng-submit = "ctrl.logIn()" ng-if="user">
 				<input type="text" placeholder="email" ng-model = "ctrl.loginData.email"><br/>
 				<input type="text" placeholder="password" ng-model="ctrl.logindData.password"><br/>
 				<button type="submit">Login</button>
