@@ -1,7 +1,6 @@
 var app = angular.module('sadSpace', []);
 
 
-
 app.controller('MainController', ['$http', function($http){
 	var controller = this;
 	this.signUpData = {};
@@ -57,6 +56,7 @@ this.logIn = function(){
 	});
 
 }; //<--logIn
+
 
 
 app.controller('SignUpController', ['$http', function($http){
@@ -186,8 +186,3 @@ app.controller('PlanetController', ['$http', function($http){
 	  // 	}
 
        
-
-
-
-
-
