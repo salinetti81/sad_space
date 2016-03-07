@@ -6,9 +6,9 @@ var express     = require('express'),
 
 //Index
 router.get('/', function(req,res) {
-    User.find(function(err, user) {
-        res.send(user);
-    });
+  User.find(function(err, user) {
+      res.send(user);
+  });
 });
 
 // router.get('/:id', function(req,res){
@@ -22,38 +22,35 @@ router.get('/', function(req,res) {
 
 //LOGOUT
 router.get('/logout', function(req, res) {
-    req.logout();
-    res.redirect('/users');
+  req.logout();
+  res.redirect('/users');
 });
 
 //SHOW PAGE FOR WHEN USER IS LOGGED IN
 router.get('/:id', isLoggedIn, function(req, res) {
-    //checks if the user is logged in
-    res.locals.usertrue = (req.user.is == req.params.id);
-    //list users
-    User.find({}, function(err, users) {
-        //finds single user
-        User.findById(req.params.id, function(err, user) {
-            res.render('index.html', {
-                user: user
-             
-            });
-        });
+//checks if the user is logged in
+res.locals.usertrue = (req.user.is == req.params.id);
+//list users
+User.find({}, function(err, users) {
+    //finds single user
+  User.findById(req.params.id, function(err, user) {
+    res.render('index.html', {
+      user: user
+         
+      });
     });
+  });
 });
 
 // CREATE NEW USER
-    //PROCESS SIGNUP FORM
+  //PROCESS SIGNUP FORM
 router.post('/signup', passport.authenticate('local-signup', {
+  failureRedirect : '/boatman'
 
-    failureRedirect : '/'
-
-    }), function(req,res) { //redirect back to signup if there is an error
-
-
-        console.log('successfully brought to success route: ', req.user)
-        res.redirect('/' + req.user.id);
-        // res.send('sign up route')
+  }), function(req,res) { //redirect back to signup if there is an error
+    console.log('successfully brought to success route: ', req.user)
+    res.send(req.user);
+    // res.send('sign up route')
 });
 
 //DELETE
@@ -74,10 +71,10 @@ router.post('/signup', passport.authenticate('local-signup', {
 //defines isLoggedIn
 function isLoggedIn(req, res, next) {
 //if user exists, do this
-  if (req.isAuthenticated())
-    return next();
+if (req.isAuthenticated())
+  return next();
 //if user doesn't exists, go here
-      res.redirect('/');
+  res.redirect('/');
 } ;
 
 module.exports = router;
