@@ -2,33 +2,57 @@
 <html ng-app='sadSpace'>
 	<head>
 		<title></title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 	</head>
+	<body ng-controller="MainController as Main">
+		<header ng-include src=" './partials/header.html' "></header>
+	
 
-<body ng-conttroller='MainController'>
+<!-- 
 
-<div class="passport">
-	<h4>Signup</h4>
-<!-- form action route needs to change -->
-	<form action="/milkyway/signup" method="POST">
-		<input type="text" name="username" placeholder="username">
-		<input type="text" name="email" placeholder="email">
-		<input type="text" name="password" placeholder="password">
-		<input type="submit">
-	</form>
+		<div id="signin" ng-hide="">
+			<h4>Signup</h4>
 
-	<h4>Login</h4>
+			<form action="/milkyway/signup" method="POST">
+				<input type="text" name="username" placeholder="username"><br/>
+				<input type="text" name="email" placeholder="email"><br/>
+				<input type="text" name="password" placeholder="password"><br/>
+				<button type="submit">Sign Up</button>
+			</form>
 
-	<form action="/milkyway/login" method="POST">
-		<input type="text" name="email" placeholder="email">
-		<input type="text" name="password" placeholder="password">
-		<input type="submit">
-	</form>
-</div>  <!-- ends passport div -->
+			<h4>Login</h4>
+
+			<form action="/milkyway/login" method="POST">
+				<input type="text" name="email" placeholder="email"><br/>
+				<input type="text" name="password" placeholder="password"><br/>
+				<button type="submit">Login</button>
+			</form>
+		</div> -->
+	
+
+
+		<div id="planets-container" ng-controller="">
+			<div id="sun" ng-click=""></div>
+			<div id="mercury" ng-click=""></div>
+			<div id="venus" ng-click=""></div>
+			<div id="earth" ng-click=""></div>
+			<div id="mars" ng-click=""></div>
+			<div id="jupiter" ng-click=""></div>
+			<div id="saturn" ng-click=""></div>
+			<div id="uranus" ng-click=""></div>
+			<div id="neptune" ng-click=""></div>
+			<div id="pluto" ng-click=""></div>
+		</div>
+
+<!-- 		this will be the info-box for clicked info -->
+		<div id="">
+			<h1>{{planet.name}}</h1>
+		</div>
+
 	</body>
-
 </html>	
 
 

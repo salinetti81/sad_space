@@ -1,16 +1,19 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: black;
-	color: white;
+	background: #030315;
+	color: #b4b4bf;
+	font-family: 'Roboto', sans-serif;
 }
 
 /*===========================*/
 /*HEADER*/
 header {
-	background: #333333;
+	background: #181823;
 	color: white;
 	padding: 1em;
+	opacity: .8;
+	border-bottom: 1px solid grey;
 }
 
 h1 {
@@ -19,50 +22,173 @@ h1 {
 
 ul {
 	display: inline;
+	float: right;
 }
 
 li {
 	display: inline;
+	padding: 1em;
+	opacity: .6;
+}
+
+li:hover {
+	opacity: .9;
+}
+
+/*===========================*/
+/*SIGN IN BOX*/
+
+#signin {
+	background: #4B4B65;
+	height: 40%; width: 30%;
+	border: 1px solid white;
+	text-align: center;
+	opacity: .9;
+	margin: 0 auto;
+	padding-bottom: 1.5em;
+	z-index: 99;
+}
+
+input {
+	height: 30px; width: 45%;
+	background: #9191AD;
+	margin: .5em;
+}
+
+input:hover {
+	background: #4B4B65;
+}
+
+button {
+	height: 30px; width: 106px;
+	background: #9191AD;
+	margin: .5em;
+}
+
+button:hover {
+	background: #4B4B65;
 }
 
 /*===========================*/
 
 #planets-container {
+		height: 85%; width: 100%;
+/*		border: 1px solid grey;*/
+}
 
+#sun {
+	background-image: url('http://orig12.deviantart.net/c7d3/f/2013/292/7/5/sun_transparent_background_sun_world_by_royalblueiv-d6r3ze7.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding-bottom: 12%;
+	width: 12%;
+	margin-top: 4%;
+	margin-left: 50%;
+	margin-right: 20%;
+	z-index: 1;
 }
 
 #mercury {
-
+	background-image: url('http://www.veryicon.com/icon/ico/System/Qs%20Vista%20Ready%20Icons/QsMercury.ico');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 6%;
+	padding-bottom: 6%;
+	margin-left: 45%;
+	z-index: 2;
 }
 
 #venus {
-	
+	background-image: url('http://jplanets.sourceforge.net/images/venus.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 7%;
+	padding-bottom: 7%;
+	margin-left: 40%;
+	z-index: 3;
 }
 
 #earth {
-	
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/The_Earth_seen_from_Apollo_17_with_transparent_background.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 6%;
+	padding-bottom: 6%;
+	margin-left: 35%;
+	z-index: 4;
 }
 
 #mars {
-	
+	background-image: url('http://img3.wikia.nocookie.net/__cb20130916161813/factfinder/images/c/c5/Mars-1-.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 6%;
+	padding-bottom: 6%;
+	margin-left: 30%;
+	z-index: 5;
 }
 
 #jupiter {
-	
+	background-image: url('http://www.zaxtor.net/jupiter.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 7%;
+	padding-bottom: 7%;
+	margin-left: 25%;
+	z-index: 6;
 }
 
 #saturn {
-	
+	background-image: url('http://www.zaxtor.net/Saturn.png');	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 7%;
+	padding-bottom: 7%;
+	margin-left: 20%;
+	z-index: 7;
 }
 
 #uranus {
-	
+	background-image: url('http://3.bp.blogspot.com/-fWJM7KisZXk/T9YzvopmDzI/AAAAAAAAAq0/vDRoopnaVpg/s1600/uranus.png');	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 7%;
+	padding-bottom: 7%;
+	margin-left: 15%;
+	z-index: 8;
 }
 
 #neptune {
-	
+	background-image: url('http://space-facts.com/wp-content/uploads/neptune-transparent-300x300.png');	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 7%;
+	padding-bottom: 7%;
+	margin-left: 10%;
+	z-index: 9;
 }
 
 #pluto {
-	
+	background-image: url('http://www.icone-gif.com/icone/png/planets/pluto.png');	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 4%;
+	padding-bottom: 4%;
+	margin-left: 5%;
+	z-index: 10;
 }
+
+#info-box {
+	background: #4B4B65;
+	height: 40%; width: 30%;
+	border: 1px solid white;
+	text-align: center;
+	opacity: .9;
+	margin: 0 auto;
+	padding-bottom: 1.5em;
+	z-index: 99;
+}
+
+
+
+
