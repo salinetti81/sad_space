@@ -2,52 +2,60 @@
 var app = angular.module('sadSpace', []);
 
 
-app.controller('SignUpController', ['$http', function($http){
-    var controller = this;
-    this.signUpData = {};
-    this.isLoggedIn = false;
+app.controller('MainController', ['$http', function($http){
+	var controller = this;
+	this.signUpData = {};
+	this.logInData = {};
+	this.isLoggedIn = null;
 
-    this.signUp = function(){
-        console.log("SIGNUP function firing in app.js");
+	this.user = {}
 
-        console.log(this.signUpData);
+this.signUp = function(){
+	console.log("SIGNUP function firing in app.js");
 
-        if (!user)
-        $http({
-            method: 'POST',
-            url: '/users/signup',
-            data: this.signUpData
-        }).then(
-            //success
-            function(response){
-                console.log(response);
-                controller.isLoggedIn = true;
-                controller.signUpData = {};
-            },
-            function(err){
-                console.log(err);
-            });       
+	console.log(this.signUpData);
 
-    }; //<--signUp
-    if (user)
-    this.logIn = function(){
-        console.log("LOGIN function firing in app.js")
+$http({
+	method: 'POST',
+	url: '/users/signup',
+	data: this.signUpData
+}).then(
+	//success
+	function(response){
+		console.log(response);
+		controller.isLoggedIn = true;
+		controller.signUpData = {};
+		controller.user = response.data;
+	},
+	function(err){
+		console.log(err);
+	});       
 
-        $http({
+}; //<--signUp
 
-            method: 'POST',
-            url: '/users/login',
-            data: this.loginData
-        }).then(
-        //success
-        function(response){
-            console.log(response)
 
-        },
-        function(err){
-            console.log(err)
-        });
+this.logIn = function(){
+	console.log("LOGIN function firing in app.js")
 
-    }; //<--logIn
+	$http({
+
+		method: 'GET',
+		url: '/',
+		data: this.loginData
+	}).then(
+	//success
+	function(response){
+		console.log('this is the response',response.config.data);
+		controller.isLoggedIn = true;
+		// controller.logInData = {};
+		controller.user = response.config.data;
+		console.log(controller.user)
+
+	},
+	function(err){
+		console.log(err)
+	});
+
+}; //<--logIn
 
 }]); //end form controller

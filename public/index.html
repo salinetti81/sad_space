@@ -7,48 +7,48 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 	</head>
-	<body>
+	<body ng-controller="MainController as ctrl"> 
 		<header ng-include src="'./partials/header.html' "></header>
 	
-{{main.fun}}
 
-Welcome {{user.name}}
-		<div id="signin" ng-hide="" ng-controller="SignUpController as ctrl" ng-if="ctrl.isLoggedIn=true">
-			<h4>Signup</h4>
 
-			<form ng-submit="ctrl.signUp()">
-				<input type="text" placeholder="username" ng-model="ctrl.signUpData.username"><br/>
-				<input type="text" placeholder="email" ng-model="ctrl.signUpData.email"><br/>
-				<input type="text" placeholder="password" ng-model="ctrl.signUpData.password"><br/>
-				<button type="submit">Sign Up</button>
-			</form>
+<!-- Welcome {{ctrl.user.name}}-->
+<div id="signin" ng-if="ctrl.isLoggedIn === null">
+	<h4>Signup</h4>
 
-			<h4>Login</h4>
+	<form ng-submit="ctrl.signUp()">
+		<input type="text" placeholder="username" ng-model="ctrl.signUpData.name"><br/>
+		<input type="text" placeholder="email" ng-model="ctrl.signUpData.email"><br/>
+		<input type="text" placeholder="password" ng-model="ctrl.signUpData.password"><br/>
+		<button type="submit">Sign Up</button>
+	</form>
 
-			<form action="/milkyway/login" ng-submit = "ctrl.logIn()" ng-if="user">
-				<input type="text" placeholder="email" ng-model = "ctrl.loginData.email"><br/>
-				<input type="text" placeholder="password" ng-model="ctrl.logindData.password"><br/>
-				<button type="submit">Login</button>
-			</form>
-		</div>
+	<h4>Login</h4>
 
-		<div id="planets-container">
-			<div id="sun" ></div>
-			<div id="mercury" ></div>
-			<div id="venus" ></div>
-			<div id="earth" ></div>
-			<div id="mars" ></div>
-			<div id="jupiter" ></div>
-			<div id="saturn" ></div>
-			<div id="uranus" ></div>
-			<div id="neptune" ></div>
-			<div id="pluto" ></div>
-		</div>
+	<form ng-submit = "ctrl.logIn()" >
+		<input type="text" placeholder="name" ng-model = "ctrl.loginData.name"><br/>
+		<input type="text" placeholder="password" ng-model="ctrl.logindData.password"><br/>
+		<button type="submit">Login</button>
+	</form>
+</div>
+
+<div id="planets-container">
+	<div id="sun" ></div>
+	<div id="mercury" ></div>
+	<div id="venus" ></div>
+	<div id="earth" ></div>
+	<div id="mars" ></div>
+	<div id="jupiter" ></div>
+	<div id="saturn" ></div>
+	<div id="uranus" ></div>
+	<div id="neptune" ></div>
+	<div id="pluto" ></div>
+</div>
 
 <!-- 		this will be the info-box for clicked info -->
-		<div id="">
-			<h1>{{planet.name}}</h1>
-		</div>
+<div id="">
+	<h1>{{planet.name}}</h1>
+</div>
 
 	</body>
 </html>	
