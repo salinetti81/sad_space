@@ -179,8 +179,13 @@ button:hover {
 }
 
 #info-box {
+	display: none;
+}
+
+#info-box.active {
+	display: block;
 	background: #4B4B65;
-	height: 40%; width: 30%;
+	width: 30%;
 	border: 1px solid white;
 	text-align: center;
 	opacity: .9;
