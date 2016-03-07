@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	background: black;
 	color: white;
+	font-family: 'Roboto', sans-serif;
 }
 
 /*===========================*/
@@ -11,6 +12,7 @@ header {
 	background: #333333;
 	color: white;
 	padding: 1em;
+	opacity: .8;
 }
 
 h1 {
@@ -23,46 +25,52 @@ ul {
 
 li {
 	display: inline;
+	padding: 1em;
 }
 
 /*===========================*/
 
 #planets-container {
+		height: 70%; width: 100%;
+}
 
+#sun {
+	background-image: url('http://orig12.deviantart.net/c7d3/f/2013/292/7/5/sun_transparent_background_sun_world_by_royalblueiv-d6r3ze7.png');
+	height: 15%; width: 15%;
 }
 
 #mercury {
-
+	background-image: url('http://www.veryicon.com/icon/ico/System/Qs%20Vista%20Ready%20Icons/QsMercury.ico');
 }
 
 #venus {
-	
+	background-image: url('http://jplanets.sourceforge.net/images/venus.png');
 }
 
 #earth {
-	
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/The_Earth_seen_from_Apollo_17_with_transparent_background.png');
 }
 
 #mars {
-	
+	background-image: url('http://img3.wikia.nocookie.net/__cb20130916161813/factfinder/images/c/c5/Mars-1-.png');
 }
 
 #jupiter {
-	
+	background-image: url('http://www.zaxtor.net/jupiter.png');
 }
 
 #saturn {
-	
+	background-image: url('http://www.zaxtor.net/Saturn.png');	
 }
 
 #uranus {
-	
+	background-image: url('http://3.bp.blogspot.com/-fWJM7KisZXk/T9YzvopmDzI/AAAAAAAAAq0/vDRoopnaVpg/s1600/uranus.png');	
 }
 
 #neptune {
-	
+	background-image: url('http://space-facts.com/wp-content/uploads/neptune-transparent-300x300.png');	
 }
 
 #pluto {
-	
+	background-image: url('http://www.icone-gif.com/icone/png/planets/pluto.png');	
 }
