@@ -43,5 +43,5 @@ app.use('/users', usersController);
 // });
 
 app.listen(port, function(){
-	console.log("Running");
+	console.log("Hey you. Think sunshine");
 });
