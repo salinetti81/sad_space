@@ -1,18 +1,18 @@
-var     express 	= require('express'),
-		router 		= express.Router(),
-		passport 	= require('passport'),
-		User 		= require('../models/userModel');
+var express     = require('express'),
+    router      = express.Router(),
+    passport    = require('passport'),
+    User        = require('../models/userModel');
 
 
 //Index
 router.get('/', function(req,res) {
- 	res.render('index.html');
+    res.render('index.html');
 });
 
 router.get('/:id', function(req,res){
-	res.locals.login = req.isAuthenticated();
-	 User.find(function(err, data) {
-      res.render('index.html', {users: data});
+    res.locals.login = req.isAuthenticated();
+     User.find(function(err, data) {
+      res.send('index.html', {users: data});
       console.log(err);
   });
 });

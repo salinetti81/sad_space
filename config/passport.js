@@ -60,9 +60,9 @@ User.findOne({ 'email' :  email }, function(err, user) {
 
         // set the user's local credentials
         newUser.username = req.body.username;
-        // newUser.email    = email;
+        newUser.email    = email;
         // ///// Needed to comment out this line for passport to not kill the server//////
-        // newUser.password = newUser.generateHash(password);
+        newUser.password = newUser.generateHash(password);
 
         // save the user
         newUser.save(function(err) {    
