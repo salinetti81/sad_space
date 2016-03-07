@@ -7,9 +7,9 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 	</head>
-	<body ng-controller="MainController as Main">
+	<body>
 		<header ng-include src=" './partials/header.html' "></header>
-	
+		{{2+2}}
 
 <!-- 
 
@@ -34,12 +34,12 @@
 	
 
 
-		<div id="planets-container" ng-controller="">
+		<div id="planets-container" ng-controller="PlanetController as planetCtrl">
 			<div id="sun" ng-click=""></div>
 			<div id="mercury" ng-click=""></div>
 			<div id="venus" ng-click=""></div>
 			<div id="earth" ng-click=""></div>
-			<div id="mars" ng-click=""></div>
+			<div id="mars" ng-click="planetCtrl.getExtract($event)"></div>
 			<div id="jupiter" ng-click=""></div>
 			<div id="saturn" ng-click=""></div>
 			<div id="uranus" ng-click=""></div>
@@ -49,7 +49,7 @@
 
 <!-- 		this will be the info-box for clicked info -->
 		<div id="">
-			<h1>{{planet.name}}</h1>
+			<h1>{{planetCtrl.extract}}</h1>
 		</div>
 
 	</body>
