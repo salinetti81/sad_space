@@ -14,22 +14,22 @@
 
 	{{2+2}}
 
-		<div class="passport">
+		<div id="signin" ng-hide="">
 			<h4>Signup</h4>
 
 			<form action="/milkyway/signup" method="POST">
-				<input type="text" name="username" placeholder="username">
-				<input type="text" name="email" placeholder="email">
-				<input type="text" name="password" placeholder="password">
-				<input type="submit">
+				<input type="text" name="username" placeholder="username"><br/>
+				<input type="text" name="email" placeholder="email"><br/>
+				<input type="text" name="password" placeholder="password"><br/>
+				<button type="submit">Sign Up</button>
 			</form>
 
 			<h4>Login</h4>
 
 			<form action="/milkyway/login" method="POST">
-				<input type="text" name="email" placeholder="email">
-				<input type="text" name="password" placeholder="password">
-				<input type="submit">
+				<input type="text" name="email" placeholder="email"><br/>
+				<input type="text" name="password" placeholder="password"><br/>
+				<button type="submit">Login</button>
 			</form>
 		</div>
 	

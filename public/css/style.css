@@ -1,15 +1,15 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: black;
-	color: white;
+	background: #030315;
+	color: #b4b4bf;
 	font-family: 'Roboto', sans-serif;
 }
 
 /*===========================*/
 /*HEADER*/
 header {
-	background: #333333;
+	background: #181823;
 	color: white;
 	padding: 1em;
 	opacity: .8;
@@ -26,6 +26,44 @@ ul {
 li {
 	display: inline;
 	padding: 1em;
+	opacity: .6;
+}
+
+li:hover {
+	opacity: .9;
+}
+
+/*===========================*/
+/*SIGN IN BOX*/
+
+#signin {
+	background: #4B4B65;
+	height: 40%; width: 30%;
+	border: 1px solid white;
+	text-align: center;
+	opacity: .9;
+	margin: 0 auto;
+	padding-bottom: 1.5em;
+}
+
+input {
+	height: 30px; width: 45%;
+	background: #9191AD;
+	margin: .5em;
+}
+
+input:hover {
+	background: #4B4B65;
+}
+
+button {
+	height: 30px; width: 106px;
+	background: #9191AD;
+	margin: .5em;
+}
+
+button:hover {
+	background: #4B4B65;
 }
 
 /*===========================*/
