@@ -50,15 +50,33 @@ app.controller('SignUpController', ['$http', function($http){
 }]);
 
 
+
 app.controller('PlanetController', ['$http', function($http){
     var controller = this;
     
     
-
     controller.displayContent = false;
+
     this.getData = function(name){
-    controller.displayContent = true;
-    console.log(controller.displayContent, "displayContent")
+        var planet = name;
+        controller.displayContent = true;
+        console.log(controller.displayContent, "displayContent")
+        console.log(planet ,"here");
+
+        $http({
+            url: '/milkyway/users',
+            method: 'GET',
+        }).then(
+        //success
+        function(results){
+            console.log(results);
+        }),
+        //error
+        function(err){
+            console.log(err);
+        };
+
+
     }; //<--getExtract
 
 }]);
@@ -77,8 +95,8 @@ app.controller('PlanetController', ['$http', function($http){
 
 
 
-	// var planet = name;
-	// console.log(planet ,"here");
+
+
 //===================================
 //AJAX CALL FOR WIKIMEDIA API
 //===================================
@@ -112,5 +130,5 @@ app.controller('PlanetController', ['$http', function($http){
 
        
 
-}]); //end form controller
+// }]); //end form controller
 
