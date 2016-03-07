@@ -4,14 +4,18 @@ var express 	 	= require('express'),
 		morgan 			= require('morgan'),
 		passport 		= require('passport'),
 		session 		= require('express-session'),
+		bcrypt			= require('bcrypt-nodejs'),
 		port 				= process.env.PORT || 3000,
-		app					= express();
+		app					= express(),
+		passportLocal = require('passport-local');
 
 mongoose.connect('mongodb://localhost:27017/planetproject');
 
 app.use(morgan('dev'));
 
 app.use(express.static('public'));
+// app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -21,14 +25,23 @@ app.use(session({secret: 'secretsecretsecret', resave: true, saveUninitialized: 
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(function(req, res, next){
+	res.locals.login = req.isAuthenticated();
+	next();
+});
+
 var usersController = require('./controllers/users');
 require('./config/passport.js')(passport);
 
-app.use('/milkyway', usersController);
+var seedController = require('./controllers/seed.js');
+app.use('/seed', seedController);
+
+
+app.use('/users', usersController);
 // app.get('/milkyway', function(req,res){
 // 	res.render('index.html');
 // });
 
 app.listen(port, function(){
-	console.log("Remember to drink water today! Let's make something cool today!");
+	console.log("Running");
 });
