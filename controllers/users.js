@@ -6,7 +6,9 @@ var express     = require('express'),
 
 //Index
 router.get('/', function(req,res) {
-    res.send('index.html');
+    User.find(function(err, user) {
+        res.send(user);
+    });
 });
 
 // router.get('/:id', function(req,res){
@@ -44,6 +46,17 @@ router.get('/:id', isLoggedIn, function(req, res) {
 
 // CREATE NEW USER
     //PROCESS SIGNUP FORM
+router.post('/signup', passport.authenticate('local-signup', {
+
+    failureRedirect : '/'
+
+    }), function(req,res) { //redirect back to signup if there is an error
+
+
+        console.log('successfully brought to success route: ', req.user)
+        res.redirect('/' + req.user.id);
+        // res.send('sign up route')
+});
 
 //DELETE
 // router.delete('/:id', function(req, res) {

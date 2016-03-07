@@ -16,14 +16,14 @@ module.exports = function(passport) {
 
 // used to serialize the user for the session
 passport.serializeUser(function(user, done) {
-done(null, user.id);
+    done(null, user.id);
 });
 
 // used to deserialize the user
 passport.deserializeUser(function(id, done) {
-User.findById(id, function(err, user) {
-    done(err, user);
-});
+    User.findById(id, function(err, user) {
+        done(err, user);
+    });
 });
 
 // =========================================================================
@@ -42,6 +42,8 @@ function(req, email, password, done) {
 // User.findOne wont fire unless data is sent back
 process.nextTick(function() {
 
+    console.log('Passport signup running');
+
 // find a user whose email is the same as the forms email
 // we are checking to see if the user trying to login already exists
 User.findOne({ 'email' :  email }, function(err, user) {
@@ -54,6 +56,7 @@ User.findOne({ 'email' :  email }, function(err, user) {
         return done(null, false);
     } else {
 
+        console.log('User not found (good!), creating user . . . . . . . . ');
         // if there is no user with that email
         // create the user
         var newUser = new User();
@@ -66,9 +69,11 @@ User.findOne({ 'email' :  email }, function(err, user) {
         newUser.password = newUser.generateHash(password);
 
         // save the user
-        newUser.save(function(err) {    
+        newUser.save(function(err, nuser) {    
             if (err)
                 throw err;
+
+            console.log('User should be saved . . . . . : ', nuser);
             return done(null, newUser);
         });
     };

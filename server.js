@@ -34,7 +34,7 @@ var usersController = require('./controllers/users');
 require('./config/passport.js')(passport);
 
 
-app.use('/milkyway', usersController);
+app.use('/users', usersController);
 // app.get('/milkyway', function(req,res){
 // 	res.render('index.html');
 // });

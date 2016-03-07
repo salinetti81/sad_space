@@ -5,8 +5,11 @@ var app = angular.module('sadSpace', []);
 app.controller('SignUpController', ['$http', function($http){
     var controller = this;
     this.signUpData = {};
+
     this.signUp = function(){
-        console.log("SIGNUP function firing in app.js")
+        console.log("SIGNUP function firing in app.js");
+
+        console.log(this.signUpData);
 
         $http({
             method: 'POST',
@@ -19,7 +22,7 @@ app.controller('SignUpController', ['$http', function($http){
                 controller.signUpData = {};
             },
             function(err){
-                console.log(err)
+                console.log(err);
             });       
 
     }; //<--signUp
