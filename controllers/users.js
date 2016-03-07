@@ -9,27 +9,28 @@ router.get('/', function(req,res) {
     res.render('index.html');
 });
 
-router.get('/:id', function(req,res){
-    res.locals.login = req.isAuthenticated();
-     User.find(function(err, data) {
-      res.send('index.html', {users: data});
-      console.log(err);
-  });
-});
+// router.get('/:id', function(req,res){
+//     res.locals.login = req.isAuthenticated();
+//      User.find(function(err, data) {
+//       res.send('index.html', {user: data});
+//       console.log(err);
+//   });
+// });
+
 
 //JSON
-router.get('/json', function(req, res) {
-    User.find(function(err, users) {
-        res.send(users);
-    });
-});
+// router.get('/json', function(req, res) {
+//     User.find(function(err, users) {
+//         res.send(users);
+//     });
+// });
 
 //SINGLE JSON 
-router.get('/:id/json', function(req, res) {
-    User.findById(req.params.id, function(err, user) {
-        res.send(user);
-    });
-});
+// router.get('/:id/json', function(req, res) {
+//     User.findById(req.params.id, function(err, user) {
+//         res.send(user);
+//     });
+// });
 
 //LOGOUT
 router.get('/logout', function(req, res) {
@@ -56,9 +57,10 @@ router.get('/:id', isLoggedIn, function(req, res) {
 // CREATE NEW USER
     //PROCESS SIGNUP FORM
 router.post('/signup', passport.authenticate('local-signup', {
-    
-    failureRedirect : '/'}), function(req,res) { //redirect back to signup if there is an error
-        res.redirect('/' + req.user.id);
+    failureRedirect : '/'
+    }), function(req,res) { //redirect back to signup if there is an error
+        // res.redirect('/' + req.user.id);
+        res.send('sign up route')
         console.log(user);
 });
 
@@ -95,3 +97,4 @@ function isLoggedIn(req, res, next) {
 } ;
 
 module.exports = router;
+

@@ -4,7 +4,7 @@ var app = angular.module('sadSpace', []);
 
 app.controller('SignUpController', ['$http', function($http){
     var controller = this;
-
+    this.signUpData = {};
     this.signUp = function(){
         console.log("SIGNUP function firing in app.js")
 
@@ -15,7 +15,8 @@ app.controller('SignUpController', ['$http', function($http){
         }).then(
             //success
             function(response){
-                console.log(response)
+                console.log(response);
+                controller.signUpData = {};
             },
             function(err){
                 console.log(err)

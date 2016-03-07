@@ -40,5 +40,5 @@ app.use('/milkyway', usersController);
 // });
 
 app.listen(port, function(){
-	console.log("Remember to drink water today! Let's make something cool today!");
+	console.log("Running");
 });
