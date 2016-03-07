@@ -1,35 +1,33 @@
-<html>
-<head>
-	<title></title>
+<!DOCTYPE html>
+<html ng-app='sadSpace'>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</head>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-</head>
-<body >
-<h1>The Universe is at your finger tips</h1>
+<body ng-conttroller='MainController'>
 
-<div class= "passport">
-<h4>Signup</h4>
-
+<div class="passport">
+	<h4>Signup</h4>
 <!-- form action route needs to change -->
-<form action="/" method="POST">
-	<input type="text" name="username" placeholder="username">
-	<input type="text" name="email" placeholder="email">
-	<input type="text" name="password" placeholder="password">
-	<input type="submit">
-</form>
+	<form action="/milkyway/signup" method="POST">
+		<input type="text" name="username" placeholder="username">
+		<input type="text" name="email" placeholder="email">
+		<input type="text" name="password" placeholder="password">
+		<input type="submit">
+	</form>
 
-<h4>Login</h4>
-<form action="/" method="POST">
-	<input type="text" name="email" placeholder="email">
-	<input type="text" name="password" placeholder="password">
-	<input type="submit">
-</form>
+	<h4>Login</h4>
+
+	<form action="/milkyway/login" method="POST">
+		<input type="text" name="email" placeholder="email">
+		<input type="text" name="password" placeholder="password">
+		<input type="submit">
+	</form>
 </div>  <!-- ends passport div -->
+	</body>
 
+</html>	
 
-<body>
-
-</body>
-</html>
