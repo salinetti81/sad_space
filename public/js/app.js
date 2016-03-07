@@ -114,19 +114,37 @@ app.controller('PlanetController', ['$http', function($http){
     
     controller.displayContent = false;
 
+    
+
+
+
+
+
+
+
     this.getData = function(name){
-        var planet = name;
+        var clickedPlanet = name;
         controller.displayContent = true;
-        console.log(controller.displayContent, "displayContent")
-        console.log(planet ,"here");
+        console.log(controller.displayContent, "displayContent");
+        console.log(clickedPlanet ,"here");
 
         $http({
-            url: '/milkyway/users',
+            url: '/seed/data',
             method: 'GET',
         }).then(
         //success
-        function(results){
-            console.log(results);
+        function(results){      
+          var planets = results.data;
+          console.log(planets);
+          console.log(planets[0].name);
+
+          for (var i = 0; i < planets.length; i++) {
+            if(planets[i].name === clickedPlanet) {
+              return console.log('you win', planets[i].name);
+            }
+
+          };
+
         }),
         //error
         function(err){
