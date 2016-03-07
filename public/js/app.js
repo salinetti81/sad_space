@@ -9,54 +9,54 @@ app.controller('MainController', ['$http', function($http){
 
 	this.user = {}
 
-this.signUp = function(){
-	console.log("SIGNUP function firing in app.js");
+  this.signUp = function(){
+  	console.log("SIGNUP function firing in app.js");
 
-	console.log(this.signUpData);
+  	console.log(this.signUpData);
 
-$http({
-	method: 'POST',
-	url: '/users/signup',
-	data: this.signUpData
-}).then(
-	//success
-	function(response){
-		console.log(response);
-		controller.isLoggedIn = true;
-		controller.signUpData = {};
-		controller.user = response.data;
-	},
-	function(err){
-		console.log(err);
-	});       
+  $http({
+  	method: 'POST',
+  	url: '/users/signup',
+  	data: this.signUpData
+  }).then(
+  	//success
+  	function(response){
+  		console.log(response);
+  		controller.isLoggedIn = true;
+  		controller.signUpData = {};
+  		controller.user = response.data;
+  	},
+  	function(err){
+  		console.log(err);
+  	});       
 
-}; //<--signUp
+  }; //<--signUp
 
 
-this.logIn = function(){
-	console.log("LOGIN function firing in app.js")
+  this.logIn = function(){
+  	console.log("LOGIN function firing in app.js")
 
-	$http({
+  	$http({
 
-		method: 'GET',
-		url: '/',
-		data: this.loginData
-	}).then(
-	//success
-	function(response){
-		console.log('this is the response',response.config.data);
-		controller.isLoggedIn = true;
-		// controller.logInData = {};
-		controller.user = response.config.data;
-		console.log(controller.user)
+  		method: 'GET',
+  		url: '/',
+  		data: this.loginData
+  	}).then(
+  	//success
+  	function(response){
+  		console.log('this is the response',response.config.data);
+  		controller.isLoggedIn = true;
+  		// controller.logInData = {};
+  		controller.user = response.config.data;
+  		console.log(controller.user)
 
-	},
-	function(err){
-		console.log(err)
-	});
+  	},
+  	function(err){
+  		console.log(err)
+  	});
 
-}; //<--logIn
-
+  }; //<--logIn
+}]); //<---MainController
 
 
 app.controller('SignUpController', ['$http', function($http){
