@@ -35,22 +35,35 @@
 
 
 		<div id="planets-container" ng-controller="PlanetController as planetCtrl">
-			<div id="sun" ng-click=""></div>
-			<div id="mercury" ng-click=""></div>
-			<div id="venus" ng-click=""></div>
-			<div id="earth" ng-click=""></div>
-			<div id="mars" ng-click="planetCtrl.getExtract($event)"></div>
-			<div id="jupiter" ng-click=""></div>
-			<div id="saturn" ng-click=""></div>
-			<div id="uranus" ng-click=""></div>
-			<div id="neptune" ng-click=""></div>
-			<div id="pluto" ng-click=""></div>
+			<div id="sun" ng-click="planetCtrl.getData('sun')"></div>
+			<div id="mercury" ng-click="planetCtrl.getData('mercury')"></div>
+			<div id="venus" ng-click="planetCtrl.getData('venus')"></div>
+			<div id="earth" ng-click="planetCtrl.getData('earth')"></div>
+			<div id="mars" ng-click="planetCtrl.getExtract('mars')"></div>
+			<div id="jupiter" ng-click="planetCtrl.getData('jupiter')"></div>
+			<div id="saturn" ng-click="planetCtrl.getData('saturn')"></div>
+			<div id="uranus" ng-click="planetCtrl.getData('uranus')"></div>
+			<div id="neptune" ng-click="planetCtrl.getData('neptune')"></div>
+			<div id="pluto" ng-click="planetCtrl.getData('pluto')"></div>
+		
+
+
+			<div id="info-box" ng-class="(planetCtrl.getData)?'active':'' ">
+				<h1>{{planetCtrl.name}}</h1>
+				<ul>
+					<li>Moons: {{planetCtrl.moons}}</li>
+					<li>Distance From Sun: {{planetCtrl.distanceFromSun}} 10(6) km</li>
+					<li>Mass: {{planetCtrl.mass}} 10(24)kg</li>
+					<li>Ring System? {{planetCtrl.ringSystem}} 10(24)kg</li>
+					<li>Length of Day: {{planetCtrl.lengthOfDay}} hours</li>
+					<li>Orbital Period: {{planetCtrl.orbitalPeriod}} days</li>
+				</ul>
+			</div>
+
 		</div>
 
-<!-- 		this will be the info-box for clicked info -->
-		<div id="">
-			<h1>{{planetCtrl.extract}}</h1>
-		</div>
+
+
 
 	</body>
 </html>	
