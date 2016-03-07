@@ -30,5 +30,5 @@ app.use('/milkyway', usersController);
 // });
 
 app.listen(port, function(){
-	console.log('Today will be a good day');
+	console.log("Remember to drink water today! Let's make something cool today!");
 });

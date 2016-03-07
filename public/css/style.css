@@ -69,12 +69,15 @@ button:hover {
 /*===========================*/
 
 #planets-container {
-		height: 70%; width: 100%;
+		height: 500px; width: 100%;
+		border: 1px solid grey;
 }
 
 #sun {
 	background-image: url('http://orig12.deviantart.net/c7d3/f/2013/292/7/5/sun_transparent_background_sun_world_by_royalblueiv-d6r3ze7.png');
-	height: 15%; width: 15%;
+	background-size: 100%;
+	height: 18%; width: 12%;
+	margin: 22% auto;
 }
 
 #mercury {
