@@ -20,18 +20,18 @@ h1 {
 	display: inline;
 }
 
-ul {
+nav > ul {
 	display: inline;
 	float: right;
 }
 
-li {
+nav > ul > li {
 	display: inline;
 	padding: 1em;
 	opacity: .6;
 }
 
-li:hover {
+nav > ul > li:hover {
 	opacity: .9;
 }
 
@@ -70,7 +70,7 @@ button:hover {
 }
 
 /*===========================*/
-
+/*PLANETS*/
 #planets-container {
 		height: 85%; width: 100%;
 /*		border: 1px solid grey;*/
@@ -178,22 +178,29 @@ button:hover {
 	z-index: 10;
 }
 
+/*===========================*/
+
 #info-box {
 	display: none;
 }
 
 #info-box.active {
 	display: block;
+	position: absolute;
+	margin: -52% 34%;
+	padding-right: 2em;
 	background: #4B4B65;
-	width: 30%;
+	height: 14em; width: 30%;
 	border: 1px solid white;
-	text-align: center;
+	border-radius: 10px;
 	opacity: .9;
-	margin: 0 auto;
 	padding-bottom: 1.5em;
 	z-index: 99;
+	box-shadow: 2px 4px 50px 19px #010104;
 }
 
-
+ul {
+	list-style: none;
+}
 
 
