@@ -40,11 +40,13 @@ nav > ul > li:hover {
 /*SIGN IN BOX*/
 
 #signin {
-
+	display: none;
 }
+
 
 #signin.active {
 /*	margin: 52% 34%;*/
+	display: block;
 	background: #4B4B65;
 	height: 40%; width: 30%;
 	border: 1px solid white;
@@ -55,23 +57,24 @@ nav > ul > li:hover {
 	z-index: 99;
 }
 
-input {
+
+#signin > form > input {
 	height: 30px; width: 45%;
 	background: #9191AD;
 	margin: .5em;
 }
 
-input:hover {
+#signin > form > input:hover {
 	background: #4B4B65;
 }
 
-button {
+#signin > form > button {
 	height: 30px; width: 106px;
 	background: #9191AD;
 	margin: .5em;
 }
 
-button:hover {
+#signin > form > button:hover {
 	background: #4B4B65;
 }
 
@@ -189,6 +192,7 @@ button:hover {
 	display: none;
 }
 
+
 #info-box.active {
 	display: block;
 	position: absolute;
@@ -206,6 +210,7 @@ button:hover {
 	transition-duration: 1s;
 	transition-timing-function: easeInOutQuart;
 }
+
 
 ul {
 	list-style: none;
