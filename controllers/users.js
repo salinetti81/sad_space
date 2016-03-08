@@ -93,7 +93,9 @@ if (req.isAuthenticated())
   res.redirect('/');
 } ;
 
-
+router.get('/', function(req,res){
+  res.send('hello');
+})
 
 
 

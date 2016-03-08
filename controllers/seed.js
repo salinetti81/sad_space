@@ -7,7 +7,7 @@ var newPlanet = [
 	{name:'Venus', moon:'0', distanceFromSun:108.2, mass:4.87, ringSystem:false, lengthOfDay:2802.0, orbitalPeriod:224.7},
 	{name:'Earth', moon:'1', distanceFromSun:	149.6, mass:5.97, ringSystem:false, lengthOfDay:24, orbitalPeriod:365.2},
 	{name:'Mars', moon:'2', distanceFromSun:227.9 , mass:0.642, ringSystem:false, lengthOfDay:24.7, orbitalPeriod:249.2},
-	{name:'JUPITER ', moon:'67', distanceFromSun:778.6 , mass:1898, ringSystem:true, lengthOfDay:9.9, orbitalPeriod:4331},
+	{name:'Jupiter', moon:'67', distanceFromSun:778.6 , mass:1898, ringSystem:true, lengthOfDay:9.9, orbitalPeriod:4331},
 	{name:'Saturn', moon:'62', distanceFromSun:1433.5, mass:568, ringSystem:true, lengthOfDay:10.7, orbitalPeriod:10747},
 	{name:'Uranus', moon:'27', distanceFromSun:2872.5, mass:86.8, ringSystem:true, lengthOfDay:17.2, orbitalPeriod:30589},
 	{name:'Neptune', moon:'14', distanceFromSun:4495.1, mass:102, ringSystem:true, lengthOfDay:16.1, orbitalPeriod:59800},
