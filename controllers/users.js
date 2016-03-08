@@ -28,11 +28,9 @@ router.get('/', function(req,res) {
 //=================================================
 // AUTHENTICATION
 //=================================================
-//LOGOUT
-router.get('/logout', function(req, res) {
-  req.logout();
-  res.redirect('/users');
-});
+
+
+
 
 //SHOW PAGE FOR WHEN USER IS LOGGED IN
 router.get('/:id', isLoggedIn, function(req, res) {
@@ -55,7 +53,7 @@ User.find({}, function(err, users) {
 
 //CREATE NEW USER
 router.post('/signup', passport.authenticate('local-signup', {
-  failureRedirect : '/boatman'
+  failureRedirect : '/'
 
   }), function(req,res) { //redirect back to signup if there is an error
     console.log('successfully brought to success route: ', req.user)
@@ -63,6 +61,11 @@ router.post('/signup', passport.authenticate('local-signup', {
     // res.send('sign up route')
 });
 
+//logout
+router.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/');
+});
 
 
 //DELETE USER
@@ -89,6 +92,8 @@ if (req.isAuthenticated())
 //if user doesn't exists, go here
   res.redirect('/');
 } ;
+
+
 
 
 

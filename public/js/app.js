@@ -5,6 +5,7 @@ app.controller('MainController', ['$http', function($http){
 	var controller = this;
 	this.signUpData = {};
 	this.logInData = {};
+  this.logOutData = {};
 	this.isLoggedIn = null;
 	this.user = {}
 
@@ -62,55 +63,79 @@ app.controller('MainController', ['$http', function($http){
   		console.log(err)
   	});   
   }; //<--logIn
+  
+    this.logOut = function(){
+    console.log("LOGOUT function is working")
+
+    $http({
+      method: 'GET',
+      url: '/users/login',
+      data: this.logOutData
+    }).then(
+    //success
+    function(response){
+      console.log('this is the response',response.config.data);
+      controller.isLoggedIn = false;
+    
+      controller.user = {};
+      console.log(controller.user)
+
+    },
+    function(err){
+      console.log(err)
+    });
+    controller.displayContent = false;
+  }; //<--logOut
+
 }]); //<---MainController
 
 
-app.controller('SignUpController', ['$http', function($http){
-    var controller = this;
-    this.signUpData = {};
-    this.isLoggedIn = false;
+// app.controller('SignUpController', ['$http', function($http){
+//     var controller = this;
+//     this.signUpData = {};
+//     this.isLoggedIn = false;
 
-    this.signUp = function(){
-        console.log("SIGNUP function firing in app.js");
+//     this.signUp = function(){
+//         console.log("SIGNUP function firing in app.js");
 
-        console.log(this.signUpData);
+//         console.log(this.signUpData);
 
-        if (!user)
-        $http({
-            method: 'POST',
-            url: '/users/signup',
-            data: this.signUpData
-        }).then(
-            //success
-            function(response){
-                console.log(response);
-                controller.isLoggedIn = true;
-                controller.signUpData = {};
-            },
-            function(err){
-                console.log(err);
-            });       
+      
+//         $http({
+//             method: 'POST',
+//             url: '/users/signup',
+//             data: this.signUpData
+//         }).then(
+//             //success
+//             function(response){
+//                 console.log(response);
+//                 controller.isLoggedIn = true;
+//                 controller.signUpData = {};
+//             },
+//             function(err){
+//                 console.log(err);
+//             });       
 
-    }; //<--signUp
-    if (user)
-    this.logIn = function(){
-        console.log("LOGIN function firing in app.js")
+//     }; //<--signUp
+    
+//     this.logIn = function(){
+//         console.log("LOGIN function firing in app.js")
 
-        $http({
-            method: 'POST',
-            url: '/users/login',
-            data: this.loginData
-        }).then(
-        //success
-        function(response){
-            console.log(response)
-        },
-        function(err){
-            console.log(err)
-        });
+//         $http({
+//             method: 'POST',
+//             url: '/users/login',
+//             data: this.loginData
+//         }).then(
+//         //success
+//         function(response){
+//             console.log(response)
+//         },
+//         function(err){
+//             console.log(err)
+//         });
 
-    }; //<--logIn
-}]);
+//     }; //<--logIn
+// }]);
 
 
 
