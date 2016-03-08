@@ -4,7 +4,9 @@ var express     = require('express'),
     User        = require('../models/userModel');
 
 
-//Index
+
+
+//INDEX
 router.get('/', function(req,res) {
   User.find(function(err, user) {
       res.send(user);
@@ -20,11 +22,13 @@ router.get('/', function(req,res) {
 // });
 
 
-//LOGOUT
-router.get('/logout', function(req, res) {
-  req.logout();
-  res.redirect('/users');
-});
+
+
+
+//=================================================
+// AUTHENTICATION
+//=================================================
+
 
 
 
@@ -44,10 +48,12 @@ User.find({}, function(err, users) {
   });
 });
 
-// CREATE NEW USER
-  //PROCESS SIGNUP FORM
+
+
+
+//CREATE NEW USER
 router.post('/signup', passport.authenticate('local-signup', {
-  failureRedirect : '/boatman'
+  failureRedirect : '/'
 
   }), function(req,res) { //redirect back to signup if there is an error
     console.log('successfully brought to success route: ', req.user)
@@ -55,7 +61,14 @@ router.post('/signup', passport.authenticate('local-signup', {
     // res.send('sign up route')
 });
 
-//DELETE
+//logout
+router.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/');
+});
+
+
+//DELETE USER
 // router.delete('/:id', function(req, res) {
 // console.log('A user was deleted');
 // var deleteUser = req.params.id;
@@ -70,7 +83,8 @@ router.post('/signup', passport.authenticate('local-signup', {
 // });
 
 
-//defines isLoggedIn
+
+//USER LOGGED IN
 function isLoggedIn(req, res, next) {
 //if user exists, do this
 if (req.isAuthenticated())
@@ -78,6 +92,14 @@ if (req.isAuthenticated())
 //if user doesn't exists, go here
   res.redirect('/');
 } ;
+
+
+
+
+
+//===============================================
+
+
 
 module.exports = router;
 

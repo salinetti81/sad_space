@@ -1,8 +1,6 @@
-var mongoose = require('mongoose');
-var express = require('express');
-var router = express.Router();
-
-var Planet = require('../models/planetsModel.js');
+var mongoose 	= require('mongoose'),
+		router 		= require('express').Router(),
+		Planet 		= require('../models/planetsModel.js');
 
 var newPlanet = [
 	{name:'Mercury', moons:'0', distanceFromSun:57.9, mass:0.330, ringSystem:false, lengthOfDay:4222.6, orbitalPeriod:88.0},
@@ -25,9 +23,18 @@ router.get('/', function(req, res) {
 			res.send('Error seeding database');
 		} else {
 			console.log('SEED EXECUTED');
-			res.redirect('/')
+			res.redirect('/');
 		}
 	});
 });
 
-	module.exports = router;
+//find seed data
+router.get('/data', function(req,res){
+  Planet.find({}, function(err,data){
+    res.send(data);
+    console.log(data);
+  })
+});
+
+
+module.exports = router;

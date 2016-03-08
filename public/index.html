@@ -13,7 +13,7 @@
 	
 
 
-<!-- 		<div id="signin" ng-if="ctrl.isLoggedIn === null">
+		<div id="signin" ng-class="ctrl.displayContent ? 'active':'disabled' ">
 			<h4>Signup</h4>
 
 			<form ng-submit="ctrl.signUp()">
@@ -30,34 +30,34 @@
 				<input type="text" placeholder="password" ng-model="ctrl.logindData.password"><br/>
 				<button type="submit">Login</button>
 			</form>
-		</div> -->
+		</div>
 
 
 
 		<div id="planets-container" ng-controller="PlanetController as planetCtrl">
 			
-			<div id="sun" ng-click="planetCtrl.getData('sun')"></div>
-			<div id="mercury" ng-click="planetCtrl.getData('mercury')"></div>
-			<div id="venus" ng-click="planetCtrl.getData('venus')"></div>
-			<div id="earth" ng-click="planetCtrl.getData('earth')"></div>
-			<div id="mars" ng-click="planetCtrl.getExtract('mars')"></div>
-			<div id="jupiter" ng-click="planetCtrl.getData('jupiter')"></div>
-			<div id="saturn" ng-click="planetCtrl.getData('saturn')"></div>
-			<div id="uranus" ng-click="planetCtrl.getData('uranus')"></div>
-			<div id="neptune" ng-click="planetCtrl.getData('neptune')"></div>
-			<div id="pluto" ng-click="planetCtrl.getData('pluto')"></div>
+			<div id="sun" ng-click="planetCtrl.getData('Sun')"></div>
+			<div id="mercury" ng-click="planetCtrl.getData('Mercury')"></div>
+			<div id="venus" ng-click="planetCtrl.getData('Venus')"></div>
+			<div id="earth" ng-click="planetCtrl.getData('Earth')"></div>
+			<div id="mars" ng-click="planetCtrl.getExtract('Mars')"></div>
+			<div id="jupiter" ng-click="planetCtrl.getData('Jupiter')"></div>
+			<div id="saturn" ng-click="planetCtrl.getData('Saturn')"></div>
+			<div id="uranus" ng-click="planetCtrl.getData('Uranus')"></div>
+			<div id="neptune" ng-click="planetCtrl.getData('Neptune')"></div>
+			<div id="pluto" ng-click="planetCtrl.getData('Pluto')"></div>
 		
 
 
-			<div id="info-box" ng-class="planetCtrl.displayContent ? 'active':'disabled' ">
-				<h1>{{planetCtrl.name}}</h1>
+			<div id="info-box" ng-class="planetCtrl.displayContent ? 'active':'disabled' " ng-click="planetCtrl.leaveInfoBox()">
+				<h1>{{planetCtrl.planet.name}}</h1>
 				<ul>
-					<li>Moons: {{planetCtrl.moons}}</li>
-					<li>Distance From Sun: {{planetCtrl.distanceFromSun}} 10(6) km</li>
-					<li>Mass: {{planetCtrl.mass}} 10(24)kg</li>
-					<li>Ring System? {{planetCtrl.ringSystem}} 10(24)kg</li>
-					<li>Length of Day: {{planetCtrl.lengthOfDay}} hours</li>
-					<li>Orbital Period: {{planetCtrl.orbitalPeriod}} days</li>
+					<li>Moons: {{planetCtrl.planet.moons[0]}}</li>
+					<li>Distance From Sun: {{planetCtrl.planet.distanceFromSun}} 10(6) km</li>
+					<li>Mass: {{planetCtrl.planet.mass}} 10(24)kg</li>
+					<li>Ring System? {{planetCtrl.planet.ringSystem | yesNo}} 10(24)kg</li>
+					<li>Length of Day: {{planetCtrl.planet.lengthOfDay}} hours</li>
+					<li>Orbital Period: {{planetCtrl.planet.orbitalPeriod}} days</li>
 				</ul>
 			</div>
 

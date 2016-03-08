@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 
 var planetSchema = mongoose.Schema({
     name: String,
-    moons: [String],
+    moons: Number,
     distanceFromSun: Number,
     mass: Number,
     ringSystem: Boolean,
