@@ -6,8 +6,15 @@ app.controller('MainController', ['$http', function($http){
 	this.signUpData = {};
 	this.logInData = {};
 	this.isLoggedIn = null;
-
 	this.user = {}
+
+  controller.displayContent = false;
+
+  this.revealLogin = function(){
+    controller.displayContent = true;
+  };
+
+
 
   this.signUp = function(){
   	console.log("SIGNUP function firing in app.js");
@@ -29,7 +36,7 @@ app.controller('MainController', ['$http', function($http){
   	function(err){
   		console.log(err);
   	});       
-
+   controller.displayContent = false;
   }; //<--signUp
 
 
@@ -54,7 +61,7 @@ app.controller('MainController', ['$http', function($http){
   	function(err){
   		console.log(err)
   	});
-
+    controller.displayContent = false;
   }; //<--logIn
 }]); //<---MainController
 
