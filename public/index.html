@@ -49,7 +49,7 @@
 		
 
 
-			<div id="info-box" ng-class="planetCtrl.displayContent ? 'active':'disabled' ">
+			<div id="info-box" ng-class="planetCtrl.displayContent ? 'active':'disabled' " ng-click="planetCtrl.leaveInfoBox()">
 				<h1>{{planetCtrl.planet.name}}</h1>
 				<ul>
 					<li>Moons: {{planetCtrl.planet.moons[0]}}</li>

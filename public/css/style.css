@@ -197,6 +197,9 @@ button:hover {
 	padding-bottom: 1.5em;
 	z-index: 99;
 	box-shadow: 2px 4px 50px 19px #010104;
+	transition-property: 100%;
+	transition-duration: 1s;
+	transition-timing-function: easeInOutQuart;
 }
 
 ul {

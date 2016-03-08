@@ -148,10 +148,14 @@ app.controller('PlanetController', ['$http', function($http){
             console.log(err);
         };
 
-
     }; //<--getExtract
 
-}]);
+    this.leaveInfoBox = function() {
+      controller.displayContent = false;
+
+    } //<---leaveInfoBox
+
+}]); //<--PlanetController
 
 
 
