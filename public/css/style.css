@@ -14,24 +14,25 @@ header {
 	padding: 1em;
 	opacity: .8;
 	border-bottom: 1px solid grey;
+	box-shadow: 2px 4px 50px 19px #010104;
 }
 
 h1 {
 	display: inline;
 }
 
-ul {
+nav > ul {
 	display: inline;
 	float: right;
 }
 
-li {
+nav > ul > li {
 	display: inline;
 	padding: 1em;
 	opacity: .6;
 }
 
-li:hover {
+nav > ul > li:hover {
 	opacity: .9;
 }
 
@@ -39,13 +40,18 @@ li:hover {
 /*SIGN IN BOX*/
 
 #signin {
+
+}
+
+#signin.active {
+/*	margin: 52% 34%;*/
 	background: #4B4B65;
 	height: 40%; width: 30%;
 	border: 1px solid white;
 	text-align: center;
 	opacity: .9;
-	margin: 0 auto;
 	padding-bottom: 1.5em;
+	box-shadow: 2px 4px 50px 19px #010104;
 	z-index: 99;
 }
 
@@ -70,7 +76,7 @@ button:hover {
 }
 
 /*===========================*/
-
+/*PLANETS*/
 #planets-container {
 		height: 85%; width: 100%;
 /*		border: 1px solid grey;*/
@@ -177,22 +183,32 @@ button:hover {
 	z-index: 10;
 }
 
+/*===========================*/
+
 #info-box {
 	display: none;
 }
 
 #info-box.active {
 	display: block;
+	position: absolute;
+	margin: -52% 34%;
+	padding-right: 2em;
 	background: #4B4B65;
-	width: 30%;
+	height: 14em; width: 30%;
 	border: 1px solid white;
-	text-align: center;
+	border-radius: 10px;
 	opacity: .9;
-	margin: 0 auto;
 	padding-bottom: 1.5em;
 	z-index: 99;
+	box-shadow: 2px 4px 50px 19px #010104;
+	transition-property: 100%;
+	transition-duration: 1s;
+	transition-timing-function: easeInOutQuart;
 }
 
-
+ul {
+	list-style: none;
+}
 
 
