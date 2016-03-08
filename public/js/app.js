@@ -45,7 +45,6 @@ app.controller('MainController', ['$http', function($http){
   	console.log("LOGIN function firing in app.js")
 
   	$http({
-
   		method: 'GET',
   		url: '/',
   		data: this.loginData

@@ -8,6 +8,7 @@ body {
 
 /*===========================*/
 /*HEADER*/
+
 header {
 	background: #181823;
 	color: white;
@@ -34,6 +35,9 @@ nav > ul > li {
 
 nav > ul > li:hover {
 	opacity: .9;
+	transition-property: 100%;
+	transition-duration: 1s;
+	transition-timing-function: easeInOutQuart;
 }
 
 /*===========================*/
@@ -80,6 +84,7 @@ nav > ul > li:hover {
 
 /*===========================*/
 /*PLANETS*/
+
 #planets-container {
 		height: 85%; width: 100%;
 /*		border: 1px solid grey;*/
@@ -91,20 +96,22 @@ nav > ul > li:hover {
 	background-repeat: no-repeat;
 	padding-bottom: 12%;
 	width: 12%;
-	margin-top: 4%;
-	margin-left: 50%;
-	margin-right: 20%;
-	z-index: 1;
+	margin-top: 16%;
+	margin-left: 43%;
+	margin-right: 21%;
+	z-index: 9;
 }
 
 #mercury {
 	background-image: url('http://www.veryicon.com/icon/ico/System/Qs%20Vista%20Ready%20Icons/QsMercury.ico');
 	background-size: 100%;
 	background-repeat: no-repeat;
-	width: 6%;
-	padding-bottom: 6%;
+	width: 5%;
+	padding-bottom: 5%;
 	margin-left: 45%;
-	z-index: 2;
+	z-index: 10;
+	position: absolute;
+	animation: mercuryOrbit 5s linear infinite;
 }
 
 #venus {
@@ -115,6 +122,8 @@ nav > ul > li:hover {
 	padding-bottom: 7%;
 	margin-left: 40%;
 	z-index: 3;
+	position: absolute;
+	animation: venusOrbit 7s linear infinite;
 }
 
 #earth {
@@ -123,8 +132,10 @@ nav > ul > li:hover {
 	background-repeat: no-repeat;
 	width: 6%;
 	padding-bottom: 6%;
-	margin-left: 35%;
+	margin-left: 50%;
 	z-index: 4;
+	position: absolute;
+	animation: earthOrbit 8s linear infinite;
 }
 
 #mars {
@@ -133,18 +144,22 @@ nav > ul > li:hover {
 	background-repeat: no-repeat;
 	width: 6%;
 	padding-bottom: 6%;
-	margin-left: 30%;
+	margin-left: 50%;
 	z-index: 5;
+	position: absolute;
+	animation: marsOrbit 7s linear infinite;
 }
 
 #jupiter {
 	background-image: url('http://www.zaxtor.net/jupiter.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
-	width: 7%;
-	padding-bottom: 7%;
-	margin-left: 25%;
+	width: 8%;
+	padding-bottom: 8%;
+	margin-left: 50%;
 	z-index: 6;
+	position: absolute;
+	animation: jupiterOrbit 5s linear infinite;
 }
 
 #saturn {
@@ -153,8 +168,10 @@ nav > ul > li:hover {
 	background-repeat: no-repeat;
 	width: 7%;
 	padding-bottom: 7%;
-	margin-left: 20%;
+	margin-left: 50%;
 	z-index: 7;
+	position: absolute;
+	animation: saturnOrbit 8s linear infinite;
 }
 
 #uranus {
@@ -163,8 +180,10 @@ nav > ul > li:hover {
 	background-repeat: no-repeat;
 	width: 7%;
 	padding-bottom: 7%;
-	margin-left: 15%;
+	margin-left: 50%;
 	z-index: 8;
+	position: absolute;
+	animation: uranusOrbit 6s linear infinite;
 }
 
 #neptune {
@@ -173,8 +192,10 @@ nav > ul > li:hover {
 	background-repeat: no-repeat;
 	width: 7%;
 	padding-bottom: 7%;
-	margin-left: 10%;
+	margin-left: 50%;
 	z-index: 9;
+	position: absolute;
+	animation: neptuneOrbit 7s linear infinite;
 }
 
 #pluto {
@@ -183,11 +204,14 @@ nav > ul > li:hover {
 	background-repeat: no-repeat;
 	width: 4%;
 	padding-bottom: 4%;
-	margin-left: 5%;
+	margin-left: 50%;
 	z-index: 10;
+	position: absolute;
+	animation: plutoOrbit 8s linear infinite;
 }
 
 /*===========================*/
+/*INFO BOX*/
 
 #info-box {
 	display: none;
@@ -197,7 +221,7 @@ nav > ul > li:hover {
 #info-box.active {
 	display: block;
 	position: absolute;
-	margin: -52% 34%;
+	margin: -15% 34%;
 	padding-right: 2em;
 	background: #4B4B65;
 	height: 14em; width: 30%;
@@ -217,7 +241,67 @@ ul {
 	list-style: none;
 }
 
-a {
-	color: white;
-	text-decoration: none;
+
+/*===========================*/
+/*KEYFRAMES FOR ORBITS*/
+
+@keyframes mercuryOrbit {
+    from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
 }
+
+@keyframes venusOrbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes earthOrbit {
+    from { transform: rotate(0deg) translateX(180px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(180px) rotate(-360deg); }
+}
+
+@keyframes marsOrbit {
+    from { transform: rotate(0deg) translateX(210px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(210px) rotate(-360deg); }
+}
+
+@keyframes jupiterOrbit {
+    from { transform: rotate(0deg) translateX(220px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(220px) rotate(-360deg); }
+}
+
+@keyframes saturnOrbit {
+    from { transform: rotate(0deg) translateX(240px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(240px) rotate(-360deg); }
+}
+
+@keyframes uranusOrbit {
+    from { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
+}
+
+@keyframes neptuneOrbit {
+    from { transform: rotate(0deg) translateX(270px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(270px) rotate(-360deg); }
+}
+
+@keyframes plutoOrbit {
+    from { transform: rotate(0deg) translateX(300px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+}
+
+
+
+
+
+/*===========================*/
+/*@MEDIA FOR PLANETS TO GO BEHIND SUN*/
+
+@media (min-width: 21%) {
+    #mercury {
+        border: red;
+        z-index: 8;
+    }
+}
+
+
