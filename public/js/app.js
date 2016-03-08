@@ -9,7 +9,9 @@ app.controller('MainController', ['$http', function($http){
 	this.user = {}
 
   controller.displayContent = false;
+  controller.displayLogIn = true;
   controller.displayLogOut = false;
+ 
 
   this.revealLogin = function(){
     controller.displayContent = true;
@@ -56,7 +58,9 @@ app.controller('MainController', ['$http', function($http){
   		controller.user = response.config.data;
   		console.log(controller.user)
       controller.displayContent = false;
+      controller.displayLogIn= false;
       controller.displayLogOut = true;
+      
   	},
   	function(err){
   		console.log(err)

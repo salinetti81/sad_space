@@ -3,7 +3,7 @@
 	<ul>
 		<li>Hi {{ctrl.user.name}}</li>
 		<li>Location: Milky Way</li>
-		<li ng-click="ctrl.revealLogin()">Login</li>
+		<li id="login" ng-click="ctrl.revealLogin()" ng-class="(ctrl.displayLogIn) ? 'active' : 'disabled' " >Login</li>
 		<!-- Logout should only exist on user sign in -->
 		<li id="logout" ng-click="ctrl.logOut()" ng-class="(ctrl.displayLogOut) ? 'active' : 'disabled' ">Logout</li>
 

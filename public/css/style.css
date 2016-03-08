@@ -26,6 +26,10 @@ nav > ul {
 	float: right;
 }
 
+#login.disabled {
+	display: none;
+}
+
 nav > ul > li {
 	display: inline;
 	padding: 1em;
@@ -34,6 +38,12 @@ nav > ul > li {
 
 nav > ul > li:hover {
 	opacity: .9;
+}
+
+
+
+#login.active {
+	display: inline;
 }
 
 #logout {
