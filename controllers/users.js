@@ -26,6 +26,8 @@ router.get('/logout', function(req, res) {
   res.redirect('/users');
 });
 
+
+
 //SHOW PAGE FOR WHEN USER IS LOGGED IN
 router.get('/:id', isLoggedIn, function(req, res) {
 //checks if the user is logged in
