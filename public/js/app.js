@@ -32,11 +32,11 @@ app.controller('MainController', ['$http', function($http){
   		controller.isLoggedIn = true;
   		controller.signUpData = {};
   		controller.user = response.data;
+      controller.displayContent = false;
   	},
   	function(err){
   		console.log(err);
   	});       
-   controller.displayContent = false;
   }; //<--signUp
 
 
@@ -56,12 +56,11 @@ app.controller('MainController', ['$http', function($http){
   		// controller.logInData = {};
   		controller.user = response.config.data;
   		console.log(controller.user)
-
+      controller.displayContent = false;
   	},
   	function(err){
   		console.log(err)
-  	});
-    controller.displayContent = false;
+  	});   
   }; //<--logIn
 }]); //<---MainController
 
@@ -166,6 +165,7 @@ app.controller('PlanetController', ['$http', function($http){
 
 
 
+//FILTERS BOOLEAN INTO YES/NO
 app.filter('yesNo', function() {
     return function(input) {
         return input ? 'Yes' : 'No';
