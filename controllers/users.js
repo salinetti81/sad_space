@@ -40,7 +40,7 @@ res.locals.usertrue = (req.user.is == req.params.id);
 User.find({}, function(err, users) {
     //finds single user
   User.findById(req.params.id, function(err, user) {
-    res.render('index.html', {
+    res.render('/', {
       user: user
          
       });
