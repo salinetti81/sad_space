@@ -50,14 +50,14 @@
 
 
 			<div id="info-box" ng-class="planetCtrl.displayContent ? 'active':'disabled' ">
-				<h1>{{planetCtrl.name}}</h1>
+				<h1>{{planetCtrl.planet.name}}</h1>
 				<ul>
-					<li>Moons: {{planetCtrl.moons}}</li>
-					<li>Distance From Sun: {{planetCtrl.distanceFromSun}} 10(6) km</li>
-					<li>Mass: {{planetCtrl.mass}} 10(24)kg</li>
-					<li>Ring System? {{planetCtrl.ringSystem}} 10(24)kg</li>
-					<li>Length of Day: {{planetCtrl.lengthOfDay}} hours</li>
-					<li>Orbital Period: {{planetCtrl.orbitalPeriod}} days</li>
+					<li>Moons: {{planetCtrl.planet.moons}}</li>
+					<li>Distance From Sun: {{planetCtrl.planet.distanceFromSun}} 10(6) km</li>
+					<li>Mass: {{planetCtrl.planet.mass}} 10(24)kg</li>
+					<li>Ring System? {{planetCtrl.planet.ringSystem}} 10(24)kg</li>
+					<li>Length of Day: {{planetCtrl.planet.lengthOfDay}} hours</li>
+					<li>Orbital Period: {{planetCtrl.planet.orbitalPeriod}} days</li>
 				</ul>
 			</div>
 

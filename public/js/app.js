@@ -110,16 +110,10 @@ app.controller('SignUpController', ['$http', function($http){
 
 app.controller('PlanetController', ['$http', function($http){
     var controller = this;
+    var planet = '';
     
     
     controller.displayContent = false;
-
-    
-
-
-
-
-
 
 
     this.getData = function(name){
@@ -131,16 +125,19 @@ app.controller('PlanetController', ['$http', function($http){
         $http({
             url: '/seed/data',
             method: 'GET',
+            // data: { name: clickedPlanet }
         }).then(
         //success
         function(results){      
-          var planets = results.data;
-          console.log(planets);
-          console.log(planets[0].name);
+          var planetData = results.data;
+          // console.log(planets);
+          console.log(results);
 
-          for (var i = 0; i < planets.length; i++) {
-            if(planets[i].name === clickedPlanet) {
-              return console.log('you win', planets[i].name);
+          for (var i = 0; i < planetData.length; i++) {
+            if(planetData[i].name === clickedPlanet) {
+              controller.planet = planetData[i]; 
+              console.log(controller.planet);
+              return controller.planet;
             }
 
           };
