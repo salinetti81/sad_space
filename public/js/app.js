@@ -87,6 +87,8 @@ app.controller('MainController', ['$http', function($http){
       console.log(err)
     });
     controller.displayContent = false;
+    controller.displayLogIn= true;
+    controller.displayLogOut = false;
 
   }; //<--logOut
 
