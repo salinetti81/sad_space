@@ -36,6 +36,13 @@ nav > ul > li:hover {
 	opacity: .9;
 }
 
+#logout {
+	display: none;
+}
+
+#logout.active {
+	display: inline;
+}
 /*===========================*/
 /*SIGN IN BOX*/
 

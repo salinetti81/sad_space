@@ -1,6 +1,5 @@
 var app = angular.module('sadSpace', []);
 
-
 app.controller('MainController', ['$http', function($http){
 	var controller = this;
 	this.signUpData = {};
@@ -10,12 +9,11 @@ app.controller('MainController', ['$http', function($http){
 	this.user = {}
 
   controller.displayContent = false;
+  controller.displayLogOut = false;
 
   this.revealLogin = function(){
     controller.displayContent = true;
   };
-
-
 
   this.signUp = function(){
   	console.log("SIGNUP function firing in app.js");
@@ -34,12 +32,12 @@ app.controller('MainController', ['$http', function($http){
   		controller.signUpData = {};
   		controller.user = response.data;
       controller.displayContent = false;
+      controller.displayLogOut = false;
   	},
   	function(err){
   		console.log(err);
   	});       
   }; //<--signUp
-
 
   this.logIn = function(){
   	console.log("LOGIN function firing in app.js")
@@ -53,11 +51,12 @@ app.controller('MainController', ['$http', function($http){
   	//success
   	function(response){
   		console.log('this is the response',response.config.data);
-  		controller.isLoggedIn = true;
+  		controller.isLoggedIn = !null;
   		// controller.logInData = {};
   		controller.user = response.config.data;
   		console.log(controller.user)
       controller.displayContent = false;
+      controller.displayLogOut = true;
   	},
   	function(err){
   		console.log(err)
@@ -79,12 +78,12 @@ app.controller('MainController', ['$http', function($http){
     
       controller.user = {};
       console.log(controller.user)
-
     },
     function(err){
       console.log(err)
     });
     controller.displayContent = false;
+
   }; //<--logOut
 
 }]); //<---MainController
