@@ -31,21 +31,68 @@
 		</div>
 
 
-
-		<div id="planets-container" ng-controller="PlanetController as planetCtrl">
-			
-			<div id="sun" ng-click="planetCtrl.getData('Sun')"></div>
-			<div id="mercury" ng-click="planetCtrl.getData('Mercury')"></div>
-			<div id="venus" ng-click="planetCtrl.getData('Venus')"></div>
-			<div id="earth" ng-click="planetCtrl.getData('Earth')"></div>
-			<div id="mars" ng-click="planetCtrl.getExtract('Mars')"></div>
-			<div id="jupiter" ng-click="planetCtrl.getData('Jupiter')"></div>
-			<div id="saturn" ng-click="planetCtrl.getData('Saturn')"></div>
-			<div id="uranus" ng-click="planetCtrl.getData('Uranus')"></div>
-			<div id="neptune" ng-click="planetCtrl.getData('Neptune')"></div>
-			<div id="pluto" ng-click="planetCtrl.getData('Pluto')"></div>
+		<div id="solar-system">
+			<div id="planets-container" ng-controller="PlanetController as planetCtrl">
 		
+				<div id="sun" ng-click="planetCtrl.getData('Sun')"></div>
 
+			
+				<div id="mercuryOrbit" class="orbit">
+					<div id="mercuryPos" class="positioning">
+						<div id="mercury" class="planet" ng-click="planetCtrl.getData('Mercury')"></div>
+					</div>
+				</div>
+
+				<div id="venusOrbit" class="orbit">
+					<div id="venusPos" class="positioning">
+						<div id="venus" class="planet" ng-click="planetCtrl.getData('Venus')"></div>
+					</div>
+				</div>
+		
+				<div id="earthOrbit" class="orbit">
+					<div id="earthPos" class="positioning">
+						<div id="earth" class="planet" ng-click="planetCtrl.getData('Earth')"></div>
+					</div>
+				</div>
+
+				<div id="marsOrbit" class="orbit">
+					<div id="marsPos" class="positioning">
+						<div id="mars" class="planet" ng-click="planetCtrl.getExtract('Mars')"></div>
+					</div>
+				</div>
+
+				<div id="jupiterOrbit" class="orbit">
+					<div id="jupiterPos" class="positioning">
+						<div id="jupiter" class="planet" ng-click="planetCtrl.getData('Jupiter')"></div>
+					</div>
+				</div>
+
+				<div id="saturnOrbit" class="orbit">
+					<div id="saturnPos" class="positioning">
+						<div id="saturn" class="planet" ng-click="planetCtrl.getData('Saturn')"></div>
+					</div>
+				</div>
+
+				<div id="uranusOrbit" class="orbit">
+					<div id="uranusPos" class="positioning">
+						<div id="uranus" class="planet" ng-click="planetCtrl.getData('Uranus')"></div>
+					</div>
+				</div>
+
+				<div id="neptuneOrbit" class="orbit">
+					<div id="neptunePos" class="positioning">
+						<div id="neptune" class="planet" ng-click="planetCtrl.getData('Neptune')"></div>
+					</div>
+				</div>
+			
+				<div id="plutoOrbit" class="orbit">
+					<div id="plutoPos" class="positioning">			
+						<div id="pluto" class="planet" ng-click="planetCtrl.getData('Pluto')"></div>	
+					</div>
+				</div>
+
+			</div>
+		</div>
 
 			<div id="info-box" ng-class="planetCtrl.displayContent ? 'active':'disabled' " ng-click="planetCtrl.leaveInfoBox()">
 				<h1>{{planetCtrl.planet.name}}</h1>

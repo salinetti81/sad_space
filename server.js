@@ -46,5 +46,7 @@ app.use('/users', usersController);
 // });
 
 app.listen(port, function(){
-	console.log("Running on port", port);
+
+	console.log("We've got this. Think sunshine. Think summer.");
+
 });
