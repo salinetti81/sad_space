@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='gameApp'>
+	<head>
+		<title></title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/games.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script type="text/javascript" src="js/gameapp.js"></script>
+	</head>
+
+	<body ng-controller="MainController as main"> 
+		<header ng-include src="'./partials/header.html' "></header>
+
+		<div id='planets-container'>
+			<div id='mercury' ng-click="main.currentPlanet = 'mercury'"></div>
+			<div id='venus' ng-click="main.currentPlanet = 'venus' "></div>
+			<div id='earth' ng-click="main.currentPlanet = 'earth'"></div>
+			<div id='mars'ng-click="main.currentPlanet = 'mars'"></div>
+			<div id='jupiter' ng-click="main.currentPlanet = 'jupiter'"></div>
+			<div id='saturn' ng-click="main.currentPlanet = 'saturn'"></div>
+			<div id='uranus' ng-click="main.currentPlanet = 'uranus'"></div>
+			<div id='neptune' ng-click="main.currentPlanet = 'neptune'"></div>
+			<div id='pluto'  ng-click="main.currentPlanet = 'pluto'"></div>
+		</div>	
+
+		<h2>{{main.currentPlanet}}</h2>
+
+			<div ng-if="main.currentPlanet === 'mercury'" ng-include src=" './partials/mercury.html' " ng-controller='VenusController as mercury'></div>
+			<div ng-if="main.currentPlanet === 'venus'" ng-include src=" './partials/venus.html' " ng-controller='VenusController as venus'></div>
+
+			<div ng-if="main.currentPlanet === 'earth'" ng-include src=" './partials/earth.html' " ng-controller='EarthController as earth'></div>
+
+			<div ng-if="main.currentPlanet === 'mars'" ng-include src=" './partials/mars.html' " ng-controller='MarsController as mars'></div>
+
+			<div ng-if="main.currentPlanet === 'jupiter'" ng-include src=" './partials/jupiter.html' " ng-controller='JupiterController as jupiter'></div>
+			<div ng-if="main.currentPlanet === 'saturn'" ng-include src=" './partials/saturn.html' " ng-controller='SaturnController as saturn'></div>
+
+			<div ng-if="main.currentPlanet === 'uranus'" ng-include src=" './partials/uranus.html' " ng-controller='UranusController as uranus'></div>
+
+			<div ng-if="main.currentPlanet === 'neptune'" ng-include src=" './partials/neptune.html' " ng-controller='NeptuneController as neptune'></div>
+
+			<div ng-if="main.currentPlanet === 'pluto'" ng-include src=" './partials/pluto.html' " ng-controller='PlutoController as pluto'></div>
+	</body>
+</html>	

@@ -30,6 +30,9 @@ app.use(function(req, res, next){
 	next();
 });
 
+var gamesController = require('./controllers/games.js');
+app.use('/games',gamesController);
+
 var usersController = require('./controllers/users');
 require('./config/passport.js')(passport);
 
@@ -43,5 +46,7 @@ app.use('/users', usersController);
 // });
 
 app.listen(port, function(){
-	console.log("Good morning beautiful people!");
+
+	console.log("We've got this. Think sunshine. Think summer.");
+
 });

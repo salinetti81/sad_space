@@ -75,7 +75,7 @@ nav > ul > li:hover {
 	opacity: .9;
 	padding-bottom: 1.5em;
 	box-shadow: 2px 4px 50px 19px #010104;
-	z-index: 99;
+	z-index: 99;	
 }
 
 
@@ -150,7 +150,6 @@ nav > ul > li:hover {
 	/*transform: rotateX(-90deg);*/
 	transform-style: preserve-3d;
 }
-
 #mercury {
 	z-index: 10;
 	background-image: url('http://www.veryicon.com/icon/ico/System/Qs%20Vista%20Ready%20Icons/QsMercury.ico');

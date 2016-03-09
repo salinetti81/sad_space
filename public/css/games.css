@@ -1,0 +1,184 @@
+body{
+	background-image: url(http://wallpapercave.com/wp/xX2GRj6.gif);
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	}
+header {
+	background: #181823;
+	color: white;
+	padding: 1em;
+	opacity: .8;
+	border-bottom: 1px solid grey;
+	box-shadow: 2px 4px 50px 19px #010104;
+}
+
+h1 {
+	display: inline;
+}
+
+nav > ul {
+	display: inline;
+	float: right;
+}
+
+nav > ul > li {
+	display: inline;
+	padding: 1em;
+	opacity: .6;
+}
+
+nav > ul > li:hover {
+	opacity: .9;
+}
+h2 {
+	color:white;
+}
+#planets-container {
+		height: 10%;
+		width: 100%;
+		margin-top: 1%;
+}
+#mercury {
+	background-image: url('http://www.veryicon.com/icon/ico/System/Qs%20Vista%20Ready%20Icons/QsMercury.ico');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 9%;
+	padding-bottom: 9%;
+	display: inline-block;
+	margin-right: .8%;	
+	/*margin-left: 45%;*/
+	/*z-index: 2;*/
+}
+
+#venus {
+	background-image: url('http://jplanets.sourceforge.net/images/venus.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 9%;
+	padding-bottom: 9.2%;	
+	display: inline-block;
+
+}
+
+#earth {
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/The_Earth_seen_from_Apollo_17_with_transparent_background.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 9.5%;
+	padding-bottom: 9.5%;
+	display: inline-block;	
+	/*margin-left: 35%;*/
+	/*z-index: 4;*/
+}
+
+#mars {
+	background-image: url('http://img3.wikia.nocookie.net/__cb20130916161813/factfinder/images/c/c5/Mars-1-.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 9.5%;
+	padding-bottom: 9.5%;
+	display: inline-block;
+	/*margin-left: 30%;*/
+	/*z-index: 5;*/
+}
+
+#jupiter {
+	background-image: url('http://www.zaxtor.net/jupiter.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 10.2%;
+	padding-bottom: 10.2%;
+	display: inline-block;
+	/*margin-left: 25%;*/
+	/*z-index: 6;*/
+}
+
+#saturn {
+	background-image: url('http://www.zaxtor.net/Saturn.png');	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 13%;
+	padding-bottom: 11%;
+	display: inline-block;
+}
+
+#uranus {
+	background-image: url('http://3.bp.blogspot.com/-fWJM7KisZXk/T9YzvopmDzI/AAAAAAAAAq0/vDRoopnaVpg/s1600/uranus.png');	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 13%;
+	padding-bottom: 11.3%;
+	display: inline-block;
+	/*margin-top: 6%;*/
+
+}
+
+#neptune {
+	background-image: url('http://space-facts.com/wp-content/uploads/neptune-transparent-300x300.png');	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 12.7%;
+	padding-bottom: 11.3%;
+	display: inline-block;
+	
+}
+
+#pluto {
+	background-image: url('http://www.icone-gif.com/icone/png/planets/pluto.png');	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 10%;
+	padding-bottom: 10%;
+	display: inline-block;
+	/*margin-left: 0;*/
+}
+
+
+
+
+/*=============== venus css*/
+.fire {
+	width:25%;
+	margin:.5%;
+	height: 150px;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Mgn_p39146.png);
+	display: inline-block;
+	text-align: center;	
+	opacity: .9;
+}
+#clickBox{
+	float:right;
+	margin-right: 3%;
+	color: white;	
+	text-align: center;
+}
+#venus-board{
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: #2E0854;
+	opacity: .8;
+	width:80%;
+}
+#playBox {
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: #2E0854;
+	opacity: .8;
+	text-align: center;
+	width: 30%;
+	margin-left: 35%;
+}
+button {
+	background-color: #2E0854;
+	color:white;
+}
+
+/*================*/
+
+
+
+
+
+
+
