@@ -112,21 +112,31 @@ nav > ul > li:hover {
 	width: 100%;
 	padding-bottom: 100%;
 	border: 1px solid red;
- 	transform: rotateX(75deg);
 	transform-style: preserve-3d;
 	overflow: hidden;
 	margin-top: -20%;
 }
 
+.orbit {
+  position: absolute;
+/*  top: 50%;
+  left: 50%;*/
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: rotateX(75deg);
+  transform-style: preserve-3d;
+  
+}
 
 .planet {
 	position: absolute;
-	top: 50%;
-  left: 50%;
+/*	top: 50%;
+  left: 50%;*/
   background-size: 100%;
 	background-repeat: no-repeat;
 	transform-style: preserve-3d;
-	transform: rotateX(0deg);
+	transform: rotateX(-75deg);
+	animation: orbit 10 linear infinite;
 }
 
 #sun {
@@ -135,8 +145,8 @@ nav > ul > li:hover {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	padding-bottom: 12%;
-	width: 12%;
+	padding-bottom: 9%;
+	width: 9%;
 	margin-left: 50%;
 	margin-top: 50%;
 	/*transform: rotateX(-90deg);*/
@@ -220,17 +230,7 @@ nav > ul > li:hover {
 /*===========================*/
 /*ORBITS*/
 
-.orbit {
-  position: absolute;
-/*  top: 50%;
-  left: 50%;*/
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform-style: preserve-3d;
-  animation-name: orbit;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
+
 
 #mercuryOrbit.orbit {
   width: 10%;
@@ -263,15 +263,15 @@ nav > ul > li:hover {
 #jupiterOrbit.orbit {
 	width: 55%;
   height: 55%;
-  margin-top: 25%;
-  margin-left: 25%;
+  margin-top: 27%;
+  margin-left: 27%;
 }
 
 #saturnOrbit.orbit {
   width: 62%;
   height: 62%;
-  margin-top: 21%;
-  margin-left: 21%;
+  margin-top: 22%;
+  margin-left: 22%;
 }
 
 #uranusOrbit.orbit {
@@ -378,8 +378,12 @@ ul {
 }*/
 
 @keyframes orbit {
-  0% { transform: rotateZ(0deg); }
-  100% { transform: rotateZ(-360deg); }
+  0% {
+    transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  }
 }
 
 
@@ -387,11 +391,11 @@ ul {
 /*===========================*/
 /*@MEDIA FOR PLANETS TO GO BEHIND SUN*/
 
-@media (min-width: 21%) {
+/*@media (min-width: 21%) {
     #mercury {
         border: red;
         z-index: 8;
     }
-}
+}*/
 
 
