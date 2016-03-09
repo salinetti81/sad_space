@@ -43,5 +43,5 @@ app.use('/users', usersController);
 // });
 
 app.listen(port, function(){
-	console.log("Hey you. Think alcohol.");
+	console.log("Good morning beautiful people!");
 });
