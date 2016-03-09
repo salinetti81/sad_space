@@ -2,6 +2,7 @@ body{
 	background-image: url(http://wallpapercave.com/wp/xX2GRj6.gif);
 	padding: 0;
 	margin: 0;
+	font-family: 'Roboto', sans-serif;
 	}
 header {
 	background: #181823;
@@ -133,18 +134,51 @@ h2 {
 	/*margin-left: 0;*/
 }
 
-#a, #b, #c, #d, #e, #f, #g, #h, #i  {
+
+
+
+/*=============== venus css*/
+.fire {
 	width:25%;
-	margin:1%;
-	height: 100px;
-	background-color: blue;
+	margin:.5%;
+	height: 150px;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Mgn_p39146.png);
 	display: inline-block;
+	text-align: center;	
+	opacity: .9;
 }
- 
-#a.fire, #b.fire, #c.fire, #d.fire, #e.fire, #f.fire, #g.fire, #h.fire, #i.fire {
-	width:25%;
-	margin:1%;
-	height: 100px;
-	background-color: red;
-	display: inline-block;
-}	
+#clickBox{
+	float:right;
+	margin-right: 3%;
+	color: white;	
+	text-align: center;
+}
+#venus-board{
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: #2E0854;
+	opacity: .8;
+	width:80%;
+}
+#playBox {
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: #2E0854;
+	opacity: .8;
+	text-align: center;
+	width: 30%;
+	margin-left: 35%;
+}
+button {
+	background-color: #2E0854;
+	color:white;
+}
+
+/*================*/
+
+
+
+
+
+
+
