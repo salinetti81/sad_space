@@ -44,7 +44,11 @@ nav > ul > li:hover {
 	transition-timing-function: easeInOutQuart;
 }
 
-
+a {
+	text-decoration: none;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
 
 #login.active {
 	display: inline;
@@ -55,6 +59,14 @@ nav > ul > li:hover {
 }
 
 #logout.active {
+	display: inline;
+}
+
+#games_link {
+	display: none;
+}
+
+#games_link.active {
 	display: inline;
 }
 /*===========================*/
@@ -115,7 +127,7 @@ nav > ul > li:hover {
 	height: 100%; width: 100%;
 }
 
-#planets-container {
+/*#planets-container {
 	position: absolute;
 	width: 100%;
 	padding-bottom: 100%;
@@ -124,7 +136,7 @@ nav > ul > li:hover {
 	overflow: hidden;
 	margin-top: -20%;
 	/*animation: theOrbit 4s linear infinite;*/
-}
+/*}*/
 
 
 .planet {

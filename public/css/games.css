@@ -34,6 +34,12 @@ nav > ul > li:hover {
 h2 {
 	color:white;
 }
+
+a {
+	text-decoration: none;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
 #planets-container {
 		height: 10%;
 		width: 100%;
