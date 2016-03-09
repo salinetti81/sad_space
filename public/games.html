@@ -24,7 +24,7 @@
 		</div>	
 		<h2>{{main.currentPlanet}}</h2>
 
-			<div ng-if="main.currentPlanet === 'vercury'" ng-include src=" './partials/mercury.html' " ng-controller='VenusController as mercury'></div>
+			<div ng-if="main.currentPlanet === 'mercury'" ng-include src=" './partials/mercury.html' " ng-controller='VenusController as mercury'></div>
 			<div ng-if="main.currentPlanet === 'venus'" ng-include src=" './partials/venus.html' " ng-controller='VenusController as venus'></div>
 			<div ng-if="main.currentPlanet === 'earth'" ng-include src=" './partials/earth.html' " ng-controller='EarthController as earth'></div>
 			<div ng-if="main.currentPlanet === 'mars'" ng-include src=" './partials/mars.html' " ng-controller='MarsController as mars'></div>

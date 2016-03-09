@@ -7,8 +7,21 @@ body {
 	text-align: center;
 }
 
-#memory_board {
+body{
+	b
+	padding: 0;
+	margin: 0;
+	}
+header {
+	background: #181823;
+	color: white;
+	padding: 1em;
+	opacity: .8;
+	border-bottom: 1px solid grey;
+	box-shadow: 2px 4px 50px 19px #010104;
+}
 
+#memory_board {
 	background: ;
 	/*border: #999 1px solid;*/
 	width: 58em;
@@ -34,4 +47,4 @@ body {
 
 #memory_board > div:hover {
 	opacity: .8;
-
+}
