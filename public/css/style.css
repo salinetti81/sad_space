@@ -44,8 +44,6 @@ nav > ul > li:hover {
 	transition-timing-function: easeInOutQuart;
 }
 
-
-
 #login.active {
 	display: inline;
 }
@@ -57,13 +55,23 @@ nav > ul > li:hover {
 #logout.active {
 	display: inline;
 }
+
+a {
+	text-decoration: none;
+	color: #b4b4bf;
+}
+
+a:hover {
+	opacity: .9;
+}
+
+
 /*===========================*/
 /*SIGN IN BOX*/
 
 #signin {
 	display: none;
 }
-
 
 #signin.active {
 /*	margin: 52% 34%;*/
@@ -77,7 +85,6 @@ nav > ul > li:hover {
 	box-shadow: 2px 4px 50px 19px #010104;
 	z-index: 99;	
 }
-
 
 #signin > form > input {
 	height: 30px; width: 45%;
@@ -98,6 +105,7 @@ nav > ul > li:hover {
 #signin > form > button:hover {
 	background: #4B4B65;
 }
+
 
 /*===========================*/
 /*PLANETS*/
@@ -220,6 +228,7 @@ nav > ul > li:hover {
 	padding-bottom: 2%;
 }
 
+
 /*===========================*/
 /*ORBITS*/
 
@@ -244,7 +253,7 @@ nav > ul > li:hover {
 
 #mercuryPos {
 	height: 100%; width: 100%;
-	animation: mercuryOrbit 4s linear infinite;
+	animation: mercuryOrbit 10s linear infinite;
 }
 
 #venusOrbit.orbit {
@@ -258,7 +267,7 @@ nav > ul > li:hover {
 	width: 100%; height: 100%;
   margin-top: 50%; 
   margin-left: 50%;
-	animation: venusOrbit 5s linear infinite;
+	animation: venusOrbit 15s linear infinite;
 }
 
 
@@ -272,7 +281,7 @@ nav > ul > li:hover {
 
 #earthPos {
 	width: 100%; height: 100%;
-	animation: earthOrbit 6s linear infinite;
+	animation: earthOrbit 20s linear infinite;
 }
 
 #marsOrbit.orbit {
@@ -284,7 +293,7 @@ nav > ul > li:hover {
 
 #marsPos {
 	width: 100%; height: 100%;
-	animation: marsOrbit 7s linear infinite;
+	animation: marsOrbit 20s linear infinite;
 }
 
 #jupiterOrbit.orbit, .positioning {
@@ -296,7 +305,7 @@ nav > ul > li:hover {
 
 #jupiterPos {
 	width: 100%; height: 100%;
-	animation: jupiterOrbit 7s linear infinite;
+	animation: jupiterOrbit 23s linear infinite;
 }
 
 #saturnOrbit.orbit, .positioning {
@@ -308,7 +317,7 @@ nav > ul > li:hover {
 
 #saturnPos {
 	width: 100%; height: 100%;
-	animation: saturnOrbit 8s linear infinite;
+	animation: saturnOrbit 25s linear infinite;
 }
 
 #uranusOrbit.orbit, .positioning {
@@ -320,7 +329,7 @@ nav > ul > li:hover {
 
 #uranusPos {
 	width: 100%; height: 100%;
-	animation: uranusOrbit 9s linear infinite;
+	animation: uranusOrbit 25s linear infinite;
 }
 
 #neptuneOrbit.orbit, .positioning {
@@ -332,7 +341,7 @@ nav > ul > li:hover {
 
 #neptunePos {
 	width: 100%; height: 100%;
-	animation: saturnOrbit 8s linear infinite;
+	animation: saturnOrbit 30s linear infinite;
 }
 
 #plutoOrbit.orbit, .positioning {
@@ -344,7 +353,7 @@ nav > ul > li:hover {
 
 #plutoPos {
 	width: 100%; height: 100%;
-	animation: plutoOrbit 8s linear infinite;
+	animation: plutoOrbit 30s linear infinite;
 }
 
 
@@ -438,4 +447,5 @@ ul {
 	from { transform: rotate(0deg) translateX(150px); }
 	to   {  transform: rotate(360deg) translateX(150px); }
 }
+
 
