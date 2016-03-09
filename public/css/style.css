@@ -115,6 +115,7 @@ nav > ul > li:hover {
  	transform: rotateX(75deg);
 	transform-style: preserve-3d;
 	overflow: hidden;
+	margin-top: -20%;
 }
 
 
@@ -129,15 +130,16 @@ nav > ul > li:hover {
 }
 
 #sun {
-	z-index: 1;
+	z-index: 99;
 	background-image: url('http://orig12.deviantart.net/c7d3/f/2013/292/7/5/sun_transparent_background_sun_world_by_royalblueiv-d6r3ze7.png');
-	padding-bottom: 12%;
+	background-size: 100%;
+	background-repeat: no-repeat;
 	position: absolute;
+	padding-bottom: 12%;
 	width: 12%;
-	margin-top: 16%;
-	margin-left: 43%;
-	margin-right: 21%;
-	transform: rotateX(-90deg);
+	margin-left: 50%;
+	margin-top: 50%;
+	/*transform: rotateX(-90deg);*/
 	transform-style: preserve-3d;
 }
 
@@ -216,6 +218,8 @@ nav > ul > li:hover {
 }
 
 /*===========================*/
+/*ORBITS*/
+
 .orbit {
   position: absolute;
 /*  top: 50%;
