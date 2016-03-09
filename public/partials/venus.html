@@ -1,10 +1,51 @@
-<div id='a' ng-class="(venus.displayFire) ? 'fire' : 'ice' "  ng-click='venus.changeBox()'></div>
-<div id='b' ng-class="(venus.displayFire) ? 'fire' : 'ice' "  ng-click='venus.changeBox()'></div>
-<div id='c' ng-class="(venus.displayFire) ? 'fire' : 'ice' "  ng-click='venus.changeBox()'></div>
-<div id='d' ng-class="(venus.displayFire) ? 'fire' : 'ice' "  ng-click='venus.changeBox()'></div>
-<div id='e' ng-class="(venus.displayFire) ? 'fire' : 'ice' "  ng-click='venus.changeBox()'></div>
-<div id='f' ng-class="(venus.displayFire) ? 'fire' : 'ice' "  ng-click='venus.changeBox()'></div>
-<div id='g' ng-class="(venus.displayFire) ? 'fire' : 'ice' "  ng-click='venus.changeBox()'></div>
-<div id='h' ng-class="(venus.displayFire) ? 'fire' : 'ice' "  ng-click='venus.changeBox()'></div>
-<div id='i' ng-class="(venus.displayFire) ? 'fire' : 'ice' "  ng-click='venus.changeBox()'></div>
-	
+
+
+<div id='playBox' ng-if="venus.failMessage"><h2>You have failed<br> <button ng-click="venus.failMessage = false">Play Again?</button></h2></div>
+<div   ng-if="venus.failMessage === false" id='venus-board' ng-click="venus.addOne()">
+
+ <div id='clickBox'><h5>Try to freeze<br> Venus's surfuce by<br> clicking on the boxes!<br> Be careful <br>though venus<br> can be <br>awfully tricky!<br> you have 15 clicks!<br><h2>{{venus.clickCount}}</h2></h5></div>
+
+	<div class='fire'  ng-style="a"  
+	ng-click="b={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}" 
+	ng-dblclick="a={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}"></div>
+
+	<div class='fire'  ng-style="b"  
+	ng-click="i={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}"
+	ng-dblclick="c={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}"></div>
+
+	<div class='fire'  ng-style="c"  
+	ng-click="a={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}"
+	ng-dblclick="f={'background-image':'url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Mgn_p39146.png)'}"
+	></div>
+
+	<div class='fire'  ng-style="d"  
+	ng-dblclick="f={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}"
+	ng-click="c={'background-image':'url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Mgn_p39146.png)'}"
+	></div>
+
+	<div class='fire'  ng-style="e"  
+	ng-dblclick="h={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}"
+	ng-click="i={'background-image':'url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Mgn_p39146.png)'}"
+	></div>
+
+	<div class='fire'  ng-style="f" 
+	ng-click="g={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}"
+	ng-dblclick="b={'background-image':'url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Mgn_p39146.png)'}"
+	></div>
+
+	<div class='fire'  ng-style="g"  
+	ng-click="c={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}"
+	ng-dblclick="e={'background-image':'url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Mgn_p39146.png)'}"
+	></div>
+
+	<div class='fire'  ng-style="h"  
+	ng-dblclick="e={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}"
+	ng-click="b={'background-image':'url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Mgn_p39146.png)'}"
+	></div>
+
+	<div class='fire'  ng-style="i"  
+	ng-click="d={'background-image':'url(http://bgfons.com/upload/ice_texture3006.jpg)'}"
+	ng-dblclick="a={'background-image':'url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Mgn_p39146.png)'}"
+	></div>
+
+</div>			

@@ -24,7 +24,7 @@ app.controller('MainController', ['$http', function($http){
 
   $http({
   	method: 'POST',
-  	url: '/users/signup',
+  	url: '/users/signup', 
   	data: this.signUpData
   }).then(
   	//success
