@@ -22,17 +22,23 @@
 			<div id='neptune' ng-click="main.currentPlanet = 'neptune'"></div>
 			<div id='pluto'  ng-click="main.currentPlanet = 'pluto'"></div>
 		</div>	
+
 		<h2>{{main.currentPlanet}}</h2>
 
 			<div ng-if="main.currentPlanet === 'mercury'" ng-include src=" './partials/mercury.html' " ng-controller='VenusController as mercury'></div>
 			<div ng-if="main.currentPlanet === 'venus'" ng-include src=" './partials/venus.html' " ng-controller='VenusController as venus'></div>
+
 			<div ng-if="main.currentPlanet === 'earth'" ng-include src=" './partials/earth.html' " ng-controller='EarthController as earth'></div>
+
 			<div ng-if="main.currentPlanet === 'mars'" ng-include src=" './partials/mars.html' " ng-controller='MarsController as mars'></div>
+
 			<div ng-if="main.currentPlanet === 'jupiter'" ng-include src=" './partials/jupiter.html' " ng-controller='JupiterController as jupiter'></div>
 			<div ng-if="main.currentPlanet === 'saturn'" ng-include src=" './partials/saturn.html' " ng-controller='SaturnController as saturn'></div>
-			<div ng-if="main.currentPlanet === 'uranus'" ng-include src=" './partials/uranus.html' " ng-controller='UranusController as uranus'></div>
-			<div ng-if="main.currentPlanet === 'neptune'" ng-include src=" './partials/neptune.html' " ng-controller='NeptuneController as neptune'></div>
-			<div ng-if="main.currentPlanet === 'pluto'" ng-include src=" './partials/pluto.html' " ng-controller='PlutoController as pluto'></div>
 
+			<div ng-if="main.currentPlanet === 'uranus'" ng-include src=" './partials/uranus.html' " ng-controller='UranusController as uranus'></div>
+
+			<div ng-if="main.currentPlanet === 'neptune'" ng-include src=" './partials/neptune.html' " ng-controller='NeptuneController as neptune'></div>
+
+			<div ng-if="main.currentPlanet === 'pluto'" ng-include src=" './partials/pluto.html' " ng-controller='PlutoController as pluto'></div>
 	</body>
 </html>	

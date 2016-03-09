@@ -102,129 +102,226 @@ nav > ul > li:hover {
 /*===========================*/
 /*PLANETS*/
 
+.positioning {
+	position: absolute;
+	transform-style: preserve-3d;
+	transform: rotateX(-75deg);
+	animation: theOrbit 4s linear infinite;
+	opacity: .9;
+}
+
+#solar-system {
+	position: relative;
+	height: 100%; width: 100%;
+}
+
 #planets-container {
-		height: 85%; width: 100%;
-/*		border: 1px solid grey;*/
+	position: absolute;
+	width: 100%;
+	padding-bottom: 100%;
+	border: 1px solid red;
+	transform-style: preserve-3d;
+	overflow: hidden;
+	margin-top: -20%;
+	/*animation: theOrbit 4s linear infinite;*/
+}
+
+
+.planet {
+	position: absolute;
+/*	top: 50%;
+  left: 50%;*/
+  background-size: 100%;
+	background-repeat: no-repeat;
+	transform-style: preserve-3d;
+	transform: rotateX(-75deg);
 }
 
 #sun {
+	z-index: 99;
 	background-image: url('http://orig12.deviantart.net/c7d3/f/2013/292/7/5/sun_transparent_background_sun_world_by_royalblueiv-d6r3ze7.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
-	padding-bottom: 12%;
-	width: 12%;
-	margin-top: 16%;
-	margin-left: 43%;
-	margin-right: 21%;
-	z-index: 9;
+	position: absolute;
+	padding-bottom: 9%;
+	width: 9%;
+	margin-left: 50%;
+	margin-top: 50%;
+	/*transform: rotateX(-90deg);*/
+	transform-style: preserve-3d;
 }
 #mercury {
+	z-index: 10;
 	background-image: url('http://www.veryicon.com/icon/ico/System/Qs%20Vista%20Ready%20Icons/QsMercury.ico');
-	background-size: 100%;
-	background-repeat: no-repeat;
 	width: 5%;
 	padding-bottom: 5%;
-	margin-left: 45%;
-	z-index: 10;
-	position: absolute;
-	animation: mercuryOrbit 5s linear infinite;
+	
 }
 
 #venus {
+	z-index: 9;
 	background-image: url('http://jplanets.sourceforge.net/images/venus.png');
-	background-size: 100%;
-	background-repeat: no-repeat;
 	width: 7%;
 	padding-bottom: 7%;
-	margin-left: 40%;
-	z-index: 3;
-	position: absolute;
-	animation: venusOrbit 7s linear infinite;
+/*	animation: venusOrbit 5s linear infinite;*/
 }
 
 #earth {
+	z-index: 8;
 	background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/The_Earth_seen_from_Apollo_17_with_transparent_background.png');
-	background-size: 100%;
-	background-repeat: no-repeat;
 	width: 6%;
 	padding-bottom: 6%;
-	margin-left: 50%;
-	z-index: 4;
-	position: absolute;
-	animation: earthOrbit 8s linear infinite;
+	/*animation: theOrbit 4s linear infinite;*/
 }
 
 #mars {
+	z-index: 7;
 	background-image: url('http://img3.wikia.nocookie.net/__cb20130916161813/factfinder/images/c/c5/Mars-1-.png');
-	background-size: 100%;
-	background-repeat: no-repeat;
 	width: 6%;
 	padding-bottom: 6%;
-	margin-left: 50%;
-	z-index: 5;
-	position: absolute;
-	animation: marsOrbit 7s linear infinite;
+/*	z-index: 5;	animation: marsOrbit 7s linear infinite;*/
 }
 
 #jupiter {
+	z-index: 6;
 	background-image: url('http://www.zaxtor.net/jupiter.png');
-	background-size: 100%;
-	background-repeat: no-repeat;
 	width: 8%;
 	padding-bottom: 8%;
-	margin-left: 50%;
-	z-index: 6;
-	position: absolute;
-	animation: jupiterOrbit 5s linear infinite;
+/*	animation: jupiterOrbit 8s linear infinite;*/
 }
 
 #saturn {
+	z-index: 5;
 	background-image: url('http://www.zaxtor.net/Saturn.png');	
-	background-size: 100%;
-	background-repeat: no-repeat;
 	width: 7%;
 	padding-bottom: 7%;
-	margin-left: 50%;
-	z-index: 7;
-	position: absolute;
-	animation: saturnOrbit 8s linear infinite;
+	/*animation: saturnOrbit 9s linear infinite;*/
 }
 
 #uranus {
+	z-index: 4;
 	background-image: url('http://3.bp.blogspot.com/-fWJM7KisZXk/T9YzvopmDzI/AAAAAAAAAq0/vDRoopnaVpg/s1600/uranus.png');	
-	background-size: 100%;
-	background-repeat: no-repeat;
 	width: 7%;
 	padding-bottom: 7%;
-	margin-left: 50%;
-	z-index: 8;
-	position: absolute;
-	animation: uranusOrbit 6s linear infinite;
+/*	animation: uranusOrbit 10s linear infinite;*/
 }
 
 #neptune {
+	z-index: 3;
 	background-image: url('http://space-facts.com/wp-content/uploads/neptune-transparent-300x300.png');	
-	background-size: 100%;
-	background-repeat: no-repeat;
-	width: 7%;
-	padding-bottom: 7%;
-	margin-left: 50%;
-	z-index: 9;
-	position: absolute;
-	animation: neptuneOrbit 7s linear infinite;
+	width: 6%;
+	padding-bottom: 6%;
+
 }
 
 #pluto {
+	z-index: 2;
 	background-image: url('http://www.icone-gif.com/icone/png/planets/pluto.png');	
-	background-size: 100%;
-	background-repeat: no-repeat;
-	width: 4%;
-	padding-bottom: 4%;
-	margin-left: 50%;
-	z-index: 10;
-	position: absolute;
-	animation: plutoOrbit 8s linear infinite;
+	width: 2%;
+	padding-bottom: 2%;
 }
+
+/*===========================*/
+/*ORBITS*/
+
+.orbit {
+  position: absolute;
+/*  top: 50%;
+  left: 50%;*/
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: rotateX(75deg);
+  transform-style: preserve-3d;
+}
+
+#mercuryOrbit.orbit, .positioning {
+  width: 10%;
+  height: 10%;
+  margin-top: 50%;
+  margin-left: 50%;
+}
+
+#mercuryPos {
+	animation: theOrbit 4s linear infinite;
+}
+
+#venusOrbit.orbit, .positioning {
+  width: 19%;
+  height: 19%;
+  margin-top: 45%;
+  margin-left: 45%;
+}
+
+#venusPos {
+	animation: theOrbit 4s linear infinite;
+}
+
+
+#earthOrbit.orbit, .positioning {
+  width: 31%;
+  height: 31%;
+  margin-top: 39%;
+  margin-left: 39%;
+}
+
+#earthPos {
+	animation: theOrbit 4s linear infinite;
+}
+
+#marsOrbit.orbit, .positioning {
+  width: 43%;
+  height: 43%;
+  margin-top: 33%;
+  margin-left: 33%;
+}
+
+#jupiterOrbit.orbit, .positioning {
+	width: 55%;
+  height: 55%;
+  margin-top: 27%;
+  margin-left: 27%;
+}
+
+#saturnOrbit.orbit, .positioning {
+  width: 62%;
+  height: 62%;
+  margin-top: 22%;
+  margin-left: 22%;
+}
+
+#uranusOrbit.orbit, .positioning {
+  width: 74%;
+  height: 74%;
+  margin-top: 15%;
+  margin-left: 15%;
+}
+
+#neptuneOrbit.orbit, .positioning {
+  width: 85%;
+  height: 85%;
+  margin-top: 9%;
+  margin-left: 9%;
+}
+
+#plutoOrbit.orbit, .positioning {
+	width: 98%;
+  height: 98%;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*===========================*/
 /*INFO BOX*/
@@ -261,7 +358,8 @@ ul {
 /*===========================*/
 /*KEYFRAMES FOR ORBITS*/
 
-@keyframes mercuryOrbit {
+
+/*@keyframes mercuryOrbit {
     from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
 }
@@ -304,20 +402,13 @@ ul {
 @keyframes plutoOrbit {
     from { transform: rotate(0deg) translateX(300px) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+}*/
+
+@keyframes theOrbit {
+ from  { 	transform: rotate(0deg) translateX(150px); }
+	to   {  transform: rotate(360deg) translateX(150px); }
 }
 
 
-
-
-
-/*===========================*/
-/*@MEDIA FOR PLANETS TO GO BEHIND SUN*/
-
-@media (min-width: 21%) {
-    #mercury {
-        border: red;
-        z-index: 8;
-    }
-}
 
 
