@@ -3,6 +3,7 @@ body{
 	padding: 0;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
+	/*color:white;*/
 	}
 header {
 	background: #181823;
@@ -175,6 +176,53 @@ button {
 }
 
 /*================*/
+/*=============== mars css*/
+#mars-board{
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: #2E0854;
+	opacity: .8;
+	width:80%;
+	color: white;
+}
+#mars-count{
+	float: right;
+	margin-right: 10%;
+	margin-bottom: 40%;
+	text-align: center;
+
+}
+/*================*/
+/*================ Satrun css*/
+#saturn-board{
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: #2E0854;
+	opacity: .8;
+	width:80%;
+	color: white;
+}
+.ring {
+	width:80px;
+	height: 80px;
+	background-size: contain;
+	background-image: url('http://img01.deviantart.net/e093/i/2013/228/4/f/stock_image___saturn_rings_by_alpha_element-d6ifske.png');
+  animation-name: example;
+  animation-duration: 20s;
+  display: inline-block;
+}
+@keyframes example {
+    0%   {margin-top:1%;}
+    100% {margin-top:90%; }
+}	
+
+ /*================*/
+
+
+
+
+
+
 
 
 
