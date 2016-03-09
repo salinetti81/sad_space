@@ -1,5 +1,9 @@
+body{
+
+}
 
 #memory_board {
+
 	background: #CCC;
 	border: #999 1px solid;
 	width: 800px;
@@ -9,7 +13,9 @@
 }
 
 #memory_board > div {
-	background: blue;
+		font-size: 10px;
+	background: blue ;
+	color: white;
 	border: #000 1px solid;
 	width: 71px;
 	height: 71px;
