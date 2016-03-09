@@ -1,0 +1,127 @@
+<!-- <h1>A lot of Facts go flying around about Mars. Drop your knowledge about the planet and answer these 10 Fact Or fiction questoins!</h1> -->
+<div id='mars-board'>
+
+ 
+<div id='mars-count'><h1>Your Score is <br>{{mars.score}}/10</h1></div>
+
+
+<div ng-if='mars.qOne.clicked===false'>Is Mars a planet?
+ <form ng-submit="mars.check(mars.qOne.bool, mars.ans1)">
+  	<label><input type='radio' ng-model='mars.ans1' ng-value="true"/>
+  	 true
+  	</label>
+    <label><input type='radio' ng-model='mars.ans1' ng-value="false"/>
+   	 false
+  	</label>	
+  	<button type="submit">Check Your Anwser!</button>
+ </form>  
+</div>
+
+  <div ng-if='mars.qTwo.clicked===false'> Is Mars the third planet from the Sun?
+    <form ng-submit="mars.check(mars.qTwo.bool, mars.ans2)">
+  	 <label><input type='radio' ng-model='mars.ans2' ng-value="true"/>
+  	   true
+  	 </label>
+      <label><input type='radio' ng-model='mars.ans2' ng-value="false"/>
+   	  false
+  	 </label>	
+  	 <button type="submit"> Check Your Anwser!</button>
+    </form> 
+  </div>
+
+  <div ng-if='mars.qThree.clicked===false' >Have we found life on mars?
+    <form ng-submit="mars.check(mars.qThree.bool, mars.ans3)">
+      	<label><input type='radio' ng-model='mars.ans3' ng-value="true"/>
+      	 true
+      	</label>
+        <label><input type='radio' ng-model='mars.ans3' ng-value="false"/>
+       	 false
+      	</label>	
+      	<button type="submit">Check Your Anwser!</button>
+    </form>  
+  </div>
+
+  <div ng-if='mars.qFour.clicked===false' > Does Mars have rings like Saturn?
+    <form ng-submit="mars.check(mars.qFour.bool, mars.ans4)">
+      	<label><input type='radio' ng-model='mars.ans4' ng-value="true"/>
+      	 true
+      	</label>
+        <label><input type='radio' ng-model='mars.ans4' ng-value="false"/>
+       	 false
+      	</label>	
+      	<button type="submit">Check Your Anwser!</button>
+    </form>  
+  </div>
+
+  <div ng-if='mars.qFive.clicked===false' > Does Mars have 30 moons?
+    <form ng-submit="mars.check(mars.qFive.bool, mars.ans5)">
+      	<label><input type='radio' ng-model='mars.ans5' ng-value="true"/>
+      	 true
+      	</label>
+        <label><input type='radio' ng-model='mars.ans5' ng-value="false"/>
+       	 false
+      	</label>	
+      	<button type="submit">Check Your Anwser!</button>
+    </form>   
+  </div>
+
+  <div ng-if='mars.qSix.clicked===false' > Is the realestate market on Mars booming?
+    <form ng-submit="mars.check(mars.qSix.bool, mars.ans6)">
+      	<label><input type='radio' ng-model='mars.ans6' ng-value="true"/>
+      	 true
+      	</label>
+        <label><input type='radio' ng-model='mars.ans6' ng-value="false"/>
+       	 false
+      	</label>	
+      	<button type="submit">Check Your Anwser!</button>
+    </form>  
+   </div>
+
+   <div ng-if='mars.qSeven.clicked===false' > Was H.G Wells radio show based on aliens from Mars?
+    <form ng-submit="mars.check(mars.qSeven.bool, mars.ans)">
+      	<label><input type='radio' ng-model='mars.ans' ng-value="true"/>
+      	 true
+      	</label>
+        <label><input type='radio' ng-model='mars.ans' ng-value="false"/>
+       	 false
+      	</label>	
+      	<button type="submit">Check Your Anwser!</button>
+    </form>  
+   </div>
+
+   <div ng-if='mars.qEight.clicked===false'>Is Mars even a real Planet?
+    <form ng-submit="mars.check(mars.qEight, mars.ans8)">
+      	<label><input type='radio' ng-model='mars.ans8' ng-value="true"/>
+      	 true
+      	</label>
+        <label><input type='radio' ng-model='mars.ans8' ng-value="false"/>
+       	 false
+      	</label>	
+      	<button type="submit">Check Your Anwser!</button>
+    </form>  
+   </div>
+
+  <div ng-if='mars.qNine.clicked===false'>Water used by the bottled water company Fiji uses water from Mars?
+    <form ng-submit="mars.check(mars.qNine.bool, mars.ans9)">
+      	<label><input type='radio' ng-model='mars.ans9' ng-value="true"/>
+      	 true
+      	</label>
+        <label><input type='radio' ng-model='mars.ans9' ng-value="false"/>
+       	 false
+      	</label>	
+      	<button type="submit">Check Your Anwser!</button>
+    </form>  
+   </div>
+   <div ng-if='mars.qTen.clicked===false'>This test is nonsense?
+    <form ng-submit="mars.check(mars.qTen.bool, mars.ans10)">
+      	<label><input type='radio' ng-model='mars.ans10' ng-value="true"/>
+      	 true
+      	</label>
+        <label><input type='radio' ng-model='mars.ans10' ng-value="false"/>
+       	 false
+      	</label>	
+      	<button type="submit">Check Your Anwser!</button>
+    </form>  
+  </div>
+
+</div>
