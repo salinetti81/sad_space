@@ -117,16 +117,6 @@ nav > ul > li:hover {
 	margin-top: -20%;
 }
 
-.orbit {
-  position: absolute;
-/*  top: 50%;
-  left: 50%;*/
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: rotateX(75deg);
-  transform-style: preserve-3d;
-  
-}
 
 .planet {
 	position: absolute;
@@ -136,7 +126,7 @@ nav > ul > li:hover {
 	background-repeat: no-repeat;
 	transform-style: preserve-3d;
 	transform: rotateX(-75deg);
-	animation: orbit 10 linear infinite;
+	animation: mercuryOrbit 4 linear infinite;
 }
 
 #sun {
@@ -158,7 +148,7 @@ nav > ul > li:hover {
 	background-image: url('http://www.veryicon.com/icon/ico/System/Qs%20Vista%20Ready%20Icons/QsMercury.ico');
 	width: 5%;
 	padding-bottom: 5%;
-	animation: mercuryOrbit 4s linear infinite;
+	animation: mercuryOrbit 4 linear infinite;
 }
 
 #venus {
@@ -166,7 +156,7 @@ nav > ul > li:hover {
 	background-image: url('http://jplanets.sourceforge.net/images/venus.png');
 	width: 7%;
 	padding-bottom: 7%;
-	animation: venusOrbit 5s linear infinite;
+/*	animation: venusOrbit 5s linear infinite;*/
 }
 
 #earth {
@@ -174,9 +164,7 @@ nav > ul > li:hover {
 	background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/The_Earth_seen_from_Apollo_17_with_transparent_background.png');
 	width: 6%;
 	padding-bottom: 6%;
-	margin-left: 50%;
-
-	animation: earthOrbit 6s linear infinite;
+/*	animation: earthOrbit 6s linear infinite;*/
 }
 
 #mars {
@@ -184,7 +172,7 @@ nav > ul > li:hover {
 	background-image: url('http://img3.wikia.nocookie.net/__cb20130916161813/factfinder/images/c/c5/Mars-1-.png');
 	width: 6%;
 	padding-bottom: 6%;
-	z-index: 5;	animation: marsOrbit 7s linear infinite;
+/*	z-index: 5;	animation: marsOrbit 7s linear infinite;*/
 }
 
 #jupiter {
@@ -192,7 +180,7 @@ nav > ul > li:hover {
 	background-image: url('http://www.zaxtor.net/jupiter.png');
 	width: 8%;
 	padding-bottom: 8%;
-	animation: jupiterOrbit 8s linear infinite;
+/*	animation: jupiterOrbit 8s linear infinite;*/
 }
 
 #saturn {
@@ -200,7 +188,7 @@ nav > ul > li:hover {
 	background-image: url('http://www.zaxtor.net/Saturn.png');	
 	width: 7%;
 	padding-bottom: 7%;
-	animation: saturnOrbit 9s linear infinite;
+	/*animation: saturnOrbit 9s linear infinite;*/
 }
 
 #uranus {
@@ -208,29 +196,37 @@ nav > ul > li:hover {
 	background-image: url('http://3.bp.blogspot.com/-fWJM7KisZXk/T9YzvopmDzI/AAAAAAAAAq0/vDRoopnaVpg/s1600/uranus.png');	
 	width: 7%;
 	padding-bottom: 7%;
-	animation: uranusOrbit 10s linear infinite;
+/*	animation: uranusOrbit 10s linear infinite;*/
 }
 
 #neptune {
 	z-index: 3;
 	background-image: url('http://space-facts.com/wp-content/uploads/neptune-transparent-300x300.png');	
-	width: 7%;
-	padding-bottom: 7%;
-	animation: neptuneOrbit 11s linear infinite;
+	width: 6%;
+	padding-bottom: 6%;
+
 }
 
 #pluto {
 	z-index: 2;
 	background-image: url('http://www.icone-gif.com/icone/png/planets/pluto.png');	
-	width: 4%;
-	padding-bottom: 4%;
-	animation: plutoOrbit 11s linear infinite;
+	width: 2%;
+	padding-bottom: 2%;
 }
 
 /*===========================*/
 /*ORBITS*/
 
-
+.orbit {
+  position: absolute;
+/*  top: 50%;
+  left: 50%;*/
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: rotateX(75deg);
+  transform-style: preserve-3d;
+  
+}
 
 #mercuryOrbit.orbit {
   width: 10%;
@@ -289,10 +285,10 @@ nav > ul > li:hover {
 }
 
 #plutoOrbit.orbit {
-	width: 100%;
-  height: 100%;
-  margin-top: 0;
-  margin-left: 0;
+	width: 98%;
+  height: 98%;
+  margin-top: 1%;
+  margin-left: 1%;
 }
 
 
@@ -377,25 +373,11 @@ ul {
     to   { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
 }*/
 
-@keyframes orbit {
-  0% {
-    transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
-  }
+@keyframes mercuryOrbit {
+  from { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+ 	to { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); }
 }
 
 
-
-/*===========================*/
-/*@MEDIA FOR PLANETS TO GO BEHIND SUN*/
-
-/*@media (min-width: 21%) {
-    #mercury {
-        border: red;
-        z-index: 8;
-    }
-}*/
 
 
