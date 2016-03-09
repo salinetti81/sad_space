@@ -5,9 +5,8 @@
 		<li>Location: Milky Way</li>
 		<li id="login" ng-click="ctrl.revealLogin()" ng-class="(ctrl.displayLogIn) ? 'active' : 'disabled' " >Login</li>
 		<!-- Logout should only exist on user sign in -->
-		<li ng-click="ctrl.logOut()">Logout</li>
-		<li><a href="/games">Games!</a></li>
-	
+		
+		<li id="games_link" ng-click="ctrl.Games()" ng-class="(ctrl.displayGames) ? 'active' : 'disabled' "><a href="/games">Games</a></li>
 
 		<li id="logout" ng-click="ctrl.logOut()" ng-class="(ctrl.displayLogOut) ? 'active' : 'disabled' ">Logout</li>
 
