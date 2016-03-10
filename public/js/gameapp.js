@@ -112,7 +112,7 @@ app.controller('MarsController', ['$http', '$scope', function($http, $scope){
 
 
 
->>>>>>> 6bff154ee0e78f2a08af6a916eb9c6b2003a9b89
+
 
 app.controller('JupiterController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
