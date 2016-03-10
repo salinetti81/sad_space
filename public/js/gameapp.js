@@ -290,7 +290,44 @@ app.controller('PlutoController', ['$http', '$scope', function($http, $scope){
 					
 				}
 			};
+}
+
+
 }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
