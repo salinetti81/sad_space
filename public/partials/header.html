@@ -1,7 +1,8 @@
 <nav>
 	<h1>The Planets</h1>
 	<ul>
-		<li>Hi {{ctrl.user.name}}</li>
+		<!-- <li>Hi {{ctrl.user.name}}</li> -->
+		<li id="welcome" ng-click="ctrl.welcome()" ng-class="(ctrl.displayWelcome) ? 'active' : 'disabled' ">Hi {{ctrl.user.name}}</li>
 		<li>Location: Milky Way</li>
 		<li id="login" ng-click="ctrl.revealLogin()" ng-class="(ctrl.displayLogIn) ? 'active' : 'disabled' " >Login</li>
 		<!-- Logout should only exist on user sign in -->

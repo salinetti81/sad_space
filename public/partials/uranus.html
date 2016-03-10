@@ -1,0 +1,14 @@
+
+<div id='uranus_board' ng-controller="UranusController as uranusCtrl" >
+
+<button type='submit' ng-click="uranusCtrl.createMinefield()">Play Minesweeper</button>
+<br>
+<table border="1">
+    <tr ng-repeat="row in uranusCtrl.minefield.rows">
+        <td ng-repeat="spot in row.spots" ng-click="spot.isCovered = false">
+            {{spot.isCovered}}
+        </td>
+    </tr>
+</table>
+
+</div>

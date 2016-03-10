@@ -54,6 +54,14 @@ a {
 	display: inline;
 }
 
+#welcome {
+	display: none;
+}
+
+#welcome.active {
+	display: inline;
+}
+
 #logout {
 	display: none;
 }
