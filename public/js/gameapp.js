@@ -2,18 +2,14 @@ var app = angular.module('gameApp', []);
 
 
 var codeBox = function(ans, con) {
-	// console.log('line 4', ans)
 	var el = document.getElementById(con);
-  // el && eval(el.value);
+		console.log(eval(el.value))  	
+
   if(el && eval(el.value) === ans){
   	console.log(eval(el.value))
-  	// console.log('line 9',ans);
   	return true
   }else{
-  	// console.log(con)
-  	console.log(eval(el.value))
-  	// console.log(ans);
-  	// console.log('Hmmm the out put was', eval(el.value) ,'instead of', ans)
+  	console.log(eval(el.value))  	
   	return false
 	}
 }
@@ -178,14 +174,28 @@ app.controller('JupiterController', ['$http', '$scope', function($http, $scope){
 app.controller('SaturnController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Saturn';
-	this.clickEvent= function(){
-		alert('hello')
-		var div = document.createElement("div");
-		div.className = 'ring';
-    document.body.appendChild(div)
-	}
-}])
+	this.count = 0;
+	this.clickEvent = function(x){
+		console.log('working');
+		for (var i = 0; i < x; i++) {
+			var main = document.getElementById('ring-board')	
+			var ringdiv = document.createElement("div");
+			ringdiv.setAttribute("ng-click", "saturn.newClick()");
+			ringdiv.setAttribute("class","ring");
+			main.insertBefore(ringdiv, main.firstChild);
+			// main.appendChild(ringdiv);
+			controller.count++;
+		};
+		
+            // if (isClickable) {
+            //     attrs.$setAttributet('ngClick', 'onHandleClick()');
+            //     element.removeAttr('ng-transclude');
+            //     $compile(element)(scope);
+            // }
 
+
+	}
+}]);
 
 // ======================================================
 //--------------URANUS--------------
@@ -312,57 +322,97 @@ app.controller('NeptuneController', ['$http', '$scope', function($http, $scope){
 //--------------PLUTO--------------
 // ======================================================
 
+app.controller('PlutoController', ['$http', '$scope', function($http, $scope){ 
+	var controller = this
+	this.planet = 'Pluto';
+	this.questions = [
+	{
+	ans:10,
+	id:'a',
+	mes:null,
+	ques:'Write a function that adds 5 plus 5!'
+	},
+	{
+	ans:13882848.000000002,
+	id:'b',
+	mes:null,
+	ques:'Write a function that determines how many hours are in one pluto year'
+	},
+	{
+	ans:20,
+	id:'c',
+	mes:null
+	},
+	{
+	ans:30,
+	id:'d',
+	mes:null
+	}];
 
 
-// app.controller('PlutoController', ['$http', '$scope', function($http, $scope){ 
-// 	var controller = this
-// 	this.planet = 'Pluto';
+	this.run = function(qus, con, mes){
+			mes = codeBox(qus ,con);
+			id = con;
+			var array = controller.questions;
+			for (var i = 0; i < array.length; i++) {
+				if (array[i].id == id) {					
+					return array[i].mes = mes;
+					
+				}
+			};
+	}
+
+
+}]);
+
+
+
+
+
+app.controller('PlutoController', ['$http', '$scope', function($http, $scope){ 
+	var controller = this
+	this.planet = 'Pluto';
 
 	
-// }])
+}])
 
-// 	this.questions = [
-// 	{
-// 	ans:4,
-// 	id:'a',
-// 	mes:null
-// 	},
-// 	{
-// 	ans:10,
-// 	id:'b',
-// 	mes:null
-// 	},
-// 	{
-// 	ans:20,
-// 	id:'c',
-// 	mes:null
-// 	},
-// 	{
-// 	ans:30,
-// 	id:'d',
-// 	mes:null
-// 	}];
+	this.questions = [
+	{
+	ans:4,
+	id:'a',
+	mes:null
+	},
+	{
+	ans:10,
+	id:'b',
+	mes:null
+	},
+	{
+	ans:20,
+	id:'c',
+	mes:null
+	},
+	{
+	ans:30,
+	id:'d',
+	mes:null
+	}];
 
 
-// 	this.run = function(qus, con, mes){
-// 			mes = codeBox(qus ,con);
-// 			id = con;
-// 			var array = controller.questions;
-// 			for (var i = 0; i < array.length; i++) {
-// 				if (array[i].id == id) {					
-// 					return array[i].mes = mes;
+	this.run = function(qus, con, mes){
+			mes = codeBox(qus ,con);
+			id = con;
+			var array = controller.questions;
+			for (var i = 0; i < array.length; i++) {
+				if (array[i].id == id) {					
+					return array[i].mes = mes;
 					
-// 				}
-// 			};
-// 	}
+				}
+		 }
+	}
 
 
-// }]);
-
-
-
-
-
+}]);
 
 
 
