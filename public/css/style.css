@@ -66,10 +66,13 @@ a:hover {
 
 #login.disabled {
 	display: none;
+	position: relative;
+	z-index: 1;
 }
 
 #login.active {
 	display: inline;
+	position: static;
 }
 
 #welcome {
@@ -82,10 +85,13 @@ a:hover {
 
 #logout {
 	display: none;
+	position: static;
 }
 
 #logout.active {
 	display: inline;
+	position: relative;
+	z-index: 2;
 }
 
 #games_link {

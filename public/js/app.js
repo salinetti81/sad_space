@@ -37,9 +37,10 @@ app.controller('MainController', ['$http', function($http){
   		controller.signUpData = {};
   		controller.user = response.data;
       controller.displayContent = false;
-      controller.displayLogOut = false;
-      controller.displayWelcome = false;
-      controller.displayGames = false;
+      controller.displayLogOut = true;
+      controller.displayWelcome = true;
+      controller.displayGames = true;
+      controller.displayLogIn = false;
   	},
   	function(err){
   		console.log(err);
@@ -92,10 +93,12 @@ app.controller('MainController', ['$http', function($http){
     function(err){
       console.log(err)
     });
+    
     controller.displayContent = false;
-    controller.displayLogIn= true;
+    controller.displayLogIn = true;
     controller.displayLogOut = false;
     controller.displayWelcome = false;
+    controller.displayGames = false;
 
   }; //<--logOut
 
@@ -128,7 +131,7 @@ app.controller('MainController', ['$http', function($http){
 //                 console.log(err);
 //             });       
 
-//     }; //<--signUp
+//     } //<--signUp
     
 //     this.logIn = function(){
 //         console.log("LOGIN function firing in app.js")
