@@ -132,14 +132,7 @@ app.controller('MarsController', ['$http', '$scope', function($http, $scope){
 
 
 
-<<<<<<< HEAD
 
-
-
-
-
-=======
->>>>>>> uranus
 app.controller('JupiterController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Jupiter';
@@ -200,10 +193,7 @@ app.controller('UranusController', ['$http', '$scope', function($http, $scope){
 			 console.log(column,'line 150');
 			 var spot = controller.getSpot(controller.minefield, row, column);
 			 spot.content = "bomb";
-	
-<<<<<<< HEAD
-}]);
-=======
+
 		} // ends place random mine function
 
 			this.placeMultipleMines = function(minefield) {
@@ -292,7 +282,7 @@ app.controller('UranusController', ['$http', '$scope', function($http, $scope){
 
 }])//ends Uranus
 
->>>>>>> uranus
+
 
 //neptune start 
 app.controller('NeptuneController', ['$http', '$scope', function($http, $scope){ 
