@@ -197,6 +197,7 @@ button {
     background-color: #2E0854;
     color: white;
 }
+<<<<<<< HEAD
 
 /*========================*/
 /*MARS CSS*/
@@ -208,6 +209,21 @@ button {
     opacity: .8;
     width:80%;
     color: white;
+=======
+#fixed {
+	position: fixed;
+}
+.ring {
+	width:40px;
+	height: 40px;
+	background-size: contain;
+	background-image: url('http://img01.deviantart.net/e093/i/2013/228/4/f/stock_image___saturn_rings_by_alpha_element-d6ifske.png');
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count:infinite;
+  display: inline-block;
+  /*display: inline-block;*/
+>>>>>>> games
 }
 
 #mars-count {
@@ -241,6 +257,7 @@ button {
 
 @keyframes example {
     0%   {margin-top:1%;}
+<<<<<<< HEAD
     100% {margin-top:100px; }
 }   
 
@@ -267,6 +284,10 @@ textarea {
 
 /*========================*/
 /*URANUS*/
+=======
+    100% {margin-top:100%; }
+}	
+>>>>>>> games
 
 #uranus_board {
     color: white;

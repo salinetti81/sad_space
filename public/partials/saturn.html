@@ -1,10 +1,11 @@
+
 <div id='saturn-board'>
-
-<div ng-click='saturn.clickEvent()' class='ring'></div>
-<div ng-click='saturn.clickEvent()' class='ring'></div>
-<div ng-click='saturn.clickEvent()' class='ring'></div>
-<div ng-click='saturn.clickEvent()' class='ring'></div>
-<div ng-click='saturn.clickEvent()' class='ring'></div>
-<div ng-click='saturn.clickEvent()' class='ring'></div>
-
+	<div id='fix'>
+		<h1>Saturn lost all it needs you to give them back fast! try to get 10000 in 10 seconds! but don't go over or you loose!{{saturn.count}} </h1>
+		<button ng-click='saturn.clickEvent(50)'>Add 50</button>
+		<button ng-click='saturn.clickEvent(100)'>Add 100</button>
+		<button ng-click='saturn.clickEvent(150)'>Add 150</button>
+		<button ng-click='saturn.clickEvent(200)'>Add 200</button>
+	</div>
+	<div id='ring-board'></div>
 </div>
