@@ -1,18 +1,14 @@
 var app = angular.module('gameApp', []);
 
 var codeBox = function(ans, con) {
-	// console.log('line 4', ans)
 	var el = document.getElementById(con);
-  // el && eval(el.value);
+		console.log(eval(el.value))  	
+
   if(el && eval(el.value) === ans){
   	console.log(eval(el.value))
-  	// console.log('line 9',ans);
   	return true
   }else{
-  	// console.log(con)
-  	console.log(eval(el.value))
-  	// console.log(ans);
-  	// console.log('Hmmm the out put was', eval(el.value) ,'instead of', ans)
+  	console.log(eval(el.value))  	
   	return false
 	}
 }
@@ -147,28 +143,28 @@ app.controller('SaturnController', ['$http', '$scope', function($http, $scope){
 	var controller = this
 	this.planet = 'Saturn';
 	this.count = 0;
-	this.clickEvent= function(){
-		for (var i = 0; i < 5; i++) {
-		var main = document.getElementById('saturn-board')	
-		var div = document.createElement("div");
-		div.setAttribute("ng-click", "saturn.clickEvent()")
-		div.setAttribute("class","ring");
-		main.insertBefore(div, main.firstChild);
+	this.clickEvent = function(x){
+		console.log('working');
+		for (var i = 0; i < x; i++) {
+			var main = document.getElementById('ring-board')	
+			var ringdiv = document.createElement("div");
+			ringdiv.setAttribute("ng-click", "saturn.newClick()");
+			ringdiv.setAttribute("class","ring");
+			main.insertBefore(ringdiv, main.firstChild);
+			// main.appendChild(ringdiv);
+			controller.count++;
 		};
-		
-            // if (isClickable) {
-            //     attrs.$setAttributet('ngClick', 'onHandleClick()');
-            //     element.removeAttr('ng-transclude');
-            //     $compile(element)(scope);
-            // }
-
-
-
-
-
-
 	}
-}])
+}]);
+
+// this.rings = []
+
+
+// ng-repeat x number of times
+//
+// div ng-repeat ring in satCtrl.ringstuff 
+//		div     class="ring" ng-click="satCtrl.clickevent()"     /div
+// /div
 
 
 
@@ -191,14 +187,16 @@ app.controller('PlutoController', ['$http', '$scope', function($http, $scope){
 	this.planet = 'Pluto';
 	this.questions = [
 	{
-	ans:4,
+	ans:10,
 	id:'a',
-	mes:null
+	mes:null,
+	ques:'Write a function that adds 5 plus 5!'
 	},
 	{
-	ans:10,
+	ans:13882848.000000002,
 	id:'b',
-	mes:null
+	mes:null,
+	ques:'Write a function that determines how many hours are in one pluto year'
 	},
 	{
 	ans:20,
@@ -220,27 +218,10 @@ app.controller('PlutoController', ['$http', '$scope', function($http, $scope){
 					return array[i].mes = mes;
 					
 				}
-			};
-			
-
-
-
-			console.log(mes)
-	
-			// return mes 
-		// console.log(mes)
-		// if(x === true){
-		// 	mes = true
-		// 	console.log(qus, con, mes)
-		// }else{
-		// 	mes = false;
-		// 	console.log(false);
-		// 	console.log(mes,'mes')
-		// }
-		// return mes;
+			};	
 	};
 
-}])//ends pluto 
+}])
 
 
 
