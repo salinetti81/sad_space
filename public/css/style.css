@@ -13,6 +13,8 @@ body {
 /*HEADER*/
 
 header {
+	position: relative;
+	z-index: 99;
 	background: #181823;
 	color: white;
 	padding: 1em;
@@ -56,6 +58,7 @@ a {
 
 a:hover {
 	opacity: .9;
+	color: red;
 }
 
 /*===========================*/
@@ -151,7 +154,7 @@ a:hover {
 	position: relative;
 	width: 100%;
 	padding-bottom: 100%;
-	margin-top: -10%;
+	margin-top: 10%;
 }
 
 
@@ -496,7 +499,6 @@ ul {
 	#solar-system {
 		margin-top: -20%;
 	}
-
 
 	#info-box.active {
 		height: 14em; width: 30%;
