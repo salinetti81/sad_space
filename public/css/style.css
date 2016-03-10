@@ -15,9 +15,9 @@ body {
 header {
 	position: relative;
 	z-index: 99;
-	background: #181823;
+	background: #26292a;
 	color: white;
-	padding: 1em;
+	padding: 1.5em;
 	opacity: .8;
 	border-bottom: 1px solid grey;
 	box-shadow: 2px 4px 50px 19px #010104;

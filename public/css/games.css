@@ -1,5 +1,7 @@
 body {
-    background-image: url(http://wallpapercave.com/wp/xX2GRj6.gif);
+    background-image: url('https://57.media.tumblr.com/9348a3347757267167ed4b81dafbf430/tumblr_o35t15yIx11v6lkbfo1_500.gif');
+    background-repeat: none;
+    background-size: cover;
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -9,7 +11,7 @@ body {
 /*========================*/
 /*HEADER*/
 header, #planets-container {
-    background: #181823;
+    background: #26292a;
     padding: 1em;
     opacity: .8;
     border-bottom: 1px solid grey;
