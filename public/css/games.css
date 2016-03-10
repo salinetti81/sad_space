@@ -122,6 +122,7 @@ a:hover {
 	display: inline-block;
 	text-align: center;	
 	opacity: .9;
+	border-radius: 3%;
 }
  
 #a.fire, #b.fire, #c.fire, #d.fire, #e.fire, #f.fire, #g.fire, #h.fire, #i.fire {
@@ -188,6 +189,10 @@ a:hover {
 	text-align: center;
 	width: 30%;
 	margin-left: 35%;
+}	
+#x{
+	width:65%;
+	/*float: left;*/
 }
 
 button {
@@ -227,19 +232,20 @@ button {
 }
 
 .ring {
-	width:80px;
-	height: 80px;
+	width:40px;
+	height: 40px;
 	background-size: contain;
 	background-image: url('http://img01.deviantart.net/e093/i/2013/228/4/f/stock_image___saturn_rings_by_alpha_element-d6ifske.png');
   animation-name: example;
-  animation-duration: 20s;
+  animation-duration: 10s;
+  animation-iteration:infinite;
   display: inline-block;
 }
 
 
 @keyframes example {
     0%   {margin-top:1%;}
-    100% {margin-top:90%; }
+    100% {margin-top:100px; }
 }	
 
 /*========================*/
@@ -247,6 +253,7 @@ button {
 
 @media (min-width: 660px) {
 
+<<<<<<< HEAD
 	h1 {
 		display: inline;
 	}
@@ -265,6 +272,25 @@ button {
 		display: inline;
 		float: right;
 	}
+
+/*=======pluto*/
+textarea{
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: #2E0854;
+	opacity: .8;
+	color:white;
+	font-weight: 900;
+}
+.messageBox{	
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: white;
+	opacity: .8;
+	color: black;
+	/*font-weight: 900;*/
+}
+
 
 
 	#planets-container > div {
