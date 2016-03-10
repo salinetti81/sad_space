@@ -3,9 +3,6 @@ var express     = require('express'),
     passport    = require('passport'),
     User        = require('../models/userModel');
 
-
-
-
 //INDEX
 router.get('/', function(req,res) {
   User.find(function(err, user) {
@@ -23,13 +20,9 @@ router.get('/', function(req,res) {
 
 
 
-
-
 //=================================================
 // AUTHENTICATION
 //=================================================
-
-
 
 
 //SHOW PAGE FOR WHEN USER IS LOGGED IN
@@ -47,8 +40,6 @@ User.find({}, function(err, users) {
     });
   });
 });
-
-
 
 
 //CREATE NEW USER
