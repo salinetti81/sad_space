@@ -268,9 +268,38 @@ button {
 
 
 
+/*====================*/
+#uranus_board {
+	color: black;
+	border: 2px solid white;
+	height: 500px;
+	/*width: 80%;
+	padding: 5%*/;
+}
 
+table {
+	background-color: white;
+	height: 200px;
+	width: 200px;
+}
+/*tr {
 
+	background-color: white;
 
+}*/
+.minefiled {
+	line-height: 0;
+	border-spacing: 0;
+}
+
+.minefiled td {
+	padding: 0;
+
+}
+button {
+	background-color:white;
+	color: black;
+}
 
 
 

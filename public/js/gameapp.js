@@ -4,7 +4,9 @@ app.controller('MainController', ['$http', '$scope', function($http, $scope){
 	var controller = this;
 	this.hello = 'hello';
 	this.currentPlanet = null;
+
 }]);
+
 
 app.controller('MercuryController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
@@ -108,12 +110,6 @@ app.controller('MarsController', ['$http', '$scope', function($http, $scope){
 }])
 
 
-
-
-
-
->>>>>>> 6bff154ee0e78f2a08af6a916eb9c6b2003a9b89
-
 app.controller('JupiterController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Jupiter';
@@ -132,10 +128,36 @@ app.controller('SaturnController', ['$http', '$scope', function($http, $scope){
 }])
 
 app.controller('UranusController', ['$http', '$scope', function($http, $scope){ 
-	var controller = this
+	var controller = this;
 	this.planet = 'Uranus';
-	
+  this.minefield = {};
+
+		this.createMinefield = function() {
+				// console.log(minefield);
+	    // console.log(minefield);
+	    this.minefield.rows = [];
+	    // console.log(minefield);
+	    for(var i = 0; i < 9; i++) {
+	        var row = {};
+	        row.spots = [];
+	        // console.log(row)
+	        // console.log(row);
+	        for(var j = 0; j < 9; j++) {
+	            var spot = {};
+	            spot.isRevealed = false;
+	            // console.log(spot);
+	            row.spots.push(spot);
+	        }
+	        this.minefield.rows.push(row);
+	 		 		// console.log(minefield);
+	    }
+	    // console.log(minefield);
+	    // console.log('Minefield rows: ', minefield.rows);
+
+	    console.log('Minefield rowd: ', this.minefield.rows);
+	  } // end create minefield
 }])
+
 
 //neptune start 
 app.controller('NeptuneController', ['$http', '$scope', function($http, $scope){ 
