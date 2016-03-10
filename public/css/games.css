@@ -270,7 +270,7 @@ button {
 
 /*====================*/
 #uranus_board {
-	color: black;
+	color: white;
 	border: 2px solid white;
 	height: 500px;
 	/*width: 80%;
@@ -278,7 +278,7 @@ button {
 }
 
 table {
-	background-color: white;
+	background-color: blue;
 	height: 200px;
 	width: 200px;
 }

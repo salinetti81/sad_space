@@ -144,7 +144,8 @@ app.controller('UranusController', ['$http', '$scope', function($http, $scope){
 	        // console.log(row);
 	        for(var j = 0; j < 9; j++) {
 	            var spot = {};
-	            spot.isRevealed = false;
+	            spot.isCovered = true;
+	            // spot.isRevealed = false;
 	            // console.log(spot);
 	            row.spots.push(spot);
 	        }
