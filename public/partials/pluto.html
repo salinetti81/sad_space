@@ -1,0 +1,66 @@
+
+
+
+<ul ng-repeat='q in pluto.questions'>
+    <div>
+<h2>Question {{$index+1}} {{q.ans}}</h2>
+
+<textarea rows="7" cols="50" id="{{q.id}}"></textarea>
+
+<button ng-click="pluto.run(q.ans, q.id, q.mes)">Run</button>
+
+<div class='messageBox' ng-if="q.mes">Great Job! {{q.ans}} is right!</div>
+
+   <div class='messageBox' ng-if="q.mes === false">
+    The correct output shoud be {{q.ans}} make sure you you have your syntax right and are invoking the function at the end of the script.
+  </div>
+</div>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<h2>Question 1</h2>
+<textarea rows="7" cols="50" id="console1"></textarea>
+
+<button ng-click="pluto.run(pluto.questions[0].ans,'console1')">Run</button>
+
+<div class='messageBox'  ng-if="pluto.ans1.message === true">Great Job!</div>
+
+<div class='messageBox' ng-if="pluto.ans1.message === false">The correct output shoud be {{pluto.ans1.ans}} make sure you you have your syntax right and are invoking the function at the end of the script.</div>
+<!-- 
+
+<h2>Question 2</h2>
+<textarea rows="7" cols="50" id="console2"></textarea>
+
+<button ng-click="pluto.run(pluto.questions[1].ans,'console2')">Run</button>
+
+
+<h2>Question 3</h2>
+<textarea rows="7" cols="50" id="console3"></textarea>
+
+<button ng-click="pluto.run(pluto.questions[2].ans,'console3')">Run</button>
+
+
+
+<h2>Question 4</h2>
+<textarea rows="7" cols="50" id="console4"></textarea>
+
+<button ng-click="pluto.run(pluto.questions[3].ans,'console4')">Run</button>
+
