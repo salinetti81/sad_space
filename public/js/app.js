@@ -162,7 +162,7 @@ app.controller('PlanetController', ['$http', function($http){
     this.getData = function(name){
         var clickedPlanet = name;
         controller.displayContent = true;
-        console.log(controller.displayContent, "displayContent");
+        // console.log(controller.displayContent, "displayContent");
         console.log(clickedPlanet ,"here");
 
         $http({
@@ -174,7 +174,7 @@ app.controller('PlanetController', ['$http', function($http){
         function(results){      
           var planetData = results.data;
           // console.log(planets);
-          console.log(results);
+          // console.log(results);
 
           for (var i = 0; i < planetData.length; i++) {
             if(planetData[i].name === clickedPlanet) {

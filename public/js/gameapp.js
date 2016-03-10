@@ -10,7 +10,7 @@ app.controller('MercuryController', ['$http', '$scope', function($http, $scope){
 	var controller = this
 	this.planet = 'Mercury';
 	
-}])
+}]);
 
 app.controller('VenusController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
@@ -30,13 +30,13 @@ app.controller('VenusController', ['$http', '$scope', function($http, $scope){
 	}	
 
 	
-}])
+}]);
 
 app.controller('EarthController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Earth';
 	
-}])
+}]);
 
 
 app.controller('MarsController', ['$http', '$scope', function($http, $scope){ 
@@ -105,7 +105,7 @@ app.controller('MarsController', ['$http', '$scope', function($http, $scope){
 		clicked:false
 	};
 
-}])
+}]);
 
 
 
@@ -118,7 +118,7 @@ app.controller('JupiterController', ['$http', '$scope', function($http, $scope){
 	var controller = this
 	this.planet = 'Jupiter';
 	
-}])
+}]);
 
 app.controller('SaturnController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
@@ -129,13 +129,13 @@ app.controller('SaturnController', ['$http', '$scope', function($http, $scope){
 		div.className = 'ring';
     document.body.appendChild(div)
 	}
-}])
+}]);
 
 app.controller('UranusController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Uranus';
 	
-}])
+}]);
 
 //neptune start 
 app.controller('NeptuneController', ['$http', '$scope', function($http, $scope){ 
@@ -219,7 +219,7 @@ app.controller('PlutoController', ['$http', '$scope', function($http, $scope){
 	var controller = this
 	this.planet = 'Pluto';
 	
-}])
+}]);
 
 
 

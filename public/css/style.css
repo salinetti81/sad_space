@@ -135,6 +135,8 @@ a:hover {
 /*PLANETS*/
 
 .positioning {
+/*	background-color: green;*/
+	z-index: 2;
 	position: absolute;
 	transform-style: preserve-3d;
 	transform: rotateX(-75deg);
@@ -142,7 +144,7 @@ a:hover {
 }
 
 #solar-system {
-	z-index: -1;
+	z-index: 1;
 	position: relative;
 	width: 100%;
 	padding-bottom: 100%;
@@ -151,7 +153,8 @@ a:hover {
 
 
 #planets-container {
-	z-index: -2;
+	/*background-color: blue;*/
+	z-index: 1;
 	position: absolute;
 	width: 100%;
 	padding-bottom: 100%;
@@ -182,56 +185,56 @@ a:hover {
 }
 
 #mercury {
-	z-index: 10;
+	z-index: 19;
 	background-image: url('http://www.veryicon.com/icon/ico/System/Qs%20Vista%20Ready%20Icons/QsMercury.ico');
 	width: 5%;
 	padding-bottom: 5%;
 }
 
 #venus {
-	z-index: 9;
+	z-index: 18;
 	background-image: url('http://jplanets.sourceforge.net/images/venus.png');
 	width: 7%;
 	padding-bottom: 7%;
 }
 
 #earth {
-	z-index: 8;
+	z-index: 17;
 	background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/The_Earth_seen_from_Apollo_17_with_transparent_background.png');
 	width: 6%;
 	padding-bottom: 6%;
 }
 
 #mars {
-	z-index: 7;
+	z-index: 16;
 	background-image: url('http://img3.wikia.nocookie.net/__cb20130916161813/factfinder/images/c/c5/Mars-1-.png');
 	width: 6%;
 	padding-bottom: 6%;
 }
 
 #jupiter {
-	z-index: 6;
+	z-index: 15;
 	background-image: url('http://www.zaxtor.net/jupiter.png');
 	width: 8%;
 	padding-bottom: 8%;
 }
 
 #saturn {
-	z-index: 5;
+	z-index: 14;
 	background-image: url('http://www.zaxtor.net/Saturn.png');	
 	width: 7%;
 	padding-bottom: 7%;
 }
 
 #uranus {
-	z-index: 4;
+	z-index: 13;
 	background-image: url('http://3.bp.blogspot.com/-fWJM7KisZXk/T9YzvopmDzI/AAAAAAAAAq0/vDRoopnaVpg/s1600/uranus.png');	
 	width: 7%;
 	padding-bottom: 7%;
 }
 
 #neptune {
-	z-index: 3;
+	z-index: 12;
 	background-image: url('http://space-facts.com/wp-content/uploads/neptune-transparent-300x300.png');	
 	width: 6%;
 	padding-bottom: 6%;
@@ -239,7 +242,7 @@ a:hover {
 }
 
 #pluto {
-	z-index: 2;
+	z-index: 11;
 	background-image: url('http://www.icone-gif.com/icone/png/planets/pluto.png');	
 	width: 2%;
 	padding-bottom: 2%;
@@ -250,6 +253,7 @@ a:hover {
 /*ORBITS*/
 
 .orbit {
+/*	background-color: red;*/
   position: absolute;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
@@ -259,6 +263,7 @@ a:hover {
 
 
 #mercuryOrbit.orbit {
+	z-index: 10;
   width: 11%;
   height: 11%;
   margin-top: 50%;
@@ -266,6 +271,7 @@ a:hover {
 }
 
 #venusOrbit.orbit {
+	z-index: 9;
   width: 19%;
   height: 19%;
   margin-top: 45%;
@@ -273,6 +279,7 @@ a:hover {
 }
 
 #earthOrbit.orbit {
+	z-index: 8;
   width: 31%;
   height: 31%;
   margin-top: 39%;
@@ -280,6 +287,7 @@ a:hover {
 }
 
 #marsOrbit.orbit {
+	z-index: 7;
   width: 43%;
   height: 43%;
   margin-top: 33%;
@@ -287,6 +295,7 @@ a:hover {
 }
 
 #jupiterOrbit.orbit {
+	z-index: 6;
 	width: 55%;
   height: 55%;
   margin-top: 26%;
@@ -294,6 +303,7 @@ a:hover {
 }
 
 #saturnOrbit.orbit {
+	z-index: 5;
   width: 62%;
   height: 62%;
   margin-top: 22%;
@@ -301,13 +311,15 @@ a:hover {
 }
 
 #uranusOrbit.orbit {
-  width: 74%;
+ 	z-index: 4;
+ 	width: 74%;
   height: 74%;
   margin-top: 15%;
   margin-left: 15%;
 }
 
 #neptuneOrbit.orbit {
+	z-index: 3;
   width: 85%;
   height: 85%;
   margin-top: 9%;
@@ -315,6 +327,7 @@ a:hover {
 }
 
 #plutoOrbit.orbit {
+	z-index: 2;
 	width: 98%;
   height: 98%;
   margin-top: 1%;
@@ -362,6 +375,7 @@ a:hover {
 
 #neptunePos {
 	width: 100%; height: 100%;
+	z-index: 2;
 	animation: saturnOrbit 30s linear infinite;
 }
 
