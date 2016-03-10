@@ -1,18 +1,15 @@
 var app = angular.module('gameApp', []);
 
+
 var codeBox = function(ans, con) {
-	// console.log('line 4', ans)
 	var el = document.getElementById(con);
-  // el && eval(el.value);
+		console.log(eval(el.value))  	
+
   if(el && eval(el.value) === ans){
   	console.log(eval(el.value))
-  	// console.log('line 9',ans);
   	return true
   }else{
-  	// console.log(con)
-  	console.log(eval(el.value))
-  	// console.log(ans);
-  	// console.log('Hmmm the out put was', eval(el.value) ,'instead of', ans)
+  	console.log(eval(el.value))  	
   	return false
 	}
 }
@@ -22,22 +19,26 @@ var codeBox = function(ans, con) {
 //--------------MAIN--------------
 // ======================================================
 
+
 app.controller('MainController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this;
 	this.hello = 'hello';
 	this.currentPlanet = null;
+
 }]);
+
 
 // ======================================================
 //--------------MERCURY--------------
 // ======================================================
 
 
+
 app.controller('MercuryController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Mercury';
 	
-}]);
+}])
 
 
 // ======================================================
@@ -62,7 +63,7 @@ app.controller('VenusController', ['$http', '$scope', function($http, $scope){
 	}	
 
 	
-}]);
+}])
 
 
 
@@ -74,7 +75,7 @@ app.controller('EarthController', ['$http', '$scope', function($http, $scope){
 	var controller = this
 	this.planet = 'Earth';
 	
-}]);
+}])
 
 
 
@@ -152,18 +153,17 @@ app.controller('MarsController', ['$http', '$scope', function($http, $scope){
 
 
 
-
-
 // ======================================================
 //--------------JUPITER--------------
 // ======================================================
+
 
 
 app.controller('JupiterController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Jupiter';
 	
-}]);
+}])
 
 
 // ======================================================
@@ -175,13 +175,16 @@ app.controller('SaturnController', ['$http', '$scope', function($http, $scope){
 	var controller = this
 	this.planet = 'Saturn';
 	this.count = 0;
-	this.clickEvent= function(){
-		for (var i = 0; i < 5; i++) {
-		var main = document.getElementById('saturn-board')	
-		var div = document.createElement("div");
-		div.setAttribute("ng-click", "saturn.clickEvent()")
-		div.setAttribute("class","ring");
-		main.insertBefore(div, main.firstChild);
+	this.clickEvent = function(x){
+		console.log('working');
+		for (var i = 0; i < x; i++) {
+			var main = document.getElementById('ring-board')	
+			var ringdiv = document.createElement("div");
+			ringdiv.setAttribute("ng-click", "saturn.newClick()");
+			ringdiv.setAttribute("class","ring");
+			main.insertBefore(ringdiv, main.firstChild);
+			// main.appendChild(ringdiv);
+			controller.count++;
 		};
 		
             // if (isClickable) {
@@ -198,34 +201,32 @@ app.controller('SaturnController', ['$http', '$scope', function($http, $scope){
 //--------------URANUS--------------
 // ======================================================
 
-
-
 app.controller('UranusController', ['$http', '$scope', function($http, $scope){ 
     var controller = this;
     this.planet = 'Uranus';
-  	this.minefield = {};
+  this.minefield = {};
 
-      this.getSpot = function(minefield, row, column) {
-        // console.log(minefield,'this is 136')
-        return controller.minefield.rows[row].spots[column];
+         this.getSpot = function(minefield, row, column) {
+              // console.log(minefield,'this is 136')
+          return controller.minefield.rows[row].spots[column];
       }
 
-    this.placeRandomMine = function(minefield) {
-      console.log('line 143 running random function')
-    	var row = Math.round(Math.random() * 8);
-    	console.log(row,'line 148');
-      var column = Math.round(Math.random() * 8);
-      console.log(column,'line 150');
-      var spot = controller.getSpot(controller.minefield, row, column);
-      spot.content = "bomb";
+        this.placeRandomMine = function(minefield) {
+            console.log('line 143 running random function')
+             var row = Math.round(Math.random() * 8);
+             console.log(row,'line 148');
+             var column = Math.round(Math.random() * 8);
+             console.log(column,'line 150');
+             var spot = controller.getSpot(controller.minefield, row, column);
+             spot.content = "bomb";
+    
+        } // ends place random mine function
 
-    } // ends place random mine function
-
-    this.placeMultipleMines = function(minefield) {
-      for(var i = 0; i < 10; i++) {
-          controller.placeRandomMine(controller.minefield);
-          // console.log(minefield);
-      }
+            this.placeMultipleMines = function(minefield) {
+        for(var i = 0; i < 10; i++) {
+            controller.placeRandomMine(controller.minefield);
+            // console.log(minefield);
+        }
     }
 
      
@@ -264,7 +265,7 @@ app.controller('UranusController', ['$http', '$scope', function($http, $scope){
 
 
          controller.placeMultipleMines();
-}; // ===================end create minefield===============================
+} // ===================end create minefield===============================
 
 
 //==========MAKE NUMBERS==================
@@ -305,85 +306,14 @@ app.controller('UranusController', ['$http', '$scope', function($http, $scope){
 
 
 
-}]); //ends Uranus
+}])//ends Uranus
+
 
 
 
 //neptune start 
 app.controller('NeptuneController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
-// 	this.planet = 'Neptune';
-// console.log("Don't Panic.")
-
-// var memory_array = [ 'Thalassa', 'Thalassa', 'Despina', 'Despina', 'Galatea', 'Galatea', 'Naiad', 'Naiad', 'Larissa', 'Larissa', 'Proteus', 'Proteus', 'Triton', 'Triton', 'Nereclass', 'Nereclass', 'Halimede', 'Halimede' ];
-// var memory_values = [];
-// var memory_tile_ids = [];
-// var tiles_flipped = 0;
-
-
-// //shuffle tiles for new game
-// Array.prototype.memory_tile_shuffle = function() {
-// 	var i = this.length, j, temp;
-// 	while(--i > 0) {
-// 		j = Math.floor(Math.random() * (i+1));
-// 		temp = this[j];
-// 		this[j] = this[i];
-// 		this[i] = temp;
-// 	}
-// }
-
-// //create a new board
-// function newBoard(){
-// 	tiles_flipped = 0;
-// 	var output = '';
-//     memory_array.memory_tile_shuffle();
-// 	for(var i = 0; i < memory_array.length; i++){
-// 		output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>';
-// 	}
-// 	document.getElementById('memory_board').innerHTML = output;
-// }
-//   window.addEventListener(newBoard());
-
-// function memoryFlipTile(tile,val){
-// 	if(tile.innerHTML == "" && memory_values.length < 2){
-// 		tile.style.background = '#FFF';
-// 		tile.innerHTML = val;
-// 		if(memory_values.length == 0){
-// 			memory_values.push(val);
-// 			memory_tile_ids.push(tile.id);
-// 		} else if(memory_values.length == 1){
-// 			memory_values.push(val);
-// 			memory_tile_ids.push(tile.id);
-// 			if(memory_values[0] == memory_values[1]){
-// 				tiles_flipped += 2;
-// 				// Clear both arrays
-// 				memory_values = [];
-//             	memory_tile_ids = [];
-// 				// Check to see if the whole board is cleared
-// 				if(tiles_flipped == memory_array.length){
-// 					alert("You won!");
-// 					document.getElementById('memory_board').innerHTML = "";
-// 					newBoard();
-// 				}
-// 			} else {
-// 				function flip2Back(){
-// 				    // Flip the 2 tiles back over
-// 				    var tile_1 = document.getElementById(memory_tile_ids[0]);
-// 				    var tile_2 = document.getElementById(memory_tile_ids[1]);
-// 				    tile_1.style.background = 'blue';
-//             	    tile_1.innerHTML = "";
-// 				    tile_2.style.background = 'blue';
-//             	    tile_2.innerHTML = "";
-// 				    // Clear both arrays
-// 				    memory_values = [];
-//             	    memory_tile_ids = [];
-// 				}
-// 				setTimeout(flip2Back, 500);
-// 			}
-// 		}
-// 	}
-// }// ends neptune  
-
 	
 }])
 
@@ -392,21 +322,21 @@ app.controller('NeptuneController', ['$http', '$scope', function($http, $scope){
 //--------------PLUTO--------------
 // ======================================================
 
-
-
 app.controller('PlutoController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Pluto';
 	this.questions = [
 	{
-	ans:4,
+	ans:10,
 	id:'a',
-	mes:null
+	mes:null,
+	ques:'Write a function that adds 5 plus 5!'
 	},
 	{
-	ans:10,
+	ans:13882848.000000002,
 	id:'b',
-	mes:null
+	mes:null,
+	ques:'Write a function that determines how many hours are in one pluto year'
 	},
 	{
 	ans:20,
@@ -439,36 +369,50 @@ app.controller('PlutoController', ['$http', '$scope', function($http, $scope){
 
 
 
+app.controller('PlutoController', ['$http', '$scope', function($http, $scope){ 
+	var controller = this
+	this.planet = 'Pluto';
+
+	
+}])
+
+	this.questions = [
+	{
+	ans:4,
+	id:'a',
+	mes:null
+	},
+	{
+	ans:10,
+	id:'b',
+	mes:null
+	},
+	{
+	ans:20,
+	id:'c',
+	mes:null
+	},
+	{
+	ans:30,
+	id:'d',
+	mes:null
+	}];
 
 
+	this.run = function(qus, con, mes){
+			mes = codeBox(qus ,con);
+			id = con;
+			var array = controller.questions;
+			for (var i = 0; i < array.length; i++) {
+				if (array[i].id == id) {					
+					return array[i].mes = mes;
+					
+				}
+		 }
+	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}]);
 
 
 

@@ -209,6 +209,23 @@ button {
     width:80%;
     color: white;
 }
+ 
+#fixed {
+  position: fixed;
+}
+
+.ring {
+  width:40px;
+  height: 40px;
+  background-size: contain;
+  background-image: url('http://img01.deviantart.net/e093/i/2013/228/4/f/stock_image___saturn_rings_by_alpha_element-d6ifske.png');
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count:infinite;
+  display: inline-block;
+  /*display: inline-block;*/
+ 
+}
 
 #mars-count {
     float: right;
@@ -233,8 +250,8 @@ button {
     height: 40px;
     background-size: contain;
     background-image: url('http://img01.deviantart.net/e093/i/2013/228/4/f/stock_image___saturn_rings_by_alpha_element-d6ifske.png');
- 		animation-name: example;
- 	 	animation-duration: 10s;
+ 	animation-name: example;
+ 	animation-duration: 10s;
   	animation-iteration:infinite;
   	display: inline-block;
 	}
@@ -327,6 +344,45 @@ button {
     nav > ul > li:nth-child(2) {
         display: inline;
     }
+
+/*====================*/
+#uranus_board {
+	color: white;
+	background-color: white;
+	/*border: 2px solid white;*/
+	height: 500px;
+	/*width: 80%;
+	padding: 5%*/;
+}
+
+table {
+	background-color:  ;
+	height: 200px;
+	width: 200px;
+}
+/*tr {
+
+	background-color: white;
+
+}*/
+.minefiled {
+	line-height: 0;
+	border-spacing: 0;
+}
+
+.minefiled td {
+	padding: 0;
+
+}
+button {
+	background-color:white;
+	color: black;
+}
+
+.tile {
+	background-color: blue;
+	opacity:;
+}
 
     nav > ul {
         display: inline;
