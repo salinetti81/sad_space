@@ -1,26 +1,5 @@
 var app = angular.module('gameApp', []);
 
-var codeBox = function(ans, con) {
-	// console.log('line 4', ans)
-	var el = document.getElementById(con);
-  // el && eval(el.value);
-  if(el && eval(el.value) === ans){
-  	console.log(eval(el.value))
-  	// console.log('line 9',ans);
-  	return true
-  }else{
-  	// console.log(con)
-  	console.log(eval(el.value))
-  	// console.log(ans);
-  	// console.log('Hmmm the out put was', eval(el.value) ,'instead of', ans)
-  	return false
-	}
-}
-
-
-
-
-
 app.controller('MainController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this;
 	this.hello = 'hello';
@@ -33,7 +12,7 @@ app.controller('MercuryController', ['$http', '$scope', function($http, $scope){
 	var controller = this
 	this.planet = 'Mercury';
 	
-}]);
+}])
 
 app.controller('VenusController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
@@ -53,13 +32,13 @@ app.controller('VenusController', ['$http', '$scope', function($http, $scope){
 	}	
 
 	
-}]);
+}])
 
 app.controller('EarthController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Earth';
 	
-}]);
+}])
 
 
 app.controller('MarsController', ['$http', '$scope', function($http, $scope){ 
@@ -128,47 +107,25 @@ app.controller('MarsController', ['$http', '$scope', function($http, $scope){
 		clicked:false
 	};
 
-}]);
-
-
+}])
 
 
 app.controller('JupiterController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Jupiter';
 	
-}]);
+}])
 
 app.controller('SaturnController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Saturn';
-	this.count = 0;
 	this.clickEvent= function(){
-		for (var i = 0; i < 5; i++) {
-		var main = document.getElementById('saturn-board')	
+		alert('hello')
 		var div = document.createElement("div");
-		div.setAttribute("ng-click", "saturn.clickEvent()")
-		div.setAttribute("class","ring");
-		main.insertBefore(div, main.firstChild);
-		};
-		
-            // if (isClickable) {
-            //     attrs.$setAttributet('ngClick', 'onHandleClick()');
-            //     element.removeAttr('ng-transclude');
-            //     $compile(element)(scope);
-            // }
-
-
-
-
-
-
+		div.className = 'ring';
+    document.body.appendChild(div)
 	}
-}]);
-
-
-
-
+}])
 
 
 
@@ -193,7 +150,7 @@ app.controller('UranusController', ['$http', '$scope', function($http, $scope){
 			 console.log(column,'line 150');
 			 var spot = controller.getSpot(controller.minefield, row, column);
 			 spot.content = "bomb";
-
+	
 		} // ends place random mine function
 
 			this.placeMultipleMines = function(minefield) {
@@ -283,7 +240,6 @@ app.controller('UranusController', ['$http', '$scope', function($http, $scope){
 }])//ends Uranus
 
 
-
 //neptune start 
 app.controller('NeptuneController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
@@ -365,83 +321,8 @@ app.controller('NeptuneController', ['$http', '$scope', function($http, $scope){
 app.controller('PlutoController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Pluto';
-	this.questions = [
-	{
-	ans:4,
-	id:'a',
-	mes:null
-	},
-	{
-	ans:10,
-	id:'b',
-	mes:null
-	},
-	{
-	ans:20,
-	id:'c',
-	mes:null
-	},
-	{
-	ans:30,
-	id:'d',
-	mes:null
-	}];
-	this.run = function(qus, con, mes){
-			mes = codeBox(qus ,con);
-			id = con;
-			var array = controller.questions;
-			for (var i = 0; i < array.length; i++) {
-				if (array[i].id == id) {					
-					return array[i].mes = mes;
-					
-				}
-			};
-}
-
-
-}]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+}])
 
 
 
