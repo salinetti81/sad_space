@@ -27,6 +27,10 @@ nav > ul {
 	float: right;
 }
 
+nav > ul > li:nth-child(2) {
+	display: none;
+}
+
 #login.disabled {
 	display: none;
 }
@@ -135,7 +139,6 @@ a:hover {
 /*	border: 1px solid red;*/
 	transform-style: preserve-3d;
 	overflow: hidden;
-	/*margin-bottom: 40%;*/
 }
 
 
@@ -452,6 +455,14 @@ ul {
 		margin: .5em;
 	}
 
+	nav > ul > li:nth-child(2) {
+		display: inline;
+	}
 
+	#solar-system {
+		margin-top: -20%;
+	}
 
 }
+
+/*===========================*/
