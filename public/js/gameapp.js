@@ -127,15 +127,45 @@ app.controller('SaturnController', ['$http', '$scope', function($http, $scope){
 	}
 }])
 
+
+
+
+
+
 app.controller('UranusController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this;
 	this.planet = 'Uranus';
   this.minefield = {};
 
-		this.createMinefield = function() {
+	 	this.getSpot = function(minefield, row, column) {
+		  	// console.log(minefield,'this is 136')
+	  	return controller.minefield.rows[row].spots[column];
+	  }
+
+		this.placeRandomMine = function(minefield) {
+			console.log('line 143 running random function')
+			 var row = Math.round(Math.random() * 8);
+			 console.log(row,'line 148');
+			 var column = Math.round(Math.random() * 8);
+			 console.log(column,'line 150');
+			 var spot = controller.getSpot(controller.minefield, row, column);
+			 spot.content = "bomb";
+	
+		} // ends place random mine function
+
+			this.placeMultipleMines = function(minefield) {
+		for(var i = 0; i < 10; i++) {
+			controller.placeRandomMine(controller.minefield);
+			// console.log(minefield);
+		}
+	}
+
+ 	
+//creates the mine field
+		this.createMinefield = function(spot) {
 				// console.log(minefield);
 	    // console.log(minefield);
-	    this.minefield.rows = [];
+	    controller.minefield.rows = [];
 	    // console.log(minefield);
 	    for(var i = 0; i < 9; i++) {
 	        var row = {};
@@ -146,18 +176,68 @@ app.controller('UranusController', ['$http', '$scope', function($http, $scope){
 	            var spot = {};
 	            spot.isCovered = true;
 	            // spot.isRevealed = false;
+	            spot.content = "empty";
 	            // console.log(spot);
 	            row.spots.push(spot);
 	        }
-	        this.minefield.rows.push(row);
+	        controller.minefield.rows.push(row);
 	 		 		// console.log(minefield);
 	    }
 	    // console.log(minefield);
 	    // console.log('Minefield rows: ', minefield.rows);
 
-	    console.log('Minefield rowd: ', this.minefield.rows);
-	  } // end create minefield
-}])
+	    console.log('Minefield row: ', this.minefield.rows);
+	 
+	  //Place 1 random mine
+	  var row = Math.round(Math.random() * 8);
+	  console.log("row: " + row);
+	  var column = Math.round(Math.random() * 8);
+	  console.log("column: " + column);
+
+
+		 controller.placeMultipleMines();
+} // ===================end create minefield===============================
+
+
+//==========MAKE NUMBERS==================
+
+// this.createNumber = function(minefield, row, column) {
+// 	this.thisSpot = controller.getSpot(minefield, row, column);
+// }
+
+// //check if spot has a mine in it
+// 	if (controller.thisSpot.content == "bomb") {
+// 		return;
+// 	}
+
+// 	this.bombCount = 0;
+
+// 	//check above row
+// 	if(row > 0) {
+// 		//check column to left
+// 		this.spot = getSpot(minefield, row - 1, column - 1);
+// 		if(spot.content == "bomb") {
+// 			bombCount++;
+// 		}
+// 	}
+// //get spot just above
+// this.spot = getSpot(minefield, row - 1, column);
+// if(spot.content == "bomb") {
+// 	bombCount ++;
+// }
+
+// //check colum to the right
+// if(column < 8) {
+// 	//get spot above and to the right
+// 	this.spot = getSpot(minefield, row - 1, column + 1);
+// 	if(spot.content == "bomb") {
+// 		bombCount++
+// 	}
+// }
+
+
+
+}])//ends Uranus
 
 
 //neptune start 
