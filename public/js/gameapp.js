@@ -1,5 +1,26 @@
 var app = angular.module('gameApp', []);
 
+var codeBox = function(ans, con) {
+	// console.log('line 4', ans)
+	var el = document.getElementById(con);
+  // el && eval(el.value);
+  if(el && eval(el.value) === ans){
+  	console.log(eval(el.value))
+  	// console.log('line 9',ans);
+  	return true
+  }else{
+  	// console.log(con)
+  	console.log(eval(el.value))
+  	// console.log(ans);
+  	// console.log('Hmmm the out put was', eval(el.value) ,'instead of', ans)
+  	return false
+	}
+}
+
+
+
+
+
 app.controller('MainController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this;
 	this.hello = 'hello';
@@ -123,13 +144,33 @@ app.controller('JupiterController', ['$http', '$scope', function($http, $scope){
 app.controller('SaturnController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Saturn';
+	this.count = 0;
 	this.clickEvent= function(){
-		alert('hello')
+		for (var i = 0; i < 5; i++) {
+		var main = document.getElementById('saturn-board')	
 		var div = document.createElement("div");
-		div.className = 'ring';
-    document.body.appendChild(div)
+		div.setAttribute("ng-click", "saturn.clickEvent()")
+		div.setAttribute("class","ring");
+		main.insertBefore(div, main.firstChild);
+		};
+		
+            // if (isClickable) {
+            //     attrs.$setAttributet('ngClick', 'onHandleClick()');
+            //     element.removeAttr('ng-transclude');
+            //     $compile(element)(scope);
+            // }
+
+
+
+
+
+
 	}
 }]);
+
+
+
+
 
 app.controller('UranusController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
@@ -218,8 +259,46 @@ app.controller('NeptuneController', ['$http', '$scope', function($http, $scope){
 app.controller('PlutoController', ['$http', '$scope', function($http, $scope){ 
 	var controller = this
 	this.planet = 'Pluto';
-	
+	this.questions = [
+	{
+	ans:4,
+	id:'a',
+	mes:null
+	},
+	{
+	ans:10,
+	id:'b',
+	mes:null
+	},
+	{
+	ans:20,
+	id:'c',
+	mes:null
+	},
+	{
+	ans:30,
+	id:'d',
+	mes:null
+	}];
+	this.run = function(qus, con, mes){
+			mes = codeBox(qus ,con);
+			id = con;
+			var array = controller.questions;
+			for (var i = 0; i < array.length; i++) {
+				if (array[i].id == id) {					
+					return array[i].mes = mes;
+					
+				}
+			};
 }]);
+
+
+
+
+
+
+
+
 
 
 
