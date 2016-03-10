@@ -91,21 +91,24 @@
 					</div>
 				</div>
 
+			
+		
+
+				<div id="info-box" ng-class=" planetCtrl.displayContent ? 'active':'disabled' " ng-click="planetCtrl.leaveInfoBox()">
+					<h1>{{planetCtrl.planet.name}}</h1>
+					<ul>
+						<li>Moons: {{planetCtrl.planet.moons[0]}}</li>
+						<li>Distance From Sun: {{planetCtrl.planet.distanceFromSun}} 10(6) km</li>
+						<li>Mass: {{planetCtrl.planet.mass}} 10(24)kg</li>
+						<li>Ring System? {{planetCtrl.planet.ringSystem | yesNo}} 10(24)kg</li>
+						<li>Length of Day: {{planetCtrl.planet.lengthOfDay}} hours</li>
+						<li>Orbital Period: {{planetCtrl.planet.orbitalPeriod}} days</li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
-
-			<div id="info-box" ng-class="planetCtrl.displayContent ? 'active':'disabled' " ng-click="planetCtrl.leaveInfoBox()">
-				<h1>{{planetCtrl.planet.name}}</h1>
-				<ul>
-					<li>Moons: {{planetCtrl.planet.moons[0]}}</li>
-					<li>Distance From Sun: {{planetCtrl.planet.distanceFromSun}} 10(6) km</li>
-					<li>Mass: {{planetCtrl.planet.mass}} 10(24)kg</li>
-					<li>Ring System? {{planetCtrl.planet.ringSystem | yesNo}} 10(24)kg</li>
-					<li>Length of Day: {{planetCtrl.planet.lengthOfDay}} hours</li>
-					<li>Orbital Period: {{planetCtrl.planet.orbitalPeriod}} days</li>
-				</ul>
-			</div>
-
+		
 	</body>
 </html>	
 

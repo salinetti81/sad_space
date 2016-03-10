@@ -394,21 +394,18 @@ a:hover {
 
 
 #info-box.active {
+	z-index: 99;
 	display: block;
+	height: 16em; width: 50%;
 	position: absolute;
-	margin: -15% 34%;
+	margin: 30% 20%;
 	padding-right: 2em;
+	padding-bottom: 1.5em;
 	background: #4B4B65;
-	height: 14em; width: 30%;
 	border: 1px solid white;
 	border-radius: 10px;
 	opacity: .9;
-	padding-bottom: 1.5em;
-	z-index: 99;
 	box-shadow: 2px 4px 50px 19px #010104;
-	transition-property: 100%;
-	transition-duration: 1s;
-	transition-timing-function: easeInOutQuart;
 }
 
 
@@ -495,6 +492,18 @@ ul {
 		margin-top: -20%;
 	}
 
+
+	#info-box.active {
+		height: 14em; width: 30%;
+		margin: 30% 34%;
+		padding-right: 2em;
+		padding-bottom: 1.5em;
+	}
+
 }
+
+
+
+
 
 /*===========================*/
