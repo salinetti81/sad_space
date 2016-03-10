@@ -1,4 +1,4 @@
-body {
+	body {
 	margin: 0;
 	padding: 0;
 	background: #030315;
@@ -50,7 +50,24 @@ nav > ul > li:hover {
 /*	color: red;*/
 }
 
+<<<<<<< HEAD
+=======
+a {
+	text-decoration: none;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+>>>>>>> f1f59138b628adc4883ef5c236558aa57331d8df
 #login.active {
+	display: inline;
+}
+
+#welcome {
+	display: none;
+}
+
+#welcome.active {
 	display: inline;
 }
 
@@ -62,6 +79,7 @@ nav > ul > li:hover {
 	display: inline;
 }
 
+<<<<<<< HEAD
 a {
 	text-decoration: none;
 	color: #b4b4bf;
@@ -72,6 +90,15 @@ a:hover {
 }
 
 
+=======
+#games_link {
+	display: none;
+}
+
+#games_link.active {
+	display: inline;
+}
+>>>>>>> f1f59138b628adc4883ef5c236558aa57331d8df
 /*===========================*/
 /*SIGN IN BOX*/
 
@@ -131,16 +158,26 @@ a:hover {
 	margin-top: -10%;
 }
 
+<<<<<<< HEAD
 #planets-container {
 	z-index: -2;
+=======
+planets-container {
+>>>>>>> f1f59138b628adc4883ef5c236558aa57331d8df
 	position: absolute;
 	width: 100%;
 	padding-bottom: 100%;
 /*	border: 1px solid red;*/
 	transform-style: preserve-3d;
 	overflow: hidden;
+<<<<<<< HEAD
 }
 
+=======
+	margin-top: -20%;
+	/*animation: theOrbit 4s linear infinite;*/
+	}
+>>>>>>> f1f59138b628adc4883ef5c236558aa57331d8df
 
 .planet {
 	position: absolute;

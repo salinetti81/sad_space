@@ -3,6 +3,7 @@ body{
 	padding: 0;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
+	/*color:white;*/
 	}
 header {
 	background: #181823;
@@ -33,6 +34,12 @@ nav > ul > li:hover {
 }
 h2 {
 	color:white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-family: 'Roboto', sans-serif;
 }
 #planets-container {
 		height: 10%;
@@ -147,6 +154,46 @@ h2 {
 	text-align: center;	
 	opacity: .9;
 }
+ 
+#a.fire, #b.fire, #c.fire, #d.fire, #e.fire, #f.fire, #g.fire, #h.fire, #i.fire {
+	width:25%;
+	margin:1%;
+	height: 100px;
+	background-color: red;
+	display: inline-block;
+}	
+/*============= Neptune */
+#memory_board {
+
+	background: ;
+	/*border: #999 1px solid;*/
+	width: 58em;
+	height: 540px;
+	padding: 24px;
+	margin: 0px auto;
+}
+
+#memory_board > div {
+	background: blue ;
+	color: ;
+	/*border: #000 1px solid;*/
+	width: 91px;
+	height: 91px;
+	float: left;
+	margin: 5px;
+	padding: 20px;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 5px;
+}
+
+#memory_board > div:hover {
+	opacity: .8;
+
+}
+/*============*/
+=======
 #clickBox{
 	float:right;
 	margin-right: 3%;
@@ -175,6 +222,53 @@ button {
 }
 
 /*================*/
+/*=============== mars css*/
+#mars-board{
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: #2E0854;
+	opacity: .8;
+	width:80%;
+	color: white;
+}
+#mars-count{
+	float: right;
+	margin-right: 10%;
+	margin-bottom: 40%;
+	text-align: center;
+
+}
+/*================*/
+/*================ Satrun css*/
+#saturn-board{
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: #2E0854;
+	opacity: .8;
+	width:80%;
+	color: white;
+}
+.ring {
+	width:80px;
+	height: 80px;
+	background-size: contain;
+	background-image: url('http://img01.deviantart.net/e093/i/2013/228/4/f/stock_image___saturn_rings_by_alpha_element-d6ifske.png');
+  animation-name: example;
+  animation-duration: 20s;
+  display: inline-block;
+}
+@keyframes example {
+    0%   {margin-top:1%;}
+    100% {margin-top:90%; }
+}	
+
+ /*================*/
+
+
+
+
+
+
 
 
 

@@ -5,12 +5,15 @@ app.controller('MainController', ['$http', function($http){
 	this.signUpData = {};
 	this.logInData = {};
   this.logOutData = {};
+  this.welcomeData = {};
 	this.isLoggedIn = null;
 	this.user = {}
 
   controller.displayContent = false;
   controller.displayLogIn = true;
   controller.displayLogOut = false;
+  controller.displayWelcome = false;
+  controller.displayGames = false;
  
 
   this.revealLogin = function(){
@@ -35,6 +38,8 @@ app.controller('MainController', ['$http', function($http){
   		controller.user = response.data;
       controller.displayContent = false;
       controller.displayLogOut = false;
+      controller.displayWelcome = false;
+      controller.displayGames = false;
   	},
   	function(err){
   		console.log(err);
@@ -59,6 +64,8 @@ app.controller('MainController', ['$http', function($http){
       controller.displayContent = false;
       controller.displayLogIn= false;
       controller.displayLogOut = true;
+      controller.displayWelcome = true;
+      controller.displayGames = true;
       
   	},
   	function(err){
@@ -88,6 +95,7 @@ app.controller('MainController', ['$http', function($http){
     controller.displayContent = false;
     controller.displayLogIn= true;
     controller.displayLogOut = false;
+    controller.displayWelcome = false;
 
   }; //<--logOut
 
