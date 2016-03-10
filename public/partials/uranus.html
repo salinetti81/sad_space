@@ -1,18 +1,14 @@
-
 <button type='submit' ng-click="uranus.createMinefield()">Play Minesweeper</button>
-
 <br>
-
 <table border="0">
     <tr ng-repeat="row in uranus.minefield.rows">
-   		<td ng-repeat="spot in row.spots" ng-click="spot.isCovered = false" >
+    <td ng-repeat="spot in row.spots" ng-click="spot.isCovered = false" >
 
         <img ng-if="spot.isCovered" src="http://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/covered.png" />
 
         <img ng-if="!spot.isCovered && spot.content == 'empty' " src="http://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/empty.png" />
 
         <img ng-if="!spot.isCovered && spot.content == 'bomb' " src="http://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/mine.png" />
-        
-      </td>
+        </td>
     </tr>
 </table>
