@@ -5,6 +5,7 @@ body{
 	font-family: 'Roboto', sans-serif;
 	color: #b4b4bf;
 	}
+
 /*========================*/
 /*HEADER*/
 
@@ -94,7 +95,7 @@ a:hover {
 }
 
 #uranus {
-	background-image: url('http://3.bp.blogspot.com/-fWJM7KisZXk/T9YzvopmDzI/AAAAAAAAAq0/vDRoopnaVpg/s1600/uranus.png');	
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/3D_Uranus.png/235px-3D_Uranus.png');	
 	width: 10%;
 	padding-bottom: 10%;
 }
@@ -253,7 +254,7 @@ button {
 
 @media (min-width: 660px) {
 
-<<<<<<< HEAD
+
 	h1 {
 		display: inline;
 	}
