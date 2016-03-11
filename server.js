@@ -1,21 +1,21 @@
-var express 	 	= require('express'),
-		bodyParser 	= require('body-parser'),
-		mongoose		= require('mongoose'),
-		morgan 			= require('morgan'),
-		passport 		= require('passport'),
-		session 		= require('express-session'),
-		bcrypt			= require('bcrypt-nodejs'),
-		port 				= process.env.PORT || 3000,
-		app					= express(),
+var express 	 	  = require('express'),
+		bodyParser 	  = require('body-parser'),
+		mongoose		  = require('mongoose'),
+		morgan 			  = require('morgan'),
+		passport 		  = require('passport'),
+		session 	  	= require('express-session'),
+		bcrypt			  = require('bcrypt-nodejs'),
+		port 				  = process.env.PORT || 3000,
+		app				 	  = express(),
 		passportLocal = require('passport-local');
 
-mongoose.connect('mongodb://localhost:27017/planetproject');
+
+var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/planetproject';
+mongoose.connect(mongoUri);
 
 app.use(morgan('dev'));
 
 app.use(express.static('public'));
-// app.use(express.static(path.join(__dirname, 'public')));
-
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -39,14 +39,10 @@ require('./config/passport.js')(passport);
 var seedController = require('./controllers/seed.js');
 app.use('/seed', seedController);
 
-
 app.use('/users', usersController);
-// app.get('/milkyway', function(req,res){
-// 	res.render('index.html');
-// });
 
 app.listen(port, function(){
 
-	console.log("We've got this. Think sunshine. Think summer.");
+	console.log("Space, the final frontier.");
 
 });
