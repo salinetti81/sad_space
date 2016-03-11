@@ -212,6 +212,8 @@ app.filter('yesNo', function() {
     }
 });
 
+
+//FILTERS MOON CONTENT VALUE
 app.filter('moonsNo', function() {
     return function(input) {
         return input ? input : 'No moons';
