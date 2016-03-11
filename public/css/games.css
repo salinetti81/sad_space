@@ -348,7 +348,7 @@ button {
 /*====================*/
 #uranus_board {
 	color: white;
-	background-color: white;
+	background-color: ;
 	/*border: 2px solid white;*/
 	height: 500px;
 	/*width: 80%;
@@ -380,7 +380,7 @@ button {
 }
 
 .tile {
-	background-color: blue;
+	background-color: ;
 	opacity:;
 }
 

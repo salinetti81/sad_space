@@ -202,69 +202,69 @@ app.controller('SaturnController', ['$http', '$scope', function($http, $scope){
 // ======================================================
 
 app.controller('UranusController', ['$http', '$scope', function($http, $scope){ 
-    var controller = this;
-    this.planet = 'Uranus';
-  this.minefield = {};
+var controller = this;
+this.planet = 'Uranus';
+this.minefield = {};
 
-         this.getSpot = function(minefield, row, column) {
-              // console.log(minefield,'this is 136')
-          return controller.minefield.rows[row].spots[column];
-      }
+     this.getSpot = function(minefield, row, column) {
+          // console.log(minefield,'this is 136')
+      return controller.minefield.rows[row].spots[column];
+  }
 
-        this.placeRandomMine = function(minefield) {
-            console.log('line 143 running random function')
-             var row = Math.round(Math.random() * 8);
-             console.log(row,'line 148');
-             var column = Math.round(Math.random() * 8);
-             console.log(column,'line 150');
-             var spot = controller.getSpot(controller.minefield, row, column);
-             spot.content = "bomb";
-    
-        } // ends place random mine function
+    this.placeRandomMine = function(minefield) {
+        console.log('line 143 running random function')
+         var row = Math.round(Math.random() * 8);
+         console.log(row,'line 148');
+         var column = Math.round(Math.random() * 8);
+         console.log(column,'line 150');
+         var spot = controller.getSpot(controller.minefield, row, column);
+         spot.content = "bomb";
 
-            this.placeMultipleMines = function(minefield) {
-        for(var i = 0; i < 10; i++) {
-            controller.placeRandomMine(controller.minefield);
-            // console.log(minefield);
-        }
+    } // ends place random mine function
+
+        this.placeMultipleMines = function(minefield) {
+    for(var i = 0; i < 10; i++) {
+        controller.placeRandomMine(controller.minefield);
+        // console.log(minefield);
     }
+}
 
      
 //creates the mine field
-        this.createMinefield = function(spot) {
-                // console.log(minefield);
+this.createMinefield = function(spot) {
         // console.log(minefield);
-        controller.minefield.rows = [];
-        // console.log(minefield);
-        for(var i = 0; i < 9; i++) {
-            var row = {};
-            row.spots = [];
-            // console.log(row)
-            // console.log(row);
-            for(var j = 0; j < 9; j++) {
-                var spot = {};
-                spot.isCovered = true;
-                // spot.isRevealed = false;
-                spot.content = "empty";
-                // console.log(spot);
-                row.spots.push(spot);
-            }
-            controller.minefield.rows.push(row);
-                      // console.log(minefield);
-        }
-        // console.log(minefield);
-        // console.log('Minefield rows: ', minefield.rows);
+// console.log(minefield);
+controller.minefield.rows = [];
+// console.log(minefield);
+for(var i = 0; i < 9; i++) {
+    var row = {};
+    row.spots = [];
+    // console.log(row)
+    // console.log(row);
+    for(var j = 0; j < 9; j++) {
+        var spot = {};
+        spot.isCovered = true;
+        // spot.isRevealed = false;
+        spot.content = "empty";
+        // console.log(spot);
+        row.spots.push(spot);
+    }
+    controller.minefield.rows.push(row);
+              // console.log(minefield);
+}
+// console.log(minefield);
+// console.log('Minefield rows: ', minefield.rows);
 
-        console.log('Minefield row: ', this.minefield.rows);
-     
-      //Place 1 random mine
-      var row = Math.round(Math.random() * 8);
-      console.log("row: " + row);
-      var column = Math.round(Math.random() * 8);
-      console.log("column: " + column);
+console.log('Minefield row: ', this.minefield.rows);
+
+//Place 1 random mine
+var row = Math.round(Math.random() * 8);
+console.log("row: " + row);
+var column = Math.round(Math.random() * 8);
+console.log("column: " + column);
 
 
-         controller.placeMultipleMines();
+controller.placeMultipleMines();
 } // ===================end create minefield===============================
 
 
@@ -306,7 +306,7 @@ app.controller('UranusController', ['$http', '$scope', function($http, $scope){
 
 
 
-}])//ends Uranus
+}]);//ends Uranus
 
 
 
@@ -412,7 +412,6 @@ app.controller('PlutoController', ['$http', '$scope', function($http, $scope){
 	}
 
 
-}]);
 
 
 

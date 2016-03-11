@@ -53,12 +53,11 @@ nav > ul > li:hover {
 
 a {
 	text-decoration: none;
-	color: #b4b4bf;
+	color: #fff;
 }
 
 a:hover {
-	opacity: .9;
-	color: red;
+	cursor: text;
 }
 
 /*===========================*/
