@@ -97,7 +97,7 @@
 				<div id="info-box" ng-class=" planetCtrl.displayContent ? 'active':'disabled' " ng-click="planetCtrl.leaveInfoBox()">
 					<h1>{{planetCtrl.planet.name}}</h1>
 					<ul>
-						<li>Moons: {{planetCtrl.planet.moons}}</li>
+						<li>Moons: {{planetCtrl.planet.moons | moonsNo}}</li>
 						<li>Distance From Sun: {{planetCtrl.planet.distanceFromSun}} 10(6) km</li>
 						<li>Mass: {{planetCtrl.planet.mass}} 10(24)kg</li>
 						<li>Ring System? {{planetCtrl.planet.ringSystem | yesNo}} 10(24)kg</li>

@@ -212,7 +212,11 @@ app.filter('yesNo', function() {
     }
 });
 
-
+app.filter('moonsNo', function() {
+    return function(input) {
+        return input ? input : 'No moons';
+    }
+});
 
 
 
