@@ -145,8 +145,9 @@ a:hover {
 	z-index: 2;
 	position: absolute;
 	transform-style: preserve-3d;
-	transform: rotateX(-75deg);
+/*	transform: rotateX(-75deg);*/
 	opacity: .9;
+	height: 100%; width: 100%;
 }
 
 #solar-system {
@@ -348,7 +349,7 @@ a:hover {
 
 #mercuryPos {
 	height: 100%; width: 100%;
-	animation: mercuryOrbit 10s linear infinite;
+	animation: mercuryOrbit 8s linear infinite;
 }
 
 #venusPos {
@@ -378,18 +379,17 @@ a:hover {
 
 #uranusPos {
 	width: 100%; height: 100%;
-	animation: uranusOrbit 25s linear infinite;
+	animation: uranusOrbit 30s linear infinite;
 }
 
 #neptunePos {
 	width: 100%; height: 100%;
-	z-index: 2;
-	animation: saturnOrbit 30s linear infinite;
+	animation: saturnOrbit 35s linear infinite;
 }
 
 #plutoPos {
 	width: 100%; height: 100%;
-	animation: plutoOrbit 30s linear infinite;
+	animation: plutoOrbit 45s linear infinite;
 }
 
 
@@ -470,6 +470,8 @@ ul {
 	from { transform: rotate(0deg) translateX(150px); }
 	to   {  transform: rotate(360deg) translateX(150px); }
 }
+
+
 
 /*===========================*/
 /*MEDIA RESPONSIVE*/
