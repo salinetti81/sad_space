@@ -8,7 +8,7 @@
 		<script type="text/javascript" src="js/app.js"></script>
 	</head>
 
-	<body ng-controller="MainController as ctrl"> 
+	<body ng-controller="MainController as ctrl">
 		<header ng-include src="'./partials/header.html' "></header>
 
 		<div id="signin" ng-class="ctrl.displayContent ? 'active':'disabled' ">
@@ -33,10 +33,10 @@
 
 		<div id="solar-system">
 			<div id="planets-container" ng-controller="PlanetController as planetCtrl">
-		
+
 				<div id="sun" ng-click="planetCtrl.getData('Sun')"></div>
 
-			
+
 				<div id="mercuryOrbit" class="orbit">
 					<div id="mercuryPos" class="positioning">
 						<div id="mercury" class="planet" ng-click="planetCtrl.getData('Mercury')"></div>
@@ -48,7 +48,7 @@
 						<div id="venus" class="planet" ng-click="planetCtrl.getData('Venus')"></div>
 					</div>
 				</div>
-		
+
 				<div id="earthOrbit" class="orbit">
 					<div id="earthPos" class="positioning">
 						<div id="earth" class="planet" ng-click="planetCtrl.getData('Earth')"></div>
@@ -84,20 +84,19 @@
 						<div id="neptune" class="planet" ng-click="planetCtrl.getData('Neptune')"></div>
 					</div>
 				</div>
-			
+
 				<div id="plutoOrbit" class="orbit">
-					<div id="plutoPos" class="positioning">			
-						<div id="pluto" class="planet" ng-click="planetCtrl.getData('Pluto')"></div>	
+					<div id="plutoPos" class="positioning">
+						<div id="pluto" class="planet" ng-click="planetCtrl.getData('Pluto')"></div>
 					</div>
 				</div>
 
-			
-		
+
+
 
 				<div id="info-box" ng-class=" planetCtrl.displayContent ? 'active':'disabled' " ng-click="planetCtrl.leaveInfoBox()">
 					<h1>{{planetCtrl.planet.name}}</h1>
 					<ul>
-						<li>Mass: {{planetCtrl.planet.mass}} 10(24)kg</li>
 						<li>Distance From Sun: {{planetCtrl.planet.distanceFromSun}} 10<sup> 6</sup> km</li>
 						<li>Ring System? {{planetCtrl.planet.ringSystem | yesNo}}</li>
 						<li>Mass: {{planetCtrl.planet.mass}} 10 <sup>24</sup> kg</li>
@@ -108,8 +107,6 @@
 
 			</div>
 		</div>
-		
+
 	</body>
-</html>	
-
-
+</html>
